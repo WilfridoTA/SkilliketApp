@@ -18,7 +18,7 @@ class UserTBC: UITabBarController {
 //            navigationController.setNavigationBarHidden(true, animated: false)
 //        }
         
-        setupMiddleButton()
+        //setupMiddleButton()
         // Do any additional setup after loading the view.
     }
     

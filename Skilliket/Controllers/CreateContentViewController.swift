@@ -29,6 +29,20 @@ class CreateContentViewController: UIViewController {
         
     }
     
+    //Ocultar tab bar globalmente para las siguientes pantallas a partir de esta
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
+    //Tab bar reaparece al salir de esta pantalla
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        self.tabBarController?.tabBar.isHidden = false
+//    }
+    
+    //Abajo esta lo de Nicole
+    
     override func viewDidAppear(_ animated: Bool) {
         if let navigationController = self.navigationController {
             navigationController.setNavigationBarHidden(false, animated: true)

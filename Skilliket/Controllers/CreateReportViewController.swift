@@ -120,7 +120,7 @@ final class CreateReport{
                 DateFormComponent(mode: .date),
                 TimeFormComponent(mode: .time),
                 TextBoxFormComponent(placeholder: "Insert Text", keyboardType: .default),
-                ButtonFormComponent(title: "Post", top: 300)
+                ButtonFormComponent(title: "Post", top: 250)
                 
             ])
         ]

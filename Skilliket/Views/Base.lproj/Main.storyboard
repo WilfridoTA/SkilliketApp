@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hkt-cF-Jg6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oy8-8K-P48">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
@@ -1118,9 +1118,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Join">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="oy8-8K-P48" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="X0U-DM-h7a"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hCF-8L-G7i"/>
@@ -1585,10 +1582,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTI-qs-3H9">
-                                <rect key="frame" x="0.0" y="96" width="393" height="707"/>
+                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fdV-1i-chZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="707"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="614"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -1625,10 +1622,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3h-v7-v5D">
-                                <rect key="frame" x="0.0" y="44" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PP4-1M-yr7">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="190" id="nCR-eq-9PV" customClass="UserPostsTableViewCell" customModule="Skilliket" customModuleProvider="target">
@@ -1744,7 +1741,19 @@
                             <constraint firstItem="r3h-v7-v5D" firstAttribute="leading" secondItem="GFd-dr-Hco" secondAttribute="leading" id="kSg-Vc-1GQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="What's new?" largeTitleDisplayMode="always" id="yGq-m1-2Uv"/>
+                    <navigationItem key="navigationItem" title="What's new?" largeTitleDisplayMode="always" id="yGq-m1-2Uv">
+                        <barButtonItem key="rightBarButtonItem" id="WAt-hK-5Vo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="OnR-YG-23R">
+                                <rect key="frame" x="311" y="4.6666666666666679" width="66" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Crear"/>
+                                <connections>
+                                    <segue destination="4dL-Lq-hV5" kind="show" id="BVO-uL-igs"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pFd-9A-Tqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1755,11 +1764,11 @@
             <objects>
                 <viewController id="4dL-Lq-hV5" customClass="CreateContentViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UhI-8E-iZw" customClass="UserColorGradient" customModule="Skilliket" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRV-mx-6IG">
-                                <rect key="frame" x="8" y="66" width="377" height="130"/>
+                                <rect key="frame" x="8" y="221" width="377" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Interact with your community!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HsF-3h-Ky4">
                                         <rect key="frame" x="8" y="8" width="190" height="40.666666666666664"/>
@@ -1786,13 +1795,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type of publication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcC-tI-894">
-                                <rect key="frame" x="8" y="216" width="377" height="24"/>
+                                <rect key="frame" x="8" y="371" width="377" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5R-c9-Bl0">
-                                <rect key="frame" x="8" y="260" width="170" height="170"/>
+                                <rect key="frame" x="8" y="415" width="170" height="170"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="A1U-Kd-YKy"/>
@@ -1806,7 +1815,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffk-Gc-iwe">
-                                <rect key="frame" x="215" y="260" width="170" height="170"/>
+                                <rect key="frame" x="215" y="415" width="170" height="170"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="0v4-Qb-MQ7"/>
@@ -1820,7 +1829,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpz-Hf-L4h">
-                                <rect key="frame" x="111.66666666666669" y="445" width="170" height="170"/>
+                                <rect key="frame" x="111.66666666666669" y="600" width="170" height="170"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="b1q-Vg-MDo"/>
@@ -1834,7 +1843,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Content" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BII-m6-ecb">
-                                <rect key="frame" x="8" y="0.0" width="377" height="36"/>
+                                <rect key="frame" x="8" y="155" width="377" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1872,7 +1881,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3b-DW-emx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-859" y="4613"/>
+            <point key="canvasLocation" x="3408" y="3670"/>
         </scene>
         <!--Posts-->
         <scene sceneID="dQc-8R-0KI">
@@ -1880,7 +1889,7 @@
                 <navigationController id="QGJ-U2-WWs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Posts" image="list.bullet.rectangle" catalog="system" id="b7d-8W-Ery"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Xrc-98-U2W">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
@@ -1901,7 +1910,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM8-z7-d6a">
-                                <rect key="frame" x="0.0" y="96" width="393" height="707"/>
+                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wwo-cn-BT9">
                                         <rect key="frame" x="10" y="10" width="373" height="34.333333333333336"/>
@@ -1968,7 +1977,7 @@
             <objects>
                 <viewController id="0i1-NR-aAS" customClass="CreateNewsViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F85-J3-ALQ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="b7I-Q9-LZR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1977,7 +1986,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="627-W2-dIr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2048" y="5296"/>
+            <point key="canvasLocation" x="4668" y="2600"/>
         </scene>
         <!--UserTBC-->
         <scene sceneID="5h7-bs-07A">
@@ -1992,24 +2001,22 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="4dL-Lq-hV5" kind="show" identifier="createContent" id="Zdc-Cm-6tL"/>
                         <segue destination="QGJ-U2-WWs" kind="relationship" relationship="viewControllers" id="yVn-nx-5bm"/>
                         <segue destination="UwQ-0T-GtT" kind="relationship" relationship="viewControllers" id="oGK-am-D7g"/>
                         <segue destination="BZH-Ou-hHc" kind="relationship" relationship="viewControllers" id="LiD-3h-f0S"/>
                         <segue destination="Rw7-BU-gmF" kind="relationship" relationship="viewControllers" id="PYZ-QF-ota"/>
-                        <segue destination="6kx-s4-xBS" kind="show" id="Gce-o5-VF3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spk-73-Kbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="4673"/>
+            <point key="canvasLocation" x="581" y="3670"/>
         </scene>
         <!--Create Post-->
         <scene sceneID="pSl-v5-p2Q">
             <objects>
                 <viewController id="oTK-gG-KNy" customClass="CreatePostViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rsc-9c-XvS" customClass="Create">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="aKj-Uc-wrw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2018,14 +2025,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNh-Gv-FjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2047" y="4613"/>
+            <point key="canvasLocation" x="4668" y="4075"/>
         </scene>
         <!--Create Forum View Controller-->
         <scene sceneID="jAg-Wr-sPe">
             <objects>
                 <viewController id="7Ao-DU-HzD" customClass="CreateForumViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1fV-nf-ruK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="SMA-QP-uJm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2041,14 +2048,14 @@
             <objects>
                 <viewController id="UQm-aQ-XIH" customClass="NewForumsViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HNP-Le-EsO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9e-Y4-HYN">
-                                <rect key="frame" x="0.0" y="56" width="393" height="786"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Koz-VG-WGq">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="786"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="715"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -2073,7 +2080,7 @@
                     <navigationItem key="navigationItem" title="Other Forums" largeTitleDisplayMode="always" style="editor" id="CN1-r8-0z3">
                         <barButtonItem key="rightBarButtonItem" title="Create" id="B9Z-pb-gPJ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="lDS-iq-lXT">
-                                <rect key="frame" x="302" y="10.666666666666664" width="75" height="35"/>
+                                <rect key="frame" x="302" y="4.6666666666666679" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Create"/>
@@ -2093,7 +2100,7 @@
             <objects>
                 <viewController id="Cw2-D9-Si7" customClass="CreateReportViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zMf-2Q-3Cy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="A5V-wE-ebV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2102,7 +2109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2qL-PG-PEP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2047" y="3944"/>
+            <point key="canvasLocation" x="4668" y="3334"/>
         </scene>
         <!--Forums-->
         <scene sceneID="5pJ-3H-heZ">
@@ -2111,7 +2118,7 @@
                     <tabBarItem key="tabBarItem" title="Forums" image="text.bubble" catalog="system" id="ghy-kf-AfC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Lv3-fu-TvY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2130,7 +2137,7 @@
                     <tabBarItem key="tabBarItem" title="Projects" image="pencil.and.list.clipboard" catalog="system" id="7cC-l8-s96"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6Nl-RW-IFh">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2149,7 +2156,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" image="chart.xyaxis.line" catalog="system" id="zWj-a4-bHp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fdw-9i-0yD">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2168,7 +2175,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="PNg-Dm-nTI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZLl-Xe-YLf">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
