@@ -33,6 +33,18 @@ class CreateForumViewController: UIViewController{
         setup()
         updateDateSource()
     }
+    
+    //Ocultar tab bar globalmente para las siguientes pantallas a partir de esta
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
+
+    //Tab bar reaparece al salir de esta pantalla
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
+    }
 }
 
 private extension CreateForumViewController {

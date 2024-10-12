@@ -18,6 +18,9 @@
 		1F65A7752CADF4CD00BFB642 /* UserPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65A7742CADF4CD00BFB642 /* UserPostsViewController.swift */; };
 		3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */; };
 		3B1CE98F2CAA437700A96445 /* projectsColorGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98E2CAA437700A96445 /* projectsColorGradient.swift */; };
+		3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */; };
+		3B26ADDD2CBB21D70025CDB3 /* YourForumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */; };
+		3B26ADDF2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADDE2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift */; };
 		3B2ABABD2CA5D1EC003EF886 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2ABABC2CA5D1EC003EF886 /* AppDelegate.swift */; };
 		3B2ABABF2CA5D1EC003EF886 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2ABABE2CA5D1EC003EF886 /* SceneDelegate.swift */; };
 		3B2ABAC42CA5D1EC003EF886 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 3B2ABAC32CA5D1EC003EF886 /* Base */; };
@@ -57,6 +60,9 @@
 		1F65A7742CADF4CD00BFB642 /* UserPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsViewController.swift; sourceTree = "<group>"; };
 		3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewController.swift; sourceTree = "<group>"; };
 		3B1CE98E2CAA437700A96445 /* projectsColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectsColorGradient.swift; sourceTree = "<group>"; };
+		3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsViewController.swift; sourceTree = "<group>"; };
+		3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsTableViewCell.swift; sourceTree = "<group>"; };
+		3B26ADDE2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedForumsTableViewCell.swift; sourceTree = "<group>"; };
 		3B2ABAB92CA5D1EC003EF886 /* Skilliket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skilliket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2ABABC2CA5D1EC003EF886 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B2ABABE2CA5D1EC003EF886 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +140,8 @@
 				3B5FE86B2CAA0A5A00706136 /* PostApproveTableViewCell.swift */,
 				1F65A76C2CACC47700BFB642 /* UserPostsTableViewCell.swift */,
 				BB7852682CB3650000DA6452 /* FormCollectionViewCell.swift */,
+				3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */,
+				3B26ADDE2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 				BB78526F2CB6139000DA6452 /* CreateReportViewController.swift */,
 				BB7852712CB74D8200DA6452 /* CreateForumViewController.swift */,
 				3BE325BA2CBA0ABC00791263 /* NewForumsViewController.swift */,
+				3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +274,7 @@
 				3BE325BB2CBA0ABC00791263 /* NewForumsViewController.swift in Sources */,
 				1F4710EE2CABA0B600442287 /* CreateAccountVC.swift in Sources */,
 				1F65A7732CACD17500BFB642 /* CreateContentViewController.swift in Sources */,
+				3B26ADDF2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift in Sources */,
 				3BAAF7802CA750C6000C7C75 /* PostColorGradient.swift in Sources */,
 				3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */,
 				BB78526B2CB3A58D00DA6452 /* FormCompositionalLayout.swift in Sources */,
@@ -272,11 +282,13 @@
 				3B5FE86E2CAA190E00706136 /* SelectedPostViewController.swift in Sources */,
 				1F65A76D2CACC47700BFB642 /* UserPostsTableViewCell.swift in Sources */,
 				BB78526E2CB6084400DA6452 /* CreatePostViewController.swift in Sources */,
+				3B26ADDD2CBB21D70025CDB3 /* YourForumsTableViewCell.swift in Sources */,
 				1F4710EA2CAB365E00442287 /* LoginVC.swift in Sources */,
 				3B5FE86A2CAA0A1100706136 /* PostApproveViewController.swift in Sources */,
 				BB7852702CB6139000DA6452 /* CreateReportViewController.swift in Sources */,
 				3B2ABABD2CA5D1EC003EF886 /* AppDelegate.swift in Sources */,
 				BB7852672CB35FB900DA6452 /* CreateNewsViewController.swift in Sources */,
+				3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */,
 				1F65A7752CADF4CD00BFB642 /* UserPostsViewController.swift in Sources */,
 				3B56580C2CA9EF3B0067F626 /* PostsCommunitiesViewController.swift in Sources */,
 				3BF11BD82CA729A700F4C113 /* CommunitiesViewController.swift in Sources */,

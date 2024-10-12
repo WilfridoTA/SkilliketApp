@@ -1,26 +1,24 @@
 //
-//  UserPostsViewController.swift
+//  YourForumsViewController.swift
 //  Skilliket
 //
-//  Created by Astrea Polaris on 02/10/24.
+//  Created by Will on 12/10/24.
 //
 
 import UIKit
 
-class UserPostsViewController: UIViewController {
+class YourForumsViewController: UIViewController {
+    
+    @IBOutlet weak var yourForumsTable: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-//        if let navigationController = self.navigationController {
-//            navigationController.setNavigationBarHidden(true, animated: false)
-//        }
+        
     }
-    
-    //Unwind a esta pantalla
-    @IBAction func unwindToNews(unwindSegue: UIStoryboardSegue){}
     
 
     /*
