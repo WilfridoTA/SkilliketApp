@@ -10,6 +10,7 @@ import UIKit
 class NetworkStatusViewController: UIViewController {
     
     @IBOutlet weak var networkBackground: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
