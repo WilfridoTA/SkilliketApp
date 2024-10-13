@@ -8,6 +8,9 @@
 import UIKit
 
 class NewForumsViewController: UIViewController {
+    
+    @IBOutlet weak var featuredForumsTable: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
