@@ -2137,7 +2137,7 @@
         <!--News-->
         <scene sceneID="7Ym-H6-Lwy">
             <objects>
-                <viewController id="5s9-qY-M6h" sceneMemberID="viewController">
+                <viewController id="5s9-qY-M6h" customClass="ProjectNewsViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hT5-YG-Zkt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2146,7 +2146,7 @@
                                 <rect key="frame" x="0.0" y="155" width="393" height="614"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="250" id="Keo-n6-gOg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="projectNewsCell" rowHeight="250" id="Keo-n6-gOg" customClass="ProjectNewsTableViewCell" customModule="Skilliket" customModuleProvider="target">
                                         <rect key="frame" x="20" y="38" width="353" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Keo-n6-gOg" id="0tg-P7-3hn">
@@ -2156,7 +2156,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgo-18-apy">
                                                     <rect key="frame" x="0.0" y="0.0" width="353" height="150"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHt-Ca-bsd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo Noticia" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHt-Ca-bsd">
                                                     <rect key="frame" x="10" y="160" width="333" height="50"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
@@ -2180,8 +2180,14 @@
                                                 <constraint firstItem="NHt-Ca-bsd" firstAttribute="height" secondItem="0tg-P7-3hn" secondAttribute="height" multiplier="0.2" id="moc-KX-aJR"/>
                                                 <constraint firstItem="dgo-18-apy" firstAttribute="height" secondItem="0tg-P7-3hn" secondAttribute="height" multiplier="0.6" id="qiq-IS-GHT"/>
                                                 <constraint firstAttribute="bottom" secondItem="CvP-0n-Vyi" secondAttribute="bottom" constant="10" id="rjZ-Ko-6Zf"/>
+                                                <constraint firstItem="CvP-0n-Vyi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0tg-P7-3hn" secondAttribute="leading" constant="20" symbolic="YES" id="uZV-lw-sbO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ProjectNewsImage" destination="dgo-18-apy" id="fEy-Xd-agP"/>
+                                            <outlet property="projectNewsDate" destination="CvP-0n-Vyi" id="Rz6-Ml-ceF"/>
+                                            <outlet property="projectNewsTitulo" destination="NHt-Ca-bsd" id="iWm-hF-CX1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2225,6 +2231,9 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="projectNewsTable" destination="REw-83-8oT" id="J9V-vz-tPy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djC-96-01Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
