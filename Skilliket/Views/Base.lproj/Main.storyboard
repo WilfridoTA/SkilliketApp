@@ -1811,6 +1811,15 @@
                                                         <constraint firstItem="BOs-eF-b4s" firstAttribute="top" secondItem="Xsw-pV-Wi4" secondAttribute="bottom" constant="8" id="ywh-O2-rcx"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="descriptionPost" destination="Xsw-pV-Wi4" id="IEV-in-hqX"/>
+                                                    <outlet property="imagePost" destination="gEH-ls-6xp" id="YpQ-km-zpK"/>
+                                                    <outlet property="link" destination="BOs-eF-b4s" id="7HI-in-kev"/>
+                                                    <outlet property="nameMember" destination="bWr-VQ-4T3" id="cWn-hc-h7b"/>
+                                                    <outlet property="timeTypeLabel" destination="vUP-g8-LHR" id="azW-Ve-C5n"/>
+                                                    <outlet property="title" destination="Vo7-PK-hak" id="c2G-T1-jvZ"/>
+                                                    <outlet property="userImage" destination="6HM-N1-Vma" id="87P-PK-NjK"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
