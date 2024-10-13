@@ -32,6 +32,11 @@
 		3B3C8AEF2CBB817300C78D03 /* ProjectAnnouncementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AEE2CBB817300C78D03 /* ProjectAnnouncementTableViewCell.swift */; };
 		3B3C8AF12CBB8A1C00C78D03 /* ProjectNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AF02CBB8A1C00C78D03 /* ProjectNewsViewController.swift */; };
 		3B3C8AF32CBB8A7300C78D03 /* ProjectNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AF22CBB8A7300C78D03 /* ProjectNewsTableViewCell.swift */; };
+		3B3C8AF52CBB933400C78D03 /* ProjectCommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AF42CBB933400C78D03 /* ProjectCommunitiesViewController.swift */; };
+		3B3C8AF72CBB938900C78D03 /* ProjectCommunitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AF62CBB938900C78D03 /* ProjectCommunitiesTableViewCell.swift */; };
+		3B3C8AF92CBB967200C78D03 /* ProjectToBeApprovedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AF82CBB967100C78D03 /* ProjectToBeApprovedViewController.swift */; };
+		3B3C8AFB2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AFA2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift */; };
+		3B3C8AFD2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AFC2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift */; };
 		3B5658002CA92DD30067F626 /* CommunitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5657FF2CA92DD30067F626 /* CommunitiesTableViewCell.swift */; };
 		3B5658032CA93F760067F626 /* Communities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5658022CA93F760067F626 /* Communities.swift */; };
 		3B5658082CA94C1D0067F626 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5658072CA94C1D0067F626 /* PostsTableViewController.swift */; };
@@ -82,6 +87,11 @@
 		3B3C8AEE2CBB817300C78D03 /* ProjectAnnouncementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAnnouncementTableViewCell.swift; sourceTree = "<group>"; };
 		3B3C8AF02CBB8A1C00C78D03 /* ProjectNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectNewsViewController.swift; sourceTree = "<group>"; };
 		3B3C8AF22CBB8A7300C78D03 /* ProjectNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectNewsTableViewCell.swift; sourceTree = "<group>"; };
+		3B3C8AF42CBB933400C78D03 /* ProjectCommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCommunitiesViewController.swift; sourceTree = "<group>"; };
+		3B3C8AF62CBB938900C78D03 /* ProjectCommunitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCommunitiesTableViewCell.swift; sourceTree = "<group>"; };
+		3B3C8AF82CBB967100C78D03 /* ProjectToBeApprovedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectToBeApprovedViewController.swift; sourceTree = "<group>"; };
+		3B3C8AFA2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectToBeApprovedTableViewCell.swift; sourceTree = "<group>"; };
+		3B3C8AFC2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectApprovedDetailsViewController.swift; sourceTree = "<group>"; };
 		3B5657FF2CA92DD30067F626 /* CommunitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesTableViewCell.swift; sourceTree = "<group>"; };
 		3B5658022CA93F760067F626 /* Communities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communities.swift; sourceTree = "<group>"; };
 		3B5658072CA94C1D0067F626 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +167,8 @@
 				3B26ADE22CBB2F1F0025CDB3 /* YourProjectsTableViewCell.swift */,
 				3B3C8AEE2CBB817300C78D03 /* ProjectAnnouncementTableViewCell.swift */,
 				3B3C8AF22CBB8A7300C78D03 /* ProjectNewsTableViewCell.swift */,
+				3B3C8AF62CBB938900C78D03 /* ProjectCommunitiesTableViewCell.swift */,
+				3B3C8AFA2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -212,6 +224,9 @@
 				3B26ADE02CBB2E600025CDB3 /* YourProjectsViewController.swift */,
 				3B3C8AEC2CBB810D00C78D03 /* ProjectAnnouncementViewController.swift */,
 				3B3C8AF02CBB8A1C00C78D03 /* ProjectNewsViewController.swift */,
+				3B3C8AF42CBB933400C78D03 /* ProjectCommunitiesViewController.swift */,
+				3B3C8AF82CBB967100C78D03 /* ProjectToBeApprovedViewController.swift */,
+				3B3C8AFC2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,17 +317,22 @@
 				BB78526E2CB6084400DA6452 /* CreatePostViewController.swift in Sources */,
 				3B26ADDD2CBB21D70025CDB3 /* YourForumsTableViewCell.swift in Sources */,
 				1F4710EA2CAB365E00442287 /* LoginVC.swift in Sources */,
+				3B3C8AFD2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift in Sources */,
 				3B5FE86A2CAA0A1100706136 /* PostApproveViewController.swift in Sources */,
+				3B3C8AF52CBB933400C78D03 /* ProjectCommunitiesViewController.swift in Sources */,
 				BB7852702CB6139000DA6452 /* CreateReportViewController.swift in Sources */,
 				3B26ADE12CBB2E600025CDB3 /* YourProjectsViewController.swift in Sources */,
 				3B2ABABD2CA5D1EC003EF886 /* AppDelegate.swift in Sources */,
+				3B3C8AFB2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift in Sources */,
 				BB7852672CB35FB900DA6452 /* CreateNewsViewController.swift in Sources */,
 				3B3C8AF32CBB8A7300C78D03 /* ProjectNewsTableViewCell.swift in Sources */,
 				3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */,
 				1F65A7752CADF4CD00BFB642 /* UserPostsViewController.swift in Sources */,
 				3B3C8AEF2CBB817300C78D03 /* ProjectAnnouncementTableViewCell.swift in Sources */,
 				3B56580C2CA9EF3B0067F626 /* PostsCommunitiesViewController.swift in Sources */,
+				3B3C8AF92CBB967200C78D03 /* ProjectToBeApprovedViewController.swift in Sources */,
 				3BF11BD82CA729A700F4C113 /* CommunitiesViewController.swift in Sources */,
+				3B3C8AF72CBB938900C78D03 /* ProjectCommunitiesTableViewCell.swift in Sources */,
 				3B26ADE32CBB2F1F0025CDB3 /* YourProjectsTableViewCell.swift in Sources */,
 				3B5FE86C2CAA0A5A00706136 /* PostApproveTableViewCell.swift in Sources */,
 				3BC3E7692CA72FDF00F106A6 /* CreateNewCommunityViewController.swift in Sources */,
