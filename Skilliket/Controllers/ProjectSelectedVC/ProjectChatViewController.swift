@@ -1,27 +1,20 @@
 //
-//  NetworkStatusViewController.swift
+//  ProjectChatViewController.swift
 //  Skilliket
 //
-//  Created by Will on 29/09/24.
+//  Created by Will on 12/10/24.
 //
 
 import UIKit
 
-class NetworkStatusViewController: UIViewController {
-    
-    @IBOutlet weak var networkBackground: UIView!
+class ProjectChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        networkBackground.layer.cornerRadius = 18
-        networkBackground.layer.shadowColor = UIColor.darkGray.cgColor
-        networkBackground.layer.shadowOpacity = 1
-        networkBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
-        networkBackground.layer.shadowRadius = 10
     }
-    
+
 
     /*
     // MARK: - Navigation

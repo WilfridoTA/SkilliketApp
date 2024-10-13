@@ -1993,21 +1993,50 @@
             </objects>
             <point key="canvasLocation" x="1531" y="3670"/>
         </scene>
-        <!--View Controller-->
+        <!--User Project Selected View Controller-->
         <scene sceneID="7Ym-H6-Lwy">
             <objects>
-                <viewController id="5s9-qY-M6h" sceneMemberID="viewController">
+                <viewController id="5s9-qY-M6h" customClass="UserProjectSelectedViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hT5-YG-Zkt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pjD-zI-N7E">
+                                <rect key="frame" x="10" y="113" width="373" height="32"/>
+                                <segments>
+                                    <segment title="News"/>
+                                    <segment title="Chat"/>
+                                    <segment title="Announcements"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchView:" destination="5s9-qY-M6h" eventType="valueChanged" id="DTE-jB-Jed"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUn-RW-VRP">
+                                <rect key="frame" x="0.0" y="154" width="393" height="615"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iKn-nw-sck"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JUn-RW-VRP" firstAttribute="leading" secondItem="iKn-nw-sck" secondAttribute="leading" id="5cU-il-s7g"/>
+                            <constraint firstItem="pjD-zI-N7E" firstAttribute="top" secondItem="iKn-nw-sck" secondAttribute="top" constant="10" id="AUn-mv-2gu"/>
+                            <constraint firstItem="pjD-zI-N7E" firstAttribute="leading" secondItem="iKn-nw-sck" secondAttribute="leading" constant="10" id="Ca4-2z-WnX"/>
+                            <constraint firstItem="iKn-nw-sck" firstAttribute="trailing" secondItem="JUn-RW-VRP" secondAttribute="trailing" id="Cuw-uA-u5e"/>
+                            <constraint firstItem="JUn-RW-VRP" firstAttribute="top" secondItem="pjD-zI-N7E" secondAttribute="bottom" constant="10" id="DEe-Mj-Iy1"/>
+                            <constraint firstItem="iKn-nw-sck" firstAttribute="bottom" secondItem="JUn-RW-VRP" secondAttribute="bottom" id="T49-Ss-UxA"/>
+                            <constraint firstItem="iKn-nw-sck" firstAttribute="trailing" secondItem="pjD-zI-N7E" secondAttribute="trailing" constant="10" id="gPo-kJ-QzL"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="djd-gG-wn9"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="djd-gG-wn9"/>
+                    <connections>
+                        <outlet property="viewContainer" destination="JUn-RW-VRP" id="Hnj-0P-R8m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="djC-96-01Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3230" y="3670"/>
+            <point key="canvasLocation" x="-3231.2977099236641" y="3669.7183098591549"/>
         </scene>
         <!--Your Projects-->
         <scene sceneID="Hl7-kX-Egc">
