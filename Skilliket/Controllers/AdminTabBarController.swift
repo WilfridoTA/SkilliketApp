@@ -1,19 +1,13 @@
 //
-//  ProjectNewsViewController.swift
+//  AdminTabBarController.swift
 //  Skilliket
 //
-//  Created by Will on 12/10/24.
+//  Created by Astrea Polaris on 13/10/24.
 //
 
 import UIKit
 
-class ProjectNewsViewController: UIViewController {
-    var ourApp:App?
-    var actualMember:Member?
-    var actualProject:Project?
-    
-    @IBOutlet weak var projectNewsTable: UITableView!
-    
+class AdminTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

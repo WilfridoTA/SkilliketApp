@@ -9,8 +9,12 @@ import UIKit
 
 class TermsConditionsVC: UIViewController {
 
+    var terms:TermsAndConditions?
+    @IBOutlet var textLabel: UILabel!
     @IBOutlet var miniView: UIView!
     @IBOutlet var scrollView: UIScrollView!
+    var accepted=false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,17 +26,32 @@ class TermsConditionsVC: UIViewController {
 
         scrollView.showsVerticalScrollIndicator=true
         // Do any additional setup after loading the view.
+        
+        Task {
+            do {
+                terms = try await TerminosCondicionesJSON.fetchTerminos()
+                textLabel.text="\(terms!.content) \nLast updated: \(terms!.lastUpdated)"
+            } catch {
+                print("Fetch Terminos failed with error: ")
+            }
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func declineTerms(_ sender: UIButton) {
+        accepted=false
+        performSegue(withIdentifier: "unwindToCreateAccountVC:", sender: self)
     }
-    */
+    @IBAction func acceptTerms(_ sender: UIButton) {
+        accepted=true
+        performSegue(withIdentifier: "unwindToCreateAccountVC:", sender: self)
+    }
+   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinatiomVC=segue.destination as? CreateAccountVC{
+            destinatiomVC.agreeTerms=accepted
+        }
+    }
+
 
 }

@@ -10,7 +10,10 @@ import UIKit
 class PostApproveViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var postApproveTable: UITableView!
-    
+    var ourApp:App?
+    var actualAdmin:Admin?
+    var actualCommunity:Community?
+    var postsArr:[Any]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,11 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
         postApproveTable.layer.shadowOpacity = 0.5
         postApproveTable.layer.shadowOffset = CGSize(width: 4, height: 4)
         postApproveTable.layer.shadowRadius = 6
+        postsArr=getWaitingContentsOfCommunity(community: actualCommunity!)
     }
+    
+    @IBAction func unwindToPostApproveViewController(_ segue: UIStoryboardSegue) {
+        }
     
     
     //MARK: - Funciones de la tabla
@@ -32,7 +39,7 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
     //El tamaño del arreglo nos dira el numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return projectsArr.count //Cantidad de secciones a crear
+        return postsArr!.count //Cantidad de secciones a crear
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,17 +50,53 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = postApproveTable.dequeueReusableCell(withIdentifier: "projectsApproveCell", for: indexPath) as! PostApproveTableViewCell
         
         //Obtenemos el tamaño del arreglo de proyectos
-        let projArr = projectsArr[indexPath.row]
+        let postArr = postsArr![indexPath.row]
         
         //Contenido de cada celda
-        cell.postApproveTitle.text = projArr.projectName
-        cell.postApproveContent.text = projArr.projectDescription
-        cell.postApproveImage.image = UIImage(named: projArr.projImage)
+        if let p=postArr as? Post{
+            cell.postApproveTitle.text = "Post by \(p.creator)"
+            cell.postApproveContent.text = p.text
+            if let im=p.image{
+                cargarImagenDesdeURL(url: im, imageView: cell.postApproveImage)
+            } else{
+                cell.postApproveImage.image = UIImage(systemName: ".square.and.pencil.circle")
+            }
+        } else if let p=postArr as? New{
+            cell.postApproveTitle.text = "Post by \(p.creator)"
+            cell.postApproveContent.text = "\(p.text) \nLink: \(p.link)"
+        }
+        
         
         //Personalizar la imagen
         cell.postApproveImage.layer.cornerRadius = 9
         
         return cell
+    }
+    
+    func getWaitingContentsOfCommunity(community:Community)->[Any]{
+        //te da todos los contenidos (posts, news y reports) de una comunidad
+        var contents:[Any]=[]
+        contents.append(community.waitingPost)
+        contents.append(community.waitingNews)
+        
+        return contents
+    }
+    
+    func cargarImagenDesdeURL(url: URL, imageView: UIImageView) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        guard let data = data, error == nil else {
+            print("Error al cargar la imagen: \(error?.localizedDescription ?? "Sin descripción de error")")
+            return
+        }
+                                             
+        DispatchQueue.main.async {
+            if let image = UIImage(data: data) {
+                imageView.image = image
+            } else {
+                print("No se pudo crear la imagen")
+            }
+        }
+        }.resume()
     }
     
     //Mantener constante el tamaño de cada celda
@@ -72,4 +115,13 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextView=segue.destination as? SelectedPostViewController{
+            nextView.ourApp=ourApp
+            nextView.actualAdmin=actualAdmin
+            nextView.actualCommunity=actualCommunity
+            let index=postApproveTable.indexPathForSelectedRow?.row
+            nextView.actualPost=postsArr![index!]
+        }
+    }
 }

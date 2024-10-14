@@ -16,6 +16,32 @@
 		1F65A76D2CACC47700BFB642 /* UserPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65A76C2CACC47700BFB642 /* UserPostsTableViewCell.swift */; };
 		1F65A7732CACD17500BFB642 /* CreateContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65A7722CACD17500BFB642 /* CreateContentViewController.swift */; };
 		1F65A7752CADF4CD00BFB642 /* UserPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65A7742CADF4CD00BFB642 /* UserPostsViewController.swift */; };
+		1F81CF2B2CBC4291000520EB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF202CBC4291000520EB /* Message.swift */; };
+		1F81CF2C2CBC4291000520EB /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF292CBC4291000520EB /* Water.swift */; };
+		1F81CF2D2CBC4291000520EB /* Noise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF222CBC4291000520EB /* Noise.swift */; };
+		1F81CF2E2CBC4291000520EB /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF242CBC4291000520EB /* Project.swift */; };
+		1F81CF2F2CBC4291000520EB /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF272CBC4291000520EB /* Temperature.swift */; };
+		1F81CF302CBC4291000520EB /* Forum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF1D2CBC4291000520EB /* Forum.swift */; };
+		1F81CF312CBC4291000520EB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF1C2CBC4291000520EB /* Data.swift */; };
+		1F81CF332CBC4291000520EB /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF2A2CBC4291000520EB /* Wind.swift */; };
+		1F81CF342CBC4291000520EB /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF212CBC4291000520EB /* New.swift */; };
+		1F81CF352CBC4291000520EB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF282CBC4291000520EB /* User.swift */; };
+		1F81CF362CBC4291000520EB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF232CBC4291000520EB /* Post.swift */; };
+		1F81CF372CBC4291000520EB /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF182CBC4291000520EB /* App.swift */; };
+		1F81CF382CBC4291000520EB /* JSONApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF1E2CBC4291000520EB /* JSONApp.swift */; };
+		1F81CF392CBC4291000520EB /* SkilliketDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF262CBC4291000520EB /* SkilliketDevice.swift */; };
+		1F81CF3A2CBC4291000520EB /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF1F2CBC4291000520EB /* Member.swift */; };
+		1F81CF3B2CBC4291000520EB /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF172CBC4291000520EB /* Admin.swift */; };
+		1F81CF3C2CBC4291000520EB /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF1A2CBC4291000520EB /* Content.swift */; };
+		1F81CF3D2CBC4291000520EB /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF252CBC4291000520EB /* Report.swift */; };
+		1F81CF3E2CBC4291000520EB /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF192CBC4291000520EB /* Community.swift */; };
+		1F81CF402CBC501B000520EB /* DataGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF3F2CBC501B000520EB /* DataGraphViewController.swift */; };
+		1F81CF422CBC52A7000520EB /* AdminTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF412CBC52A7000520EB /* AdminTabBarController.swift */; };
+		1F81CF7A2CBCAEBC000520EB /* Eula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF762CBCAEBC000520EB /* Eula.swift */; };
+		1F81CF7B2CBCAEBC000520EB /* Terminos&Condiciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF782CBCAEBC000520EB /* Terminos&Condiciones.swift */; };
+		1F81CF7C2CBCAEBC000520EB /* EulaJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF772CBCAEBC000520EB /* EulaJSON.swift */; };
+		1F81CF7D2CBCAEBC000520EB /* TerminosCondicionesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */; };
+		1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */; };
 		3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */; };
 		3B1CE98F2CAA437700A96445 /* projectsColorGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98E2CAA437700A96445 /* projectsColorGradient.swift */; };
 		3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */; };
@@ -69,6 +95,32 @@
 		1F65A76C2CACC47700BFB642 /* UserPostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsTableViewCell.swift; sourceTree = "<group>"; };
 		1F65A7722CACD17500BFB642 /* CreateContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentViewController.swift; sourceTree = "<group>"; };
 		1F65A7742CADF4CD00BFB642 /* UserPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsViewController.swift; sourceTree = "<group>"; };
+		1F81CF172CBC4291000520EB /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
+		1F81CF182CBC4291000520EB /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		1F81CF192CBC4291000520EB /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
+		1F81CF1A2CBC4291000520EB /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		1F81CF1C2CBC4291000520EB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		1F81CF1D2CBC4291000520EB /* Forum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forum.swift; sourceTree = "<group>"; };
+		1F81CF1E2CBC4291000520EB /* JSONApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONApp.swift; sourceTree = "<group>"; };
+		1F81CF1F2CBC4291000520EB /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		1F81CF202CBC4291000520EB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1F81CF212CBC4291000520EB /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
+		1F81CF222CBC4291000520EB /* Noise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noise.swift; sourceTree = "<group>"; };
+		1F81CF232CBC4291000520EB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1F81CF242CBC4291000520EB /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		1F81CF252CBC4291000520EB /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		1F81CF262CBC4291000520EB /* SkilliketDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkilliketDevice.swift; sourceTree = "<group>"; };
+		1F81CF272CBC4291000520EB /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		1F81CF282CBC4291000520EB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1F81CF292CBC4291000520EB /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
+		1F81CF2A2CBC4291000520EB /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		1F81CF3F2CBC501B000520EB /* DataGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGraphViewController.swift; sourceTree = "<group>"; };
+		1F81CF412CBC52A7000520EB /* AdminTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabBarController.swift; sourceTree = "<group>"; };
+		1F81CF762CBCAEBC000520EB /* Eula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eula.swift; sourceTree = "<group>"; };
+		1F81CF772CBCAEBC000520EB /* EulaJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaJSON.swift; sourceTree = "<group>"; };
+		1F81CF782CBCAEBC000520EB /* Terminos&Condiciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Terminos&Condiciones.swift"; sourceTree = "<group>"; };
+		1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosCondicionesJSON.swift; sourceTree = "<group>"; };
+		1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
 		3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewController.swift; sourceTree = "<group>"; };
 		3B1CE98E2CAA437700A96445 /* projectsColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectsColorGradient.swift; sourceTree = "<group>"; };
 		3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +236,29 @@
 		3BF11BD52CA728AF00F4C113 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1F81CF762CBCAEBC000520EB /* Eula.swift */,
+				1F81CF772CBCAEBC000520EB /* EulaJSON.swift */,
+				1F81CF782CBCAEBC000520EB /* Terminos&Condiciones.swift */,
+				1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */,
+				1F81CF172CBC4291000520EB /* Admin.swift */,
+				1F81CF182CBC4291000520EB /* App.swift */,
+				1F81CF192CBC4291000520EB /* Community.swift */,
+				1F81CF1A2CBC4291000520EB /* Content.swift */,
+				1F81CF1C2CBC4291000520EB /* Data.swift */,
+				1F81CF1D2CBC4291000520EB /* Forum.swift */,
+				1F81CF1E2CBC4291000520EB /* JSONApp.swift */,
+				1F81CF1F2CBC4291000520EB /* Member.swift */,
+				1F81CF202CBC4291000520EB /* Message.swift */,
+				1F81CF212CBC4291000520EB /* New.swift */,
+				1F81CF222CBC4291000520EB /* Noise.swift */,
+				1F81CF232CBC4291000520EB /* Post.swift */,
+				1F81CF242CBC4291000520EB /* Project.swift */,
+				1F81CF252CBC4291000520EB /* Report.swift */,
+				1F81CF262CBC4291000520EB /* SkilliketDevice.swift */,
+				1F81CF272CBC4291000520EB /* Temperature.swift */,
+				1F81CF282CBC4291000520EB /* User.swift */,
+				1F81CF292CBC4291000520EB /* Water.swift */,
+				1F81CF2A2CBC4291000520EB /* Wind.swift */,
 				3BC3E76B2CA7388E00F106A6 /* CommunitiesColorGradient.swift */,
 				3BAAF77F2CA750C6000C7C75 /* PostColorGradient.swift */,
 				3B5658022CA93F760067F626 /* Communities.swift */,
@@ -227,6 +302,9 @@
 				3B3C8AF42CBB933400C78D03 /* ProjectCommunitiesViewController.swift */,
 				3B3C8AF82CBB967100C78D03 /* ProjectToBeApprovedViewController.swift */,
 				3B3C8AFC2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift */,
+				1F81CF3F2CBC501B000520EB /* DataGraphViewController.swift */,
+				1F81CF412CBC52A7000520EB /* AdminTabBarController.swift */,
+				1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,18 +388,43 @@
 				3B26ADDF2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift in Sources */,
 				3BAAF7802CA750C6000C7C75 /* PostColorGradient.swift in Sources */,
 				3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */,
+				1F81CF7A2CBCAEBC000520EB /* Eula.swift in Sources */,
+				1F81CF7B2CBCAEBC000520EB /* Terminos&Condiciones.swift in Sources */,
+				1F81CF7C2CBCAEBC000520EB /* EulaJSON.swift in Sources */,
+				1F81CF7D2CBCAEBC000520EB /* TerminosCondicionesJSON.swift in Sources */,
 				BB78526B2CB3A58D00DA6452 /* FormCompositionalLayout.swift in Sources */,
 				3B5658002CA92DD30067F626 /* CommunitiesTableViewCell.swift in Sources */,
 				3B5FE86E2CAA190E00706136 /* SelectedPostViewController.swift in Sources */,
 				1F65A76D2CACC47700BFB642 /* UserPostsTableViewCell.swift in Sources */,
+				1F81CF2B2CBC4291000520EB /* Message.swift in Sources */,
+				1F81CF2C2CBC4291000520EB /* Water.swift in Sources */,
+				1F81CF2D2CBC4291000520EB /* Noise.swift in Sources */,
+				1F81CF2E2CBC4291000520EB /* Project.swift in Sources */,
+				1F81CF2F2CBC4291000520EB /* Temperature.swift in Sources */,
+				1F81CF302CBC4291000520EB /* Forum.swift in Sources */,
+				1F81CF312CBC4291000520EB /* Data.swift in Sources */,
+				1F81CF332CBC4291000520EB /* Wind.swift in Sources */,
+				1F81CF342CBC4291000520EB /* New.swift in Sources */,
+				1F81CF352CBC4291000520EB /* User.swift in Sources */,
+				1F81CF362CBC4291000520EB /* Post.swift in Sources */,
+				1F81CF372CBC4291000520EB /* App.swift in Sources */,
+				1F81CF382CBC4291000520EB /* JSONApp.swift in Sources */,
+				1F81CF392CBC4291000520EB /* SkilliketDevice.swift in Sources */,
+				1F81CF3A2CBC4291000520EB /* Member.swift in Sources */,
+				1F81CF3B2CBC4291000520EB /* Admin.swift in Sources */,
+				1F81CF3C2CBC4291000520EB /* Content.swift in Sources */,
+				1F81CF3D2CBC4291000520EB /* Report.swift in Sources */,
+				1F81CF3E2CBC4291000520EB /* Community.swift in Sources */,
 				BB78526E2CB6084400DA6452 /* CreatePostViewController.swift in Sources */,
 				3B26ADDD2CBB21D70025CDB3 /* YourForumsTableViewCell.swift in Sources */,
+				1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */,
 				1F4710EA2CAB365E00442287 /* LoginVC.swift in Sources */,
 				3B3C8AFD2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift in Sources */,
 				3B5FE86A2CAA0A1100706136 /* PostApproveViewController.swift in Sources */,
 				3B3C8AF52CBB933400C78D03 /* ProjectCommunitiesViewController.swift in Sources */,
 				BB7852702CB6139000DA6452 /* CreateReportViewController.swift in Sources */,
 				3B26ADE12CBB2E600025CDB3 /* YourProjectsViewController.swift in Sources */,
+				1F81CF422CBC52A7000520EB /* AdminTabBarController.swift in Sources */,
 				3B2ABABD2CA5D1EC003EF886 /* AppDelegate.swift in Sources */,
 				3B3C8AFB2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift in Sources */,
 				BB7852672CB35FB900DA6452 /* CreateNewsViewController.swift in Sources */,
@@ -341,6 +444,7 @@
 				3B56580A2CA94D4A0067F626 /* PostsTableViewCell.swift in Sources */,
 				3B3C8AF12CBB8A1C00C78D03 /* ProjectNewsViewController.swift in Sources */,
 				3B2ABABF2CA5D1EC003EF886 /* SceneDelegate.swift in Sources */,
+				1F81CF402CBC501B000520EB /* DataGraphViewController.swift in Sources */,
 				1F4710F22CAC9D7E00442287 /* SelectCommunityVC.swift in Sources */,
 				3B5658032CA93F760067F626 /* Communities.swift in Sources */,
 				3B1CE98F2CAA437700A96445 /* projectsColorGradient.swift in Sources */,

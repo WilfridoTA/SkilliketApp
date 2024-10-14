@@ -18,6 +18,7 @@ class CreateNewCommunityViewController: UIViewController, UITextFieldDelegate {
     var descrip:String?
     var selectedCity:String?
     var selectedArea:String?
+    var ourApp:App?
     
     
     override func viewDidLoad() {
@@ -51,12 +52,13 @@ class CreateNewCommunityViewController: UIViewController, UITextFieldDelegate {
         } //Guardamos el valor seleccionado de la ciudad
         
         //Configuramos las opciones de la lista city
-        CityPopUp.menu = UIMenu(children: [
-            UIAction(title: "Select your city.", state: .on, handler: optionClosure),
-            UIAction(title: "Mexico City", handler: optionClosure),
-            UIAction(title: "Monterrey City", handler: optionClosure),
-            UIAction(title: "Canada", handler: optionClosure)
-        ])
+        
+        var menuChildren: [UIAction] = []
+        for i in 0...ourApp!.communities.count-1 {
+            menuChildren.append(UIAction(title: ourApp!.communities[i].city, handler: optionClosure))
+        }
+        
+        CityPopUp.menu = UIMenu(children: menuChildren)
     }
     
     func updateAreaButton(){
@@ -69,38 +71,16 @@ class CreateNewCommunityViewController: UIViewController, UITextFieldDelegate {
         } //Guardamos el valor seleccionado de la ciudad
         
         //-------------- AREA --------------------
-        switch selectedCity{
-        case "Mexico City":
-            areaMenu = [
-                UIAction(title: "Choose city area.", handler: optionClosure),
-                UIAction(title: "Centro", handler: optionClosure),
-                UIAction(title: "Norte", handler: optionClosure),
-                UIAction(title: "Oriente", handler: optionClosure),
-                UIAction(title: "Poniente", handler: optionClosure),
-                UIAction(title: "Sur", handler: optionClosure)
-            ]
-        case "Monterrey City":
-            areaMenu = [
-                UIAction(title: "MTY1", handler: {action in print(action.title)}),
-                UIAction(title: "MTY2", handler: {action in print(action.title)}),
-                UIAction(title: "MTY3", handler: {action in print(action.title)}),
-                UIAction(title: "MTY4", handler: {action in print(action.title)}),
-                UIAction(title: "MTY4", handler: {action in print(action.title)})
-            ]
-            
-        case "Canada":
-            areaMenu = [
-                UIAction(title: "MOOSE1", handler: {action in print(action.title)}),
-                UIAction(title: "MOOSE2", handler: {action in print(action.title)}),
-                UIAction(title: "MOOSE3", handler: {action in print(action.title)}),
-                UIAction(title: "MOOSE4", handler: {action in print(action.title)}),
-                UIAction(title: "MOOSE5", handler: {action in print(action.title)})
-            ]
-        default:
-            areaMenu = [
-                UIAction(title: "Choose a city.", handler: {action in print(action.title)})
-            ]
-        }
+       
+        areaMenu = [
+            UIAction(title: "Choose city area.", handler: optionClosure),
+            UIAction(title: "Center", handler: optionClosure),
+            UIAction(title: "Nort", handler: optionClosure),
+            UIAction(title: "West", handler: optionClosure),
+            UIAction(title: "East", handler: optionClosure),
+            UIAction(title: "South", handler: optionClosure)
+        ]
+        
         
         areaPopUp.menu = UIMenu(children: areaMenu) //Generamos la lista dependiendo de la ciudad
     }
@@ -111,6 +91,28 @@ class CreateNewCommunityViewController: UIViewController, UITextFieldDelegate {
             //Guardamos datos
             name = String(nameTextField.text!)
             descrip = String(descriptionTextField.text!)
+            var country:String
+            if selectedCity=="CDMX" || selectedCity=="Guadalajara" || selectedCity=="Ciudad de Monterrey"{
+                country="México"
+            } else{
+                country="Canadá"
+            }
+            
+            var state:String
+            switch selectedCity{
+            case "CDMX":
+                state="Ciudad de México"
+            case "Guadalajara":
+                state="Jalisco"
+            case "Ciudad de Monterrey":
+                state="Nuevo León"
+            case "Bonnyville":
+                state="Alberta"
+            default:
+                break
+            }
+            
+            let newCommunity=Community(name: nameTextField.text!, country: country, device: <#T##SkilliketDevice#>, state: state, city: selectedCity!, zone: selectedArea!, image: <#T##URL#>)
         }
         
         //Imprimir datos

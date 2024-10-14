@@ -9,6 +9,9 @@ import UIKit
 
 class NetworkStatusViewController: UIViewController {
     
+    var ourApp:App?
+    var actualAdmin:Admin?
+    
     @IBOutlet weak var networkBackground: UIView!
     
 

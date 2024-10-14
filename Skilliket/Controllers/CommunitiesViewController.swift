@@ -9,6 +9,10 @@ import UIKit
 
 class CommunitiesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var ourApp:App?
+    var actualAdmin:Admin?
+    var communitiesArr:[Community?]?
+    
     @IBOutlet weak var communitiesTable: UITableView!
     
     //Aquí estaba el contenido de communities.swift
@@ -25,6 +29,7 @@ class CommunitiesViewController: UIViewController, UITableViewDataSource, UITabl
         communitiesTable.layer.shadowOpacity = 0.5
         communitiesTable.layer.shadowOffset = CGSize(width: 4, height: 4)
         communitiesTable.layer.shadowRadius = 6
+        communitiesArr=ourApp!.communities
     }
     
     
@@ -32,7 +37,7 @@ class CommunitiesViewController: UIViewController, UITableViewDataSource, UITabl
     //El tamaño del arreglo nos dira el numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return communitiesArr.count //Cantidad de secciones a crear
+        return communitiesArr!.count //Cantidad de secciones a crear
     }
     
     //Cada sección tendra exactamente una fila
@@ -44,17 +49,34 @@ class CommunitiesViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = communitiesTable.dequeueReusableCell(withIdentifier: "communitiesCell", for: indexPath) as! CommunitiesTableViewCell
         
         //Obtenemos el tamaño de nuestro arreglo
-        let commAr = communitiesArr[indexPath.row]
+        let commAr = communitiesArr![indexPath.row]
         
         //Modificamos los valores del contenido de nuestra celda
-        cell.communityName.text = commAr.name
-        cell.CommunityLocation.text = commAr.location
-        cell.CommunityImage.image = UIImage(named: commAr.image)
+        cell.communityName.text = commAr!.name
+        cell.CommunityLocation.text = "\(commAr!.country), \(commAr!.city). Zone: \(commAr!.zone)"
+        cargarImagenDesdeURL(url: commAr!.image, imageView: cell.CommunityImage)
         
         //Personalizamos imagen
         cell.CommunityImage.layer.cornerRadius = 18
         
         return cell
+    }
+    
+    func cargarImagenDesdeURL(url: URL, imageView: UIImageView) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        guard let data = data, error == nil else {
+            print("Error al cargar la imagen: \(error?.localizedDescription ?? "Sin descripción de error")")
+            return
+        }
+                                             
+        DispatchQueue.main.async {
+            if let image = UIImage(data: data) {
+                imageView.image = image
+            } else {
+                print("No se pudo crear la imagen")
+            }
+        }
+        }.resume()
     }
     
     //Mantener constante el tamaño de cada celda
@@ -72,4 +94,9 @@ class CommunitiesViewController: UIViewController, UITableViewDataSource, UITabl
     }
     */
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextView=segue.destination as? CreateNewCommunityViewController{
+            nextView.ourApp=ourApp
+        }
+    }
 }

@@ -12,6 +12,9 @@ class CreateReportViewController: UIViewController{
     private lazy var formContentBuilder = CreateReport()
     private lazy var formCompLayout = FormCompositionalLayout()
     private lazy var dataSource = makeDataSource()
+    var ourApp:App?
+    var actualMember:Member?
+    var actualCommunity:Community?
     
     private lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: formCompLayout.layout)

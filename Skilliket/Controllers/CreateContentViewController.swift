@@ -13,6 +13,10 @@ class CreateContentViewController: UIViewController {
     @IBOutlet var reportButton: UIButton!
     @IBOutlet var newsButton: UIButton!
     @IBOutlet var createView: UIView!
+    var ourApp:App?
+    var actualMember:Member?
+    var actualCommunity:Community?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,5 +71,21 @@ class CreateContentViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinatiomVC=segue.destination as? CreateNewsViewController{
+            destinatiomVC.ourApp=ourApp
+            destinatiomVC.actualCommunity=actualCommunity
+            destinatiomVC.actualMember=actualMember
+        } else if let destinatiomVC=segue.destination as? CreateReportViewController{
+            destinatiomVC.ourApp=ourApp
+            destinatiomVC.actualCommunity=actualCommunity
+            destinatiomVC.actualMember=actualMember
+        } else if let destinatiomVC=segue.destination as? CreatePostViewController{
+            destinatiomVC.ourApp=ourApp
+            destinatiomVC.actualCommunity=actualCommunity
+            destinatiomVC.actualMember=actualMember
+        }
+    }
 
 }

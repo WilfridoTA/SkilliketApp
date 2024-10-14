@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 class CreateNewsViewController: UIViewController{
+    var ourApp:App?
+    var actualMember:Member?
+    var actualCommunity:Community?
     private lazy var formContentBuilder = CreateNews()
     private lazy var formCompLayout = FormCompositionalLayout()
     private lazy var dataSource = makeDataSource()
