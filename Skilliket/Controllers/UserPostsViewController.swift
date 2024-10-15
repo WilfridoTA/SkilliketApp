@@ -50,25 +50,25 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func unwindToNews(unwindSegue: UIStoryboardSegue){}
     
     //MARK: - Funciones de la tabla
-    
     //El tamaño del arreglo nos dira el numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1 //Cantidad de secciones a crear
+        return postsArr!.count //Cantidad de secciones a crear
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postsArr!.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "userPostsCell", for: indexPath) as! UserPostsTableViewCell
         
         //Obtenemos el tamaño del arreglo de proyectos
-        let postArr = postsArr![indexPath.row]
+        let postArr = postsArr![indexPath.section]
         
         //Contenido de cada celda
         if let p=postArr as? Post{
+            cell.title.text = "Report"
             cell.nameMember.text=p.creator
             cell.descriptionPost.text = p.text
             if let im=p.image{
@@ -76,22 +76,51 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             } else{
                 cell.imagePost.image = UIImage(systemName: ".square.and.pencil.circle")
             }
-            cell.timeTypeLabel.text="\(p.dateCreated.day)/\(p.dateCreated.month)/\(p.dateCreated.year) - Post"
+            
+            // Convertir DateComponents a Date
+            let calendar = Calendar.current
+            if let date = calendar.date(from: p.dateCreated) {
+                // Configurar el DateFormatter
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy" // Formato deseado (mm/dd/yyyy)
+
+                // Convertir la fecha a String y asignar al UILabel
+                cell.timeTypeLabel.text = dateFormatter.string(from: date)
+            } else {
+                cell.timeTypeLabel.text = "Fecha no válida"
+            }
+            
             if let i=getMember(name: p.creator)!.profileImage{
                 cargarImagenDesdeURL(url: i, imageView: cell.userImage)
             }
             cell.link.isHidden=true
             
         } else if let p=postArr as? New{
+            cell.title.text = "New"
             cell.nameMember.text=p.creator
             cell.descriptionPost.text = p.text
             cell.imagePost.image = UIImage(systemName: ".newspaper")
-            cell.timeTypeLabel.text="\(p.dateCreated.day)/\(p.dateCreated.month)/\(p.dateCreated.year) - New"
+            
+            // Convertir DateComponents a Date
+            let calendar = Calendar.current
+            if let date = calendar.date(from: p.dateCreated) {
+                // Configurar el DateFormatter
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy" // Formato deseado (mm/dd/yyyy)
+
+                // Convertir la fecha a String y asignar al UILabel
+                cell.timeTypeLabel.text = dateFormatter.string(from: date)
+            } else {
+                cell.timeTypeLabel.text = "Fecha no válida"
+            }
+            
             if let i=getMember(name: p.creator)!.profileImage{
                 cargarImagenDesdeURL(url: i, imageView: cell.userImage)
             }
             cell.link.text="\(p.link)"
+            
         } else if let p=postArr as? Report{
+            cell.title.text = "Report"
             cell.nameMember.text=p.creator
             cell.descriptionPost.text = "\(p.text) \nLocation: \(p.location)"
             if let im=p.image{
@@ -99,7 +128,20 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             } else{
                 cell.imagePost.image = UIImage(systemName: ".document")
             }
-            cell.timeTypeLabel.text="\(p.dateCreated.day)/\(p.dateCreated.month)/\(p.dateCreated.year) - Report"
+            
+            // Convertir DateComponents a Date
+            let calendar = Calendar.current
+            if let date = calendar.date(from: p.dateCreated) {
+                // Configurar el DateFormatter
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM/dd/yyyy" // Formato deseado (mm/dd/yyyy)
+
+                // Convertir la fecha a String y asignar al UILabel
+                cell.timeTypeLabel.text = dateFormatter.string(from: date)
+            } else {
+                cell.timeTypeLabel.text = "Fecha no válida"
+            }
+            
             if let i=getMember(name: p.creator)!.profileImage{
                 cargarImagenDesdeURL(url: i, imageView: cell.userImage)
             }
@@ -134,7 +176,7 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             }
             
             for i in 0...community.reports!.count-1{
-                contents.append(community.approvedProjects![i])
+                contents.append(community.reports![i])
             }
             
             return contents
@@ -155,6 +197,11 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             }
         }
         }.resume()
+    }
+    
+    //Mantener constante el tamaño de cada celda
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250 //150 Será el tamaño para todas las tablas
     }
 
     /*

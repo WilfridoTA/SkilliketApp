@@ -65,20 +65,22 @@ class YourForumsViewController: UIViewController, UITableViewDataSource, UITable
     }
     */
 
+    //MARK: - Funciones de la tabla
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1 //Cantidad de secciones a crear
+        return forumsArr!.count //Cantidad de secciones a crear
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return forumsArr!.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = yourForumsTable.dequeueReusableCell(withIdentifier: "yourForumsCell", for: indexPath) as! YourForumsTableViewCell
         
         //Obtenemos el tamaño del arreglo de proyectos
-        let forArr = forumsArr![indexPath.row]
+        let forArr = forumsArr![indexPath.section]
+        
         cell.yourForumsDescription.text=forArr.description
         cell.yourForumsLocation.text=forArr.location
         cell.yourForumsName.text=forArr.name
@@ -103,6 +105,11 @@ class YourForumsViewController: UIViewController, UITableViewDataSource, UITable
             }
         }
         }.resume()
+    }
+    
+    //Mantener constante el tamaño de cada celda
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150 //150 Será el tamaño para todas las tablas
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

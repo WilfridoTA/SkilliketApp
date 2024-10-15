@@ -53,18 +53,25 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
         let postArr = postsArr![indexPath.row]
         
         //Contenido de cada celda
-        if let p=postArr as? Post{
-            cell.postApproveTitle.text = "Post by \(p.creator)"
-            cell.postApproveContent.text = p.text
-            if let im=p.image{
-                cargarImagenDesdeURL(url: im, imageView: cell.postApproveImage)
-            } else{
-                cell.postApproveImage.image = UIImage(systemName: ".square.and.pencil.circle")
+        if let posts = postArr as? [Skilliket.Post] {
+            for p in posts {
+                cell.postApproveTitle.text = "Post by \(p.creator)"
+                cell.postApproveContent.text = p.text
+                if let im = p.image {
+                    cargarImagenDesdeURL(url: im, imageView: cell.postApproveImage)
+                } else {
+                    cell.postApproveImage.image = UIImage(systemName: ".square.and.pencil.circle")
+                }
             }
-        } else if let p=postArr as? New{
-            cell.postApproveTitle.text = "Post by \(p.creator)"
-            cell.postApproveContent.text = "\(p.text) \nLink: \(p.link)"
+        } else if let news = postArr as? [Skilliket.New] {
+            for p in news {
+                cell.postApproveTitle.text = "Post by \(p.creator)"
+                cell.postApproveContent.text = "\(p.text) \nLink: \(p.link)"
+            }
+        } else {
+            print("Tipo desconocido en postArr")
         }
+
         
         
         //Personalizar la imagen

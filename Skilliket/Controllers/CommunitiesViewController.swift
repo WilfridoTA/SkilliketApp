@@ -53,7 +53,7 @@ class CommunitiesViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = communitiesTable.dequeueReusableCell(withIdentifier: "communitiesCell", for: indexPath) as! CommunitiesTableViewCell
         
         //Obtenemos el tamaño de nuestro arreglo
-        let commAr = communitiesArr![indexPath.row]
+        let commAr = communitiesArr![indexPath.section]
         
         //Modificamos los valores del contenido de nuestra celda
         cell.communityName.text = commAr!.name

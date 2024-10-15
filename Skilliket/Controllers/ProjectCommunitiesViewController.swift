@@ -13,6 +13,7 @@ class ProjectCommunitiesViewController: UIViewController,UITableViewDataSource, 
     var ourApp:App?
     var actualAdmin:Admin?
     var communitiesArr:[Community]?
+    var waitingProjects:[Project]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
