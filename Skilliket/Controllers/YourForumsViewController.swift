@@ -24,6 +24,12 @@ class YourForumsViewController: UIViewController, UITableViewDataSource, UITable
         yourForumsTable.dataSource=self
         yourForumsTable.delegate=self
         
+        //Personalizamos las celdas
+        yourForumsTable.layer.shadowColor = UIColor.black.cgColor
+        yourForumsTable.layer.shadowOpacity = 0.5
+        yourForumsTable.layer.shadowOffset = CGSize(width: 4, height: 4)
+        yourForumsTable.layer.shadowRadius = 6
+        
         if let member=actualMember{
             actualCommunity=getCommunityOfMember(member: member)
         }
@@ -109,7 +115,7 @@ class YourForumsViewController: UIViewController, UITableViewDataSource, UITable
     
     //Mantener constante el tamaño de cada celda
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150 //150 Será el tamaño para todas las tablas
+        return 200 //150 Será el tamaño para todas las tablas
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
