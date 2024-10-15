@@ -13,13 +13,13 @@ class Project: Codable{
     let creator:String
     var news:[New]?
     var chat:[Message]?
-    var announcements:[Content]?
+    var announcements:[Post]?
     var members:[String]?
     var category:[Categories]
     var imagen: URL
     var approved:ApprovedState
     
-    init(name: String, description: String, creator: String, news: [New]?, chat: [Message]?, announcements: [Content]?, members: [String]?, category: [Categories], imagen: URL, approved: ApprovedState) {
+    init(name: String, description: String, creator: String, news: [New]?, chat: [Message]?, announcements: [Post]?, members: [String]?, category: [Categories], imagen: URL, approved: ApprovedState) {
         self.name = name
         self.description = description
         self.creator = creator

@@ -7,29 +7,50 @@
 
 import UIKit
 
-class ProjectNewsViewController: UIViewController {
+class ProjectNewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var ourApp:App?
     var actualMember:Member?
     var actualProject:Project?
+    var newsArr:[New]?
     
     @IBOutlet weak var projectNewsTable: UITableView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        projectNewsTable.dataSource=self
+        projectNewsTable.delegate=self
+        newsArr=actualProject!.news
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    */
+    
+    //Cada sección tendra una fila
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return newsArr!.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = projectNewsTable.dequeueReusableCell(withIdentifier: "projectNewsCell", for: indexPath) as! ProjectNewsTableViewCell
+        
+        let arreglo = newsArr![indexPath.row]
+        
+        cell.projectNewsDate.text = "\(arreglo.dateCreated.day)/\(arreglo.dateCreated.month)/\(arreglo.dateCreated.year)"
+        
+        return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nextView=segue.destination as? ProjectAnnouncementViewController{
+            nextView.ourApp=ourApp
+            nextView.actualMember=actualMember
+            nextView.actualProject=actualProject
+        }
+    }
 
 }

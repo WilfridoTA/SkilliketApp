@@ -112,7 +112,7 @@ class CreateNewCommunityViewController: UIViewController, UITextFieldDelegate {
                 break
             }
             
-            let newCommunity=Community(name: nameTextField.text!, country: country, device: <#T##SkilliketDevice#>, state: state, city: selectedCity!, zone: selectedArea!, image: <#T##URL#>)
+            //let newCommunity=Community(name: nameTextField.text!, country: country, device: <#T##SkilliketDevice#>, state: state, city: selectedCity!, zone: selectedArea!, image: <#T##URL#>)
         }
         
         //Imprimir datos
