@@ -925,12 +925,11 @@
                     <navigationItem key="navigationItem" title="Projects" largeTitleDisplayMode="always" id="Ht6-GE-vLk"/>
                     <connections>
                         <outlet property="ProjectCommunitiesTable" destination="lT0-vv-uhX" id="rp7-el-Dyj"/>
-                        <outlet property="projectsTable" destination="lT0-vv-uhX" id="vCf-we-Gbb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V32-cX-PbL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4023.6641221374043" y="1273.943661971831"/>
+            <point key="canvasLocation" x="3098" y="1277"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="cfe-Ji-yHS">
@@ -1026,6 +1025,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="EULA">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="eoK-PN-3Aa" kind="show" id="Qnz-gg-Arx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1086,7 +1088,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGL-Iy-3Jc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5008.3969465648852" y="1601.4084507042255"/>
+            <point key="canvasLocation" x="-1558" y="1954"/>
         </scene>
         <!--Select CommunityVC-->
         <scene sceneID="YXN-te-xvF">
@@ -1238,7 +1240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgt-HB-ivv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5008" y="2345"/>
+            <point key="canvasLocation" x="-1558" y="2697"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="lY7-c8-lvm">
@@ -1473,7 +1475,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcg-cS-mcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="XPy-Qe-lRF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-4095.419847328244" y="1601.4084507042255"/>
+            <point key="canvasLocation" x="-645" y="1954"/>
         </scene>
         <!--Terms ConditionsVC-->
         <scene sceneID="AMm-5h-30H">
@@ -1576,7 +1578,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7U-AA-nIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0Lo-Ij-lQI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3091" y="1601"/>
+            <point key="canvasLocation" x="358" y="1954"/>
         </scene>
         <!--Admin Tab Bar Controller-->
         <scene sceneID="wta-Kp-y3n">
@@ -1655,7 +1657,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IXq-Ub-PVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3095.419847328244" y="1273.943661971831"/>
+            <point key="canvasLocation" x="2170" y="1277"/>
         </scene>
         <!--Network Status-->
         <scene sceneID="diM-MI-obV">
@@ -2904,7 +2906,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SZ5-Bf-JJn">
-                                        <rect key="frame" x="10" y="40" width="343" height="362.33333333333331"/>
+                                        <rect key="frame" x="10" y="40" width="343" height="428.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhI-TV-5tU">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="20.333333333333332"/>
@@ -2935,7 +2937,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Caj-u1-NhN">
-                                                <rect key="frame" x="0.0" y="229" width="343" height="133.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="229" width="343" height="199.66666666666663"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -2951,7 +2953,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="5UO-io-6TN" secondAttribute="bottom" constant="60" id="50R-mq-KvB"/>
                                     <constraint firstItem="5UO-io-6TN" firstAttribute="leading" secondItem="RWk-Aq-ADF" secondAttribute="leading" constant="130" id="5V1-Xu-oAx"/>
-                                    <constraint firstItem="Caj-u1-NhN" firstAttribute="height" secondItem="RWk-Aq-ADF" secondAttribute="height" multiplier="0.2" id="LUp-xT-yxe"/>
+                                    <constraint firstItem="Caj-u1-NhN" firstAttribute="height" secondItem="RWk-Aq-ADF" secondAttribute="height" multiplier="0.3" id="LUp-xT-yxe"/>
                                     <constraint firstAttribute="trailing" secondItem="5UO-io-6TN" secondAttribute="trailing" constant="130" id="NKB-NV-osy"/>
                                     <constraint firstAttribute="trailing" secondItem="SZ5-Bf-JJn" secondAttribute="trailing" constant="40" id="X0V-mf-m2S"/>
                                     <constraint firstItem="SZ5-Bf-JJn" firstAttribute="top" secondItem="RWk-Aq-ADF" secondAttribute="top" constant="40" id="Yqn-xF-sJH"/>
@@ -3130,7 +3132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJy-QW-spK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4976.3358778625952" y="1273.943661971831"/>
+            <point key="canvasLocation" x="4051" y="1277"/>
         </scene>
         <!--Project Approved Details View Controller-->
         <scene sceneID="BRI-9d-lsL">
@@ -3271,7 +3273,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23B-QD-Yca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="PBC-oH-rNL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5921.3740458015263" y="1273.943661971831"/>
+            <point key="canvasLocation" x="4996" y="1277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YOf-YS-VWW">
@@ -3289,7 +3291,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkM-GQ-396" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5935.1145038167933" y="1601.4084507042255"/>
+            <point key="canvasLocation" x="-2483" y="1954"/>
         </scene>
         <!--Eula View Controller-->
         <scene sceneID="DWe-SC-s2p">
@@ -3392,11 +3394,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdu-gI-btI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="GyZ-vJ-HzO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3092" y="2304"/>
+            <point key="canvasLocation" x="358" y="2656"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ROv-fu-l3r"/>
+        <segue reference="Qnz-gg-Arx"/>
+        <segue reference="zqE-6L-qqG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
