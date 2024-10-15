@@ -32,6 +32,10 @@ class CommunitiesViewController: UIViewController, UITableViewDataSource, UITabl
         communitiesArr=ourApp!.communities
     }
     
+    @IBAction func unwindToCommunitiesList(undiwndSegue: UIStoryboardSegue){
+        
+    }
+    
     
     //MARK: - Funciones de la tabla
     //El tamaño del arreglo nos dira el numero de secciones

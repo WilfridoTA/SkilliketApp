@@ -5,6 +5,9 @@
 //  Created by Will on 29/09/24.
 //
 
+//ESTE ARCHIVO FUE CREADO PARA PROBAR LAS FUNCIONALIDADES DE ADMIN
+//              NO USAR EN LA ENTREGA FINAL
+
 import UIKit
 
 class PostsTableViewController: UITableViewController {

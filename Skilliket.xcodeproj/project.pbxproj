@@ -43,7 +43,6 @@
 		1F81CF7D2CBCAEBC000520EB /* TerminosCondicionesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */; };
 		1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */; };
 		3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */; };
-		3B1CE98F2CAA437700A96445 /* projectsColorGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98E2CAA437700A96445 /* projectsColorGradient.swift */; };
 		3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */; };
 		3B26ADDD2CBB21D70025CDB3 /* YourForumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */; };
 		3B26ADDF2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADDE2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift */; };
@@ -64,8 +63,6 @@
 		3B3C8AFB2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AFA2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift */; };
 		3B3C8AFD2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3C8AFC2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift */; };
 		3B5658002CA92DD30067F626 /* CommunitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5657FF2CA92DD30067F626 /* CommunitiesTableViewCell.swift */; };
-		3B5658032CA93F760067F626 /* Communities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5658022CA93F760067F626 /* Communities.swift */; };
-		3B5658082CA94C1D0067F626 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5658072CA94C1D0067F626 /* PostsTableViewController.swift */; };
 		3B56580A2CA94D4A0067F626 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5658092CA94D4A0067F626 /* PostsTableViewCell.swift */; };
 		3B56580C2CA9EF3B0067F626 /* PostsCommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B56580B2CA9EF3B0067F626 /* PostsCommunitiesViewController.swift */; };
 		3B5FE86A2CAA0A1100706136 /* PostApproveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5FE8692CAA0A1100706136 /* PostApproveViewController.swift */; };
@@ -74,6 +71,7 @@
 		3BAAF7802CA750C6000C7C75 /* PostColorGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAAF77F2CA750C6000C7C75 /* PostColorGradient.swift */; };
 		3BC389D42CBE336A0035EE3D /* JoinProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC389D32CBE336A0035EE3D /* JoinProjectViewController.swift */; };
 		3BC389D62CBE33BD0035EE3D /* JoinProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC389D52CBE33BD0035EE3D /* JoinProjectTableViewCell.swift */; };
+		3BC389D82CBE4C960035EE3D /* projectsColorGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC389D72CBE4C960035EE3D /* projectsColorGradient.swift */; };
 		3BC3E7692CA72FDF00F106A6 /* CreateNewCommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3E7682CA72FDF00F106A6 /* CreateNewCommunityViewController.swift */; };
 		3BC3E76C2CA7388E00F106A6 /* CommunitiesColorGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3E76B2CA7388E00F106A6 /* CommunitiesColorGradient.swift */; };
 		3BE325BB2CBA0ABC00791263 /* NewForumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE325BA2CBA0ABC00791263 /* NewForumsViewController.swift */; };
@@ -124,7 +122,6 @@
 		1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosCondicionesJSON.swift; sourceTree = "<group>"; };
 		1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
 		3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewController.swift; sourceTree = "<group>"; };
-		3B1CE98E2CAA437700A96445 /* projectsColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectsColorGradient.swift; sourceTree = "<group>"; };
 		3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsViewController.swift; sourceTree = "<group>"; };
 		3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsTableViewCell.swift; sourceTree = "<group>"; };
 		3B26ADDE2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedForumsTableViewCell.swift; sourceTree = "<group>"; };
@@ -147,8 +144,6 @@
 		3B3C8AFA2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectToBeApprovedTableViewCell.swift; sourceTree = "<group>"; };
 		3B3C8AFC2CBB9E8700C78D03 /* ProjectApprovedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectApprovedDetailsViewController.swift; sourceTree = "<group>"; };
 		3B5657FF2CA92DD30067F626 /* CommunitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesTableViewCell.swift; sourceTree = "<group>"; };
-		3B5658022CA93F760067F626 /* Communities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communities.swift; sourceTree = "<group>"; };
-		3B5658072CA94C1D0067F626 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		3B5658092CA94D4A0067F626 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		3B56580B2CA9EF3B0067F626 /* PostsCommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCommunitiesViewController.swift; sourceTree = "<group>"; };
 		3B5FE8692CAA0A1100706136 /* PostApproveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApproveViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +152,7 @@
 		3BAAF77F2CA750C6000C7C75 /* PostColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostColorGradient.swift; sourceTree = "<group>"; };
 		3BC389D32CBE336A0035EE3D /* JoinProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinProjectViewController.swift; sourceTree = "<group>"; };
 		3BC389D52CBE33BD0035EE3D /* JoinProjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinProjectTableViewCell.swift; sourceTree = "<group>"; };
+		3BC389D72CBE4C960035EE3D /* projectsColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = projectsColorGradient.swift; sourceTree = "<group>"; };
 		3BC3E7682CA72FDF00F106A6 /* CreateNewCommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCommunityViewController.swift; sourceTree = "<group>"; };
 		3BC3E76B2CA7388E00F106A6 /* CommunitiesColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesColorGradient.swift; sourceTree = "<group>"; };
 		3BE325BA2CBA0ABC00791263 /* NewForumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForumsViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +237,7 @@
 		3BF11BD52CA728AF00F4C113 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3BC389D72CBE4C960035EE3D /* projectsColorGradient.swift */,
 				1F81CF762CBCAEBC000520EB /* Eula.swift */,
 				1F81CF772CBCAEBC000520EB /* EulaJSON.swift */,
 				1F81CF782CBCAEBC000520EB /* Terminos&Condiciones.swift */,
@@ -266,8 +263,6 @@
 				1F81CF2A2CBC4291000520EB /* Wind.swift */,
 				3BC3E76B2CA7388E00F106A6 /* CommunitiesColorGradient.swift */,
 				3BAAF77F2CA750C6000C7C75 /* PostColorGradient.swift */,
-				3B5658022CA93F760067F626 /* Communities.swift */,
-				3B1CE98E2CAA437700A96445 /* projectsColorGradient.swift */,
 				1F4710EB2CAB4F6E00442287 /* UserColorGradient.swift */,
 				BB7852642CB3563100DA6452 /* FormModel.swift */,
 				BB78526A2CB3A58D00DA6452 /* FormCompositionalLayout.swift */,
@@ -284,7 +279,6 @@
 				3B2ABABE2CA5D1EC003EF886 /* SceneDelegate.swift */,
 				3BF11BD72CA729A700F4C113 /* CommunitiesViewController.swift */,
 				3BC3E7682CA72FDF00F106A6 /* CreateNewCommunityViewController.swift */,
-				3B5658072CA94C1D0067F626 /* PostsTableViewController.swift */,
 				3B56580B2CA9EF3B0067F626 /* PostsCommunitiesViewController.swift */,
 				3B5FE8692CAA0A1100706136 /* PostApproveViewController.swift */,
 				3B5FE86D2CAA190E00706136 /* SelectedPostViewController.swift */,
@@ -449,17 +443,15 @@
 				3BC3E7692CA72FDF00F106A6 /* CreateNewCommunityViewController.swift in Sources */,
 				BB7852692CB3650000DA6452 /* FormCollectionViewCell.swift in Sources */,
 				BB7852722CB74D8200DA6452 /* CreateForumViewController.swift in Sources */,
+				3BC389D82CBE4C960035EE3D /* projectsColorGradient.swift in Sources */,
 				3B56580A2CA94D4A0067F626 /* PostsTableViewCell.swift in Sources */,
 				3B3C8AF12CBB8A1C00C78D03 /* ProjectNewsViewController.swift in Sources */,
 				3B2ABABF2CA5D1EC003EF886 /* SceneDelegate.swift in Sources */,
 				1F81CF402CBC501B000520EB /* DataGraphViewController.swift in Sources */,
 				1F4710F22CAC9D7E00442287 /* SelectCommunityVC.swift in Sources */,
-				3B5658032CA93F760067F626 /* Communities.swift in Sources */,
-				3B1CE98F2CAA437700A96445 /* projectsColorGradient.swift in Sources */,
 				3BC3E76C2CA7388E00F106A6 /* CommunitiesColorGradient.swift in Sources */,
 				BB7852652CB3563100DA6452 /* FormModel.swift in Sources */,
 				1F65A76B2CACC24500BFB642 /* UserTBC.swift in Sources */,
-				3B5658082CA94C1D0067F626 /* PostsTableViewController.swift in Sources */,
 				3B3C8AED2CBB810D00C78D03 /* ProjectAnnouncementViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
