@@ -9,8 +9,8 @@ import UIKit
 
 class UserPostsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    
     @IBOutlet var table: UITableView!
+    
     var ourApp:App?
     var actualMember:Member?
     var actualCommunity:Community?
@@ -18,6 +18,12 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Pesronalizamos las celdas generadas
+        table.layer.shadowColor = UIColor.black.cgColor
+        table.layer.shadowOpacity = 0.5
+        table.layer.shadowOffset = CGSize(width: 4, height: 4)
+        table.layer.shadowRadius = 6
 
         // Do any additional setup after loading the view.
         
@@ -27,6 +33,8 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
         
         table.dataSource=self
         table.delegate=self
+        
+        
         if let member=actualMember{
             actualCommunity=getCommunityOfMember(member: member)
         }
@@ -74,7 +82,7 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             if let im=p.image{
                 cargarImagenDesdeURL(url: im, imageView: cell.imagePost)
             } else{
-                cell.imagePost.image = UIImage(systemName: ".square.and.pencil.circle")
+                cell.imagePost.image = UIImage(systemName: "square.and.pencil.circle")
             }
             
             // Convertir DateComponents a Date
@@ -99,7 +107,7 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             cell.title.text = "New"
             cell.nameMember.text=p.creator
             cell.descriptionPost.text = p.text
-            cell.imagePost.image = UIImage(systemName: ".newspaper")
+            cell.imagePost.image = UIImage(systemName: "newspaper")
             
             // Convertir DateComponents a Date
             let calendar = Calendar.current
@@ -126,7 +134,7 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             if let im=p.image{
                 cargarImagenDesdeURL(url: im, imageView: cell.imagePost)
             } else{
-                cell.imagePost.image = UIImage(systemName: ".document")
+                cell.imagePost.image = UIImage(systemName: "newspaper")
             }
             
             // Convertir DateComponents a Date
