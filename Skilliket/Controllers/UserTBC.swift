@@ -12,7 +12,9 @@ class UserTBC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let navigationController = self.navigationController {
+            navigationController.setNavigationBarHidden(true, animated: false)
+        }
         
 
 //        if let navigationController = self.navigationController {
