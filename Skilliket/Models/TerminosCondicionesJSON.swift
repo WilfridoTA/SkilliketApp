@@ -22,7 +22,7 @@ class TerminosCondicionesJSON: Codable{
 
 extension TerminosCondicionesJSON{
     static func fetchTerminos() async throws -> TermsAndConditions {
-            var urlComponents = URLComponents(string: "https://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo5/Term&Conditions.json")!
+            var urlComponents = URLComponents(string: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo5/Term&Conditions.json")!
             
             let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
             

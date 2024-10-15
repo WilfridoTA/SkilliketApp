@@ -14,5 +14,6 @@ class FeaturedForumsTableViewCell: UITableViewCell {
     @IBOutlet weak var featuredForumsLocation: UILabel!
     @IBOutlet weak var featuredForumsNumMembers: UILabel!
     @IBOutlet weak var featuredFormsDescription: UILabel!
+    @IBOutlet weak var featuredForumsJoinButton: UIButton!
     
 }

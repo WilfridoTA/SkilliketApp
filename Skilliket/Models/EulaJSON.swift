@@ -22,7 +22,7 @@ class EulaJSON: Codable{
 
 extension EulaJSON{
     static func fetchEula() async throws -> EULA {
-            var urlComponents = URLComponents(string: "https://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo5/EULA.json")!
+            var urlComponents = URLComponents(string: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo5/EULA.json")!
             
             let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
             

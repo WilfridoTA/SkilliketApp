@@ -9,8 +9,8 @@ import UIKit
 
 class ProjectNewsTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var ProjectNewsImage: UIImageView!
-    @IBOutlet weak var projectNewsTitulo: UILabel!
+    @IBOutlet weak var projectNewsDescripcion: UILabel!
+    @IBOutlet weak var projectNewsEnlace: UILabel!
     @IBOutlet weak var projectNewsDate: UILabel!
     
 }

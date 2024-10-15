@@ -114,7 +114,7 @@ final class CreateNews{
                 LabelFormComponent(text: "Type of Content", font: UIFont.systemFont(ofSize: 18, weight: .bold), textColor: .black),
                 TextFormComponent(placeholder: "News", fontColor: .black),
                 LabelFormComponent(text: "Link", font: UIFont.systemFont(ofSize: 18, weight: .bold), textColor: .black),
-                TextFormComponent(placeholder: "https://news.com", fontColor: .lightGray),
+                TextFormComponent(placeholder: "http://news.com", fontColor: .lightGray),
                 TextBoxFormComponent(placeholder: "Insert Text", keyboardType: .default),
                 ButtonFormComponent(title: "Post", top: 250)
                 

@@ -123,14 +123,22 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func getContentsOfCommunity(community:Community)->[Any]{
-        //te da todos los contenidos (posts, news y reports) de una comunidad
-        var contents:[Any]=[]
-        contents.append(community.approvedNews)
-        contents.append(community.approvedPost)
-        contents.append(community.reports)
-        
-        return contents
-    }
+            //te da todos los contenidos (posts, news y reports) de una comunidad
+            var contents:[Any]=[]
+            for i in 0...community.approvedNews!.count-1{
+                contents.append(community.approvedNews![i])
+            }
+            
+            for i in 0...community.approvedPost!.count-1{
+                contents.append(community.approvedPost![i])
+            }
+            
+            for i in 0...community.reports!.count-1{
+                contents.append(community.approvedProjects![i])
+            }
+            
+            return contents
+        }
     
     func cargarImagenDesdeURL(url: URL, imageView: UIImageView) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in

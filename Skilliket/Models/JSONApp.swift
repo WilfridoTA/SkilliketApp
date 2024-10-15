@@ -27,7 +27,7 @@ enum ErrorJSON: Error, LocalizedError{
 
 extension JSONApp{
     static func fetchApp() async throws -> App {
-            var urlComponents = URLComponents(string: "https://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo5/Appjson.json")!
+            var urlComponents = URLComponents(string: "http://martinmolina.com.mx/martinmolina.com.mx/reto_skiliket/Equipo5/Appjson.json")!
             
             let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
             
