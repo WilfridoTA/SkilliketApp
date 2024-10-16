@@ -310,7 +310,27 @@ final class SkilliketTests: XCTestCase {
         }
     }
     
-    
+    func testHU07_CP05_createPost_Success(){
+        let createContentViewController = CreateContentViewController()
+        
+        DispatchQueue.main.async {
+            createContentViewController.loadViewIfNeeded()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            
+                createContentViewController.postButton.sendActions(for: .touchUpInside)
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    let presentedVC = loginVC.presentedViewController
+                    XCTAssertNotNil(presentedVC)
+                    XCTAssertTrue(presentedVC is ShowTermsConditionsViewController)
+                    
+                }
+            }
+        }
+        
+        
+    }
     
 
 
