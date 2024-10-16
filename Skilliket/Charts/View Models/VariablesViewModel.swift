@@ -13,7 +13,7 @@ class VariablesViewModel: ObservableObject {
     @Published var waterData: [WaterData] = []
     @Published var noiseData: [NoiseData] = []
     
-    init(temperatureData: [TemperatureData], windData: [WindData], waterData: [WaterData], noiseData: [NoiseData], skilliketDevice: SkilliketDevice.Type = SkilliketDevice?) {
+    init(temperatureData: [TemperatureData], windData: [WindData], waterData: [WaterData], noiseData: [NoiseData], skilliketDevice: SkilliketDevice? = nil) {
         self.temperatureData = temperatureData
         self.windData = windData
         self.waterData = waterData
@@ -22,10 +22,10 @@ class VariablesViewModel: ObservableObject {
     }
     
     
-    var skilliketDevice = SkilliketDevice?
+    var skilliketDevice:SkilliketDevice?
 
     func loadData() {
-        skilliketDevice.fetchTemperatureMTY()
+        skilliketDevice!.fetchTemperatureMTY()
         fetchWindMTY()
         fetchWaterMTY()
         fetchNoiseMTY()
