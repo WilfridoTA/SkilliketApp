@@ -25,18 +25,33 @@ class ShowTermsConditionsViewController: UIViewController {
         miniView.layer.cornerRadius = 10 // Ajusta según sea necesario
         miniView.clipsToBounds = true
 
-        scrollView.showsVerticalScrollIndicator=true
+        configureScrollView()
         
+        
+    }
+    
+     func configureScrollView() {
+        scrollView.isDirectionalLockEnabled = true
+         scrollView.isScrollEnabled = true
+         scrollView.isPagingEnabled = false
+        
+        scrollView.showsVerticalScrollIndicator = true
+        scrollView.alwaysBounceVertical = true
+        
+        // Establecer el contenidoSize después de cargar el texto
         Task {
             do {
                 terms = try await TerminosCondicionesJSON.fetchTerminos()
-                textLabel.text="\(terms!.content) \nLast updated: \(terms!.lastUpdated)"
+                textLabel.text = "\(terms!.content) \nLast updated: \(terms!.lastUpdated)"
+                
+                DispatchQueue.main.async {
+                    self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.textLabel.frame.height + 20) // Ajusta según sea necesario
+                }
             } catch {
                 print("Fetch Terminos failed with error: ")
             }
         }
     }
-    
 
     /*
     // MARK: - Navigation
