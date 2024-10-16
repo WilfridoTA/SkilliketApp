@@ -83,5 +83,10 @@ class ProjectAnnouncementViewController: UIViewController, UITableViewDataSource
            }
            return member
        }
+    
+    //Mantener constante el tamaño de cada celda
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180 //150 Será el tamaño para todas las tablas
+    }
 
 }
