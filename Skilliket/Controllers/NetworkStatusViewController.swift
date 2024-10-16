@@ -52,7 +52,7 @@ class NetworkStatusViewController: UIViewController {
         let cell = table.dequeueReusableCell(withIdentifier: "networkCell", for: indexPath)
         
         return cell
-    }
+    }*/
      
 
 }
