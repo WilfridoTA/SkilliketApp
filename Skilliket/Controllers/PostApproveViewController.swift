@@ -50,7 +50,7 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = postApproveTable.dequeueReusableCell(withIdentifier: "projectsApproveCell", for: indexPath) as! PostApproveTableViewCell
         
         //Obtenemos el tamaño del arreglo de proyectos
-        let postArr = postsArr![indexPath.row]
+        let postArr = postsArr![indexPath.section]
         
         //Contenido de cada celda
         if let posts = postArr as? [Skilliket.Post] {

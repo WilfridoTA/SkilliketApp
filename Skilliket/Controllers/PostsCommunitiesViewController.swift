@@ -53,7 +53,7 @@ class PostsCommunitiesViewController: UIViewController,UITableViewDataSource, UI
         let cell = postsCommunitiesTable.dequeueReusableCell(withIdentifier: "postsCommunitiesCell", for: indexPath) as! PostsTableViewCell
         
         //Obtenemos el tamaño de nuestro arreglo
-        let commAr = communitiesArr![indexPath.row]
+        let commAr = communitiesArr![indexPath.section]
         
         //Modificamos el contenido de nuestra celda
         cell.CommunityName.text = commAr!.name

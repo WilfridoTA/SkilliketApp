@@ -9,6 +9,9 @@ import UIKit
 
 class NetworkStatusViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let datosPrueba = [1,2,3,5,6,7]
+    
+    
     @IBOutlet var table: UITableView!
     var ourApp:App?
     var actualAdmin:Admin?
@@ -40,10 +43,12 @@ class NetworkStatusViewController: UIViewController, UITableViewDataSource, UITa
         return 1
     }
     
-    /*
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return
+        let cell = table.dequeueReusableCell(withIdentifier: "networkCell", for: indexPath)
+        
+        return cell
     }
-     */
+     
 
 }
