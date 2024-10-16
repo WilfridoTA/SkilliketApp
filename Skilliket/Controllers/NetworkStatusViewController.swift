@@ -7,8 +7,9 @@
 
 import UIKit
 
-class NetworkStatusViewController: UIViewController {
+class NetworkStatusViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var table: UITableView!
     var ourApp:App?
     var actualAdmin:Admin?
     
@@ -27,14 +28,22 @@ class NetworkStatusViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Funciones de la tabla
+    
+    //El tamaño del arreglo nos dira el numero de secciones
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1 //Cantidad de secciones a crear
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    /*
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return
+    }
+     */
 
 }
