@@ -13,5 +13,7 @@ class JoinProjectTableViewCell: UITableViewCell {
     @IBOutlet weak var jointProjectName: UILabel!
     @IBOutlet weak var joinProjectDescription: UILabel!
     
-
+    @IBAction func join(_ sender: UIButton) {
+    }
+    
 }

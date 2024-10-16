@@ -64,6 +64,29 @@ final class SkilliketTests: XCTestCase {
                 XCTAssertNotNil(loginVC.passwordTextField)
                 XCTAssertNotNil(loginVC.usernameTextField)
                             
+                let validUserName = "ReginaM"
+                let invalidPassword = "contraseña"
+                            
+                loginVC.passwordTextField?.text = validUserName
+                loginVC.usernameTextField?.text = invalidPassword
+                            
+                loginVC.loginButton.sendActions(for: .touchUpInside)
+                            
+                XCTAssertNil(loginVC.actualMember)
+            }
+        }
+        
+    }
+    
+    func testHU04_CP01_login_Fail2(){
+        loginVC=LoginVC()
+        DispatchQueue.main.async {
+            loginVC.loadViewIfNeeded()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                XCTAssertNotNil(loginVC.passwordTextField)
+                XCTAssertNotNil(loginVC.usernameTextField)
+                            
                 let invalidUserName = "usuario"
                 let invalidPassword = "contraseña"
                             
@@ -78,7 +101,7 @@ final class SkilliketTests: XCTestCase {
         
     }
     
-    func testHU04_CP02_register_Success(){
+    func testHU01_CP02_register_Success(){
         var registerVC=CreateAccountVC()
         var loginVC=LoginVC()
         DispatchQueue.main.async {
@@ -118,7 +141,7 @@ final class SkilliketTests: XCTestCase {
         }
     }
     
-    func testHU04_CP02_register_Fail(){
+    func testHU01_CP02_register_Fail(){
         var registerVC=CreateAccountVC()
         var loginVC=LoginVC()
         DispatchQueue.main.async {
@@ -153,12 +176,92 @@ final class SkilliketTests: XCTestCase {
                 registerVC.agreeTermsButton.sendActions(for: .touchUpInside)
                 registerVC.eulaButton.sendActions(for: .touchUpInside)
                                             
-                XCTAssertTrue(registerVC.verifyAll())
+                XCTAssertFalse(registerVC.verifyAll())
             }
         }
     }
     
-    func testHU05_CP03_seeTermsAndConditions_Success() {
+    func testHU01_CP02_register_Fail2(){
+        var registerVC=CreateAccountVC()
+        var loginVC=LoginVC()
+        DispatchQueue.main.async {
+            registerVC.loadViewIfNeeded()
+            loginVC.loadViewIfNeeded()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                XCTAssertNotNil(loginVC.passwordTextField)
+                XCTAssertNotNil(loginVC.usernameTextField)
+                XCTAssertNotNil(registerVC.passwordTextField)
+                XCTAssertNotNil(registerVC.usernameTextField)
+                XCTAssertNotNil(registerVC.nameTextField)
+                XCTAssertNotNil(registerVC.lastNameTextField)
+                XCTAssertNotNil(registerVC.emailTextField)
+                XCTAssertNotNil(registerVC.agreeTermsButton)
+                XCTAssertNotNil(registerVC.eulaButton)
+                
+                            
+                let validUsername = "user"
+                let invalidPassword = "cont"
+                let validMail="usuario@gmail.com"
+                let validName="Nombre"
+                let validLastName="Last Name"
+                            
+                registerVC.passwordTextField.text=invalidPassword
+                registerVC.nameTextField.text=validName
+                registerVC.lastNameTextField.text=validLastName
+                registerVC.usernameTextField.text=validUsername
+                registerVC.emailTextField.text=validMail
+                registerVC.ourApp=loginVC.ourApp
+                
+                registerVC.agreeTermsButton.sendActions(for: .touchUpInside)
+                registerVC.eulaButton.sendActions(for: .touchUpInside)
+                                            
+                XCTAssertFalse(registerVC.verifyAll())
+            }
+        }
+    }
+    
+    func testHU01_CP02_register_Fail3(){
+        var registerVC=CreateAccountVC()
+        var loginVC=LoginVC()
+        DispatchQueue.main.async {
+            registerVC.loadViewIfNeeded()
+            loginVC.loadViewIfNeeded()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                XCTAssertNotNil(loginVC.passwordTextField)
+                XCTAssertNotNil(loginVC.usernameTextField)
+                XCTAssertNotNil(registerVC.passwordTextField)
+                XCTAssertNotNil(registerVC.usernameTextField)
+                XCTAssertNotNil(registerVC.nameTextField)
+                XCTAssertNotNil(registerVC.lastNameTextField)
+                XCTAssertNotNil(registerVC.emailTextField)
+                XCTAssertNotNil(registerVC.agreeTermsButton)
+                XCTAssertNotNil(registerVC.eulaButton)
+                
+                            
+                let validUsername = "user"
+                let validPassword = "contraseña-123"
+                let invalidMail="correo"
+                let validName="Nombre"
+                let validLastName="Last Name"
+                            
+                registerVC.passwordTextField.text=validPassword
+                registerVC.nameTextField.text=validName
+                registerVC.lastNameTextField.text=validLastName
+                registerVC.usernameTextField.text=validUsername
+                registerVC.emailTextField.text=invalidMail
+                registerVC.ourApp=loginVC.ourApp
+                
+                registerVC.agreeTermsButton.sendActions(for: .touchUpInside)
+                registerVC.eulaButton.sendActions(for: .touchUpInside)
+                                            
+                XCTAssertFalse(registerVC.verifyAll())
+            }
+        }
+    }
+    
+    func testHU02_CP03_seeTermsAndConditions_Success() {
         let loginVC = LoginVC()
         
         DispatchQueue.main.async {
@@ -179,6 +282,56 @@ final class SkilliketTests: XCTestCase {
             }
         }
     }
+    
+    
+    func testHU02_CP04_agreeTerms_Success(){
+        var registerVC=CreateAccountVC()
+        var loginVC=LoginVC()
+        DispatchQueue.main.async {
+            registerVC.loadViewIfNeeded()
+            loginVC.loadViewIfNeeded()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                XCTAssertNotNil(loginVC.passwordTextField)
+                XCTAssertNotNil(loginVC.usernameTextField)
+                XCTAssertNotNil(registerVC.passwordTextField)
+                XCTAssertNotNil(registerVC.usernameTextField)
+                XCTAssertNotNil(registerVC.nameTextField)
+                XCTAssertNotNil(registerVC.lastNameTextField)
+                XCTAssertNotNil(registerVC.emailTextField)
+                XCTAssertNotNil(registerVC.agreeTermsButton)
+                XCTAssertNotNil(registerVC.eulaButton)
+                
+                registerVC.agreeTermsButton.sendActions(for: .touchUpInside)
+                
+                XCTAssertTrue(registerVC.agreeTerms)
+
+            }
+        }
+    }
+    
+    func testHU07_CP05_createPost_Success(){
+        let createContentViewController = CreateContentViewController()
+        
+        DispatchQueue.main.async {
+            createContentViewController.loadViewIfNeeded()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            
+                createContentViewController.postButton.sendActions(for: .touchUpInside)
+
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    let presentedVC = loginVC.presentedViewController
+                    XCTAssertNotNil(presentedVC)
+                    XCTAssertTrue(presentedVC is ShowTermsConditionsViewController)
+                    
+                }
+            }
+        }
+        
+        
+    }
+    
 
 
 }
