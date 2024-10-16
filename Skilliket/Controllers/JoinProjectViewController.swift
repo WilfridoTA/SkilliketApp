@@ -70,8 +70,7 @@ class JoinProjectViewController: UIViewController, UITableViewDataSource, UITabl
     }
     */
 
-    //si se une al projecto debe actualizarse en miApp y enviarla en el segue de regreso
-    
+    //si se une al projecto debe actualizarse en miApp y enviarla en el segue de regreso    
     //MARK: - Tabla
     func numberOfSections(in tableView: UITableView) -> Int {
         return joinProjectsArr!.count
@@ -114,5 +113,5 @@ class JoinProjectViewController: UIViewController, UITableViewDataSource, UITabl
         }
         }.resume()
     }
-    
+
 }
