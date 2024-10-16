@@ -8,7 +8,6 @@
 import UIKit
 
 class NetworkStatusViewController: UIViewController {
-
     var ourApp:App?
     var actualAdmin:Admin?
     var networkStatuses:Statuses?
@@ -23,6 +22,4 @@ class NetworkStatusViewController: UIViewController {
         }
         
     }
-    
-
 }

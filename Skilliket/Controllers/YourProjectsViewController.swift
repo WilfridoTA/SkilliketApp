@@ -112,6 +112,9 @@ class YourProjectsViewController: UIViewController, UITableViewDataSource, UITab
             nextView.actualMember=actualMember
             let index=yourProjectsTable.indexPathForSelectedRow?.row
             nextView.actualProject=projectsArr![index!]
+        }else if let nextview = segue.destination as? JoinProjectViewController{
+            nextview.ourApp = ourApp
+            nextview.actualMember = actualMember
         }
     }
     /*

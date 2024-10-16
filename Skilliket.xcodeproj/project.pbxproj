@@ -44,9 +44,12 @@
 		1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */; };
 		1FB241B32CBF75460044009E /* ShowTermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */; };
 		1FB241B52CBF76BD0044009E /* ShowEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */; };
+
 		1FB241C42CBF8A540044009E /* NetworkStatusJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */; };
+
 		1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */; };
 		1FD464CF2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */; };
+		1FD464E62CBF4E1400CBDB49 /* ForumChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464E52CBF4E1400CBDB49 /* ForumChatTableViewCell.swift */; };
 		3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */; };
 		3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */; };
 		3B26ADDD2CBB21D70025CDB3 /* YourForumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */; };
@@ -142,6 +145,7 @@
 		1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusJSON.swift; sourceTree = "<group>"; };
 		1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectUserViewController.swift; sourceTree = "<group>"; };
 		1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusTableViewCell.swift; sourceTree = "<group>"; };
+		1FD464E52CBF4E1400CBDB49 /* ForumChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumChatTableViewCell.swift; sourceTree = "<group>"; };
 		3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewController.swift; sourceTree = "<group>"; };
 		3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsViewController.swift; sourceTree = "<group>"; };
 		3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsTableViewCell.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 				3B3C8AFA2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift */,
 				3BC389D52CBE33BD0035EE3D /* JoinProjectTableViewCell.swift */,
 				1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */,
+				1FD464E52CBF4E1400CBDB49 /* ForumChatTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -515,6 +520,7 @@
 				3B2ABABD2CA5D1EC003EF886 /* AppDelegate.swift in Sources */,
 				3B3C8AFB2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift in Sources */,
 				BB7852672CB35FB900DA6452 /* CreateNewsViewController.swift in Sources */,
+				1FD464E62CBF4E1400CBDB49 /* ForumChatTableViewCell.swift in Sources */,
 				3B3C8AF32CBB8A7300C78D03 /* ProjectNewsTableViewCell.swift in Sources */,
 				3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */,
 				1F65A7752CADF4CD00BFB642 /* UserPostsViewController.swift in Sources */,
@@ -734,6 +740,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WL325SH584;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Skilliket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -750,7 +757,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -761,6 +768,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WL325SH584;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Skilliket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -777,7 +785,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
