@@ -2575,7 +2575,7 @@
                                         <imageReference key="image" image="megaphone.fill" catalog="system" symbolScale="large"/>
                                     </buttonConfiguration>
                                     <connections>
-                                        <segue destination="h4h-gT-6Gi" kind="show" id="9rK-F4-Thp"/>
+                                        <segue destination="h4h-gT-6Gi" kind="show" id="1tM-a9-ImU"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
@@ -2588,7 +2588,7 @@
                                         <imageReference key="image" image="bubble.right.circle.fill" catalog="system" symbolScale="large"/>
                                     </buttonConfiguration>
                                     <connections>
-                                        <segue destination="b5n-I0-AF1" kind="show" id="2kZ-cX-cP0"/>
+                                        <segue destination="b5n-I0-AF1" kind="show" id="cYy-GG-eQr"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
