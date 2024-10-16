@@ -17,6 +17,8 @@ class ProjectCommunitiesViewController: UIViewController,UITableViewDataSource, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ProjectCommunitiesTable.dataSource=self
+        ProjectCommunitiesTable.delegate=self
 
         // Do any additional setup after loading the view.
         communitiesArr=ourApp!.communities
@@ -42,7 +44,7 @@ class ProjectCommunitiesViewController: UIViewController,UITableViewDataSource, 
         let cell = ProjectCommunitiesTable.dequeueReusableCell(withIdentifier: "projectCommunitiesCell", for: indexPath) as! ProjectCommunitiesTableViewCell
         
         //Obtenemos el tamaño de nuestro arreglo
-        let commAr = communitiesArr![indexPath.row]
+        let commAr = communitiesArr![indexPath.section]
         
         //Modificamos el contenido de nuestra celda
         cell.projectCommunitiesName.text = commAr.name

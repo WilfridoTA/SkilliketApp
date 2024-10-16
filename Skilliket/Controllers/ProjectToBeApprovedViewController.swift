@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProjectToBeApprovedViewController: UIViewController {
+class ProjectToBeApprovedViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var projectToApprovedTable: UITableView!
     var ourApp:App?
@@ -16,6 +16,9 @@ class ProjectToBeApprovedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        projectToApprovedTable.dataSource=self
+        projectToApprovedTable.delegate=self
 
         // Do any additional setup after loading the view.
         projectsArr=actualCommunity!.waitingProjects
@@ -37,7 +40,7 @@ class ProjectToBeApprovedViewController: UIViewController {
         let cell = projectToApprovedTable.dequeueReusableCell(withIdentifier: "projectsToApproveCell", for: indexPath) as! ProjectToBeApprovedTableViewCell
         
         //Obtenemos el tamaño de nuestro arreglo
-        let commAr = projectsArr![indexPath.row]
+        let commAr = projectsArr![indexPath.section]
         
         //Modificamos el contenido de nuestra celda
         cell.projectApprovedName.text = commAr.name
