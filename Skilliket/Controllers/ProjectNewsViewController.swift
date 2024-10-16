@@ -38,9 +38,11 @@ class ProjectNewsViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = projectNewsTable.dequeueReusableCell(withIdentifier: "projectNewsCell", for: indexPath) as! ProjectNewsTableViewCell
         
-        let arreglo = newsArr![indexPath.row]
+        let arreglo = newsArr![indexPath.section]
         
-        cell.projectNewsDate.text = "\(arreglo.dateCreated.day)/\(arreglo.dateCreated.month)/\(arreglo.dateCreated.year)"
+        cell.projectNewsDescripcion.text=arreglo.text
+        cell.projectNewsEnlace.text="\(arreglo.link)"
+        cell.projectNewsDate.text = "\(arreglo.dateCreated.day!)/\(arreglo.dateCreated.month!)/\(arreglo.dateCreated.year!)"
         
         return cell
     }
