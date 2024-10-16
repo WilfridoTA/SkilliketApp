@@ -815,44 +815,17 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="MCJ-iH-cCh">
-                                                            <rect key="frame" x="40" y="250" width="273" height="40"/>
+                                                            <rect key="frame" x="40" y="255.66666666666666" width="273" height="34.333333333333343"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8U-pb-fvw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="273" height="34.333333333333336"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" title="Show more…"/>
                                                                     <connections>
                                                                         <segue destination="Sfz-sd-QiS" kind="show" id="5N0-W8-i2j"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkJ-HS-YCa">
-                                                                    <rect key="frame" x="150.66666666666666" y="0.0" width="53" height="40"/>
-                                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="40" id="Ety-Tr-360"/>
-                                                                    </constraints>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="checkmark" catalog="system" symbolScale="large"/>
-                                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </buttonConfiguration>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLE-g8-Hba">
-                                                                    <rect key="frame" x="218.66666666666669" y="0.0" width="54.333333333333314" height="40"/>
-                                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="40" id="JQj-wV-IA5"/>
-                                                                    </constraints>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
-                                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </buttonConfiguration>
-                                                                </button>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="GLE-g8-Hba" firstAttribute="height" secondItem="xkJ-HS-YCa" secondAttribute="height" id="6i1-YS-89E"/>
-                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
@@ -2577,32 +2550,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LVD-SF-YHV">
-                                                    <rect key="frame" x="120" y="160" width="108.66666666666669" height="35"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zon-Sy-LRe">
-                                                            <rect key="frame" x="0.0" y="0.33333333333334281" width="49.333333333333336" height="34.333333333333336"/>
-                                                            <color key="tintColor" systemColor="systemGreenColor"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain">
-                                                                <imageReference key="image" image="hand.thumbsup.fill" catalog="system" symbolScale="large"/>
-                                                            </buttonConfiguration>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYI-f7-TTY">
-                                                            <rect key="frame" x="59.333333333333343" y="0.33333333333334281" width="49.333333333333343" height="34.333333333333336"/>
-                                                            <color key="tintColor" systemColor="systemRedColor"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain">
-                                                                <imageReference key="image" image="hand.thumbsdown.fill" catalog="system" symbolScale="large"/>
-                                                            </buttonConfiguration>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.91372549530000002" green="0.91372549530000002" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="LVD-SF-YHV" secondAttribute="bottom" constant="5" id="FlX-Ja-Xdn"/>
-                                                <constraint firstItem="LVD-SF-YHV" firstAttribute="top" secondItem="CgB-5l-yhg" secondAttribute="bottom" constant="5" id="H0b-Se-y6M"/>
                                                 <constraint firstItem="MXW-Vo-XZs" firstAttribute="leading" secondItem="b8o-i9-h5z" secondAttribute="leading" constant="10" id="Hhc-d0-qOZ"/>
                                                 <constraint firstItem="CgB-5l-yhg" firstAttribute="top" secondItem="b8o-i9-h5z" secondAttribute="top" constant="15" id="LzX-kb-gbE"/>
                                                 <constraint firstItem="mb1-Dk-rNZ" firstAttribute="height" secondItem="b8o-i9-h5z" secondAttribute="height" multiplier="0.45" id="UUT-3Z-nWr"/>
@@ -2612,7 +2562,6 @@
                                                 <constraint firstItem="z41-It-lkP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="b8o-i9-h5z" secondAttribute="leading" constant="20" symbolic="YES" id="YEZ-uu-96S"/>
                                                 <constraint firstItem="MQs-z8-J3q" firstAttribute="height" secondItem="b8o-i9-h5z" secondAttribute="height" multiplier="0.2" id="kBK-0w-zfC"/>
                                                 <constraint firstItem="MQs-z8-J3q" firstAttribute="width" secondItem="b8o-i9-h5z" secondAttribute="width" multiplier="0.65" id="ndf-q0-MSQ"/>
-                                                <constraint firstItem="LVD-SF-YHV" firstAttribute="leading" secondItem="b8o-i9-h5z" secondAttribute="leading" constant="120" id="trb-Ci-AJQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="z41-It-lkP" secondAttribute="trailing" constant="10" id="yYp-yY-oCm"/>
                                                 <constraint firstItem="MXW-Vo-XZs" firstAttribute="top" secondItem="b8o-i9-h5z" secondAttribute="top" constant="30" id="yav-oo-gte"/>
                                             </constraints>
@@ -3435,44 +3384,17 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Uof-nu-Kr0">
-                                                            <rect key="frame" x="40" y="250" width="273" height="40"/>
+                                                            <rect key="frame" x="40" y="255.66666666666666" width="273" height="34.333333333333343"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsP-Iw-EUZ">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="135.66666666666666" height="40"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="273" height="34.333333333333336"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" title="Show more…"/>
                                                                     <connections>
                                                                         <segue destination="78B-QV-KiH" kind="show" id="Fed-VJ-jxb"/>
                                                                     </connections>
                                                                 </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2A0-rJ-HlJ">
-                                                                    <rect key="frame" x="150.66666666666666" y="0.0" width="53" height="40"/>
-                                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="40" id="4n8-mH-Dfh"/>
-                                                                    </constraints>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="checkmark" catalog="system" symbolScale="large"/>
-                                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </buttonConfiguration>
-                                                                </button>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64m-uc-za8">
-                                                                    <rect key="frame" x="218.66666666666669" y="0.0" width="54.333333333333314" height="40"/>
-                                                                    <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="40" id="cWo-hb-Uzb"/>
-                                                                    </constraints>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain">
-                                                                        <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
-                                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    </buttonConfiguration>
-                                                                </button>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="64m-uc-za8" firstAttribute="height" secondItem="2A0-rJ-HlJ" secondAttribute="height" id="VZz-fO-CaZ"/>
-                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
@@ -3943,8 +3865,6 @@
         <image name="exclamationmark.bubble.fill" catalog="system" width="128" height="110"/>
         <image name="folder" catalog="system" width="128" height="96"/>
         <image name="folder.badge.plus" catalog="system" width="128" height="93"/>
-        <image name="hand.thumbsdown.fill" catalog="system" width="128" height="121"/>
-        <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="location.circle.fill" catalog="system" width="128" height="123"/>
         <image name="megaphone.fill" catalog="system" width="128" height="112"/>
