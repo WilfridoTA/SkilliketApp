@@ -29,6 +29,8 @@ class CreateNewCommunityViewController: UIViewController, UITextFieldDelegate {
         //Mandamos a llamar el pop up button
         setUpCityButton()
         updateAreaButton()
+        
+        hideKeyboardWhenTappedAround()
     }
     
     //MARK: - Cerrar tecladodo

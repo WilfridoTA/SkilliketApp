@@ -42,6 +42,8 @@
 		1F81CF7C2CBCAEBC000520EB /* EulaJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF772CBCAEBC000520EB /* EulaJSON.swift */; };
 		1F81CF7D2CBCAEBC000520EB /* TerminosCondicionesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */; };
 		1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */; };
+		1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */; };
+		1FD464CF2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */; };
 		3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */; };
 		3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */; };
 		3B26ADDD2CBB21D70025CDB3 /* YourForumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */; };
@@ -121,6 +123,8 @@
 		1F81CF782CBCAEBC000520EB /* Terminos&Condiciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Terminos&Condiciones.swift"; sourceTree = "<group>"; };
 		1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosCondicionesJSON.swift; sourceTree = "<group>"; };
 		1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
+		1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectUserViewController.swift; sourceTree = "<group>"; };
+		1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusTableViewCell.swift; sourceTree = "<group>"; };
 		3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewController.swift; sourceTree = "<group>"; };
 		3B26ADD62CBB1CA80025CDB3 /* YourForumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsViewController.swift; sourceTree = "<group>"; };
 		3B26ADDC2CBB21D70025CDB3 /* YourForumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourForumsTableViewCell.swift; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 				3B3C8AF62CBB938900C78D03 /* ProjectCommunitiesTableViewCell.swift */,
 				3B3C8AFA2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift */,
 				3BC389D52CBE33BD0035EE3D /* JoinProjectTableViewCell.swift */,
+				1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				1F81CF412CBC52A7000520EB /* AdminTabBarController.swift */,
 				1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */,
 				3BC389D32CBE336A0035EE3D /* JoinProjectViewController.swift */,
+				1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 				1F81CF392CBC4291000520EB /* SkilliketDevice.swift in Sources */,
 				1F81CF3A2CBC4291000520EB /* Member.swift in Sources */,
 				1F81CF3B2CBC4291000520EB /* Admin.swift in Sources */,
+				1FD464CF2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift in Sources */,
 				3BC389D62CBE33BD0035EE3D /* JoinProjectTableViewCell.swift in Sources */,
 				1F81CF3C2CBC4291000520EB /* Content.swift in Sources */,
 				1F81CF3D2CBC4291000520EB /* Report.swift in Sources */,
@@ -435,6 +442,7 @@
 				1F65A7752CADF4CD00BFB642 /* UserPostsViewController.swift in Sources */,
 				3B3C8AEF2CBB817300C78D03 /* ProjectAnnouncementTableViewCell.swift in Sources */,
 				3B56580C2CA9EF3B0067F626 /* PostsCommunitiesViewController.swift in Sources */,
+				1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */,
 				3B3C8AF92CBB967200C78D03 /* ProjectToBeApprovedViewController.swift in Sources */,
 				3BF11BD82CA729A700F4C113 /* CommunitiesViewController.swift in Sources */,
 				3B3C8AF72CBB938900C78D03 /* ProjectCommunitiesTableViewCell.swift in Sources */,
