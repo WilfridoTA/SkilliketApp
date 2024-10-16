@@ -46,6 +46,7 @@
 		1FB241B32CBF75460044009E /* ShowTermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */; };
 		1FB241B52CBF76BD0044009E /* ShowEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */; };
 		1FB241C42CBF8A540044009E /* NetworkStatusJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */; };
+		1FCB17D62CC07E44006331BE /* ProjectChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB17D52CC07E44006331BE /* ProjectChatViewController.swift */; };
 		1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */; };
 		1FD464CF2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */; };
 		1FD464E62CBF4E1400CBDB49 /* ForumChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464E52CBF4E1400CBDB49 /* ForumChatTableViewCell.swift */; };
@@ -143,6 +144,7 @@
 		1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEulaViewController.swift; sourceTree = "<group>"; };
 		1FB241BA2CBF7DE60044009E /* SkilliketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkilliketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusJSON.swift; sourceTree = "<group>"; };
+		1FCB17D52CC07E44006331BE /* ProjectChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectChatViewController.swift; sourceTree = "<group>"; };
 		1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectUserViewController.swift; sourceTree = "<group>"; };
 		1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusTableViewCell.swift; sourceTree = "<group>"; };
 		1FD464E52CBF4E1400CBDB49 /* ForumChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumChatTableViewCell.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */,
 				1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */,
 				1F7004F32CC00429009E51B3 /* ForumChatViewController.swift */,
+				1FCB17D52CC07E44006331BE /* ProjectChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				1F65A7732CACD17500BFB642 /* CreateContentViewController.swift in Sources */,
 				3B26ADDF2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift in Sources */,
 				3BAAF7802CA750C6000C7C75 /* PostColorGradient.swift in Sources */,
+				1FCB17D62CC07E44006331BE /* ProjectChatViewController.swift in Sources */,
 				3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */,
 				1F81CF7A2CBCAEBC000520EB /* Eula.swift in Sources */,
 				1F81CF7B2CBCAEBC000520EB /* Terminos&Condiciones.swift in Sources */,
