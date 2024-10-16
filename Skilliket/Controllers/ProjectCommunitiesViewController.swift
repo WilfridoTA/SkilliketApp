@@ -19,6 +19,11 @@ class ProjectCommunitiesViewController: UIViewController,UITableViewDataSource, 
         super.viewDidLoad()
         ProjectCommunitiesTable.dataSource=self
         ProjectCommunitiesTable.delegate=self
+        
+        ProjectCommunitiesTable.layer.shadowColor = UIColor.black.cgColor
+        ProjectCommunitiesTable.layer.shadowOpacity = 0.5
+        ProjectCommunitiesTable.layer.shadowOffset = CGSize(width: 4, height: 4)
+        ProjectCommunitiesTable.layer.shadowRadius = 6
 
         // Do any additional setup after loading the view.
         communitiesArr=ourApp!.communities
@@ -55,6 +60,10 @@ class ProjectCommunitiesViewController: UIViewController,UITableViewDataSource, 
         cell.projectCommunitiesImage.layer.cornerRadius = 18
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 150 //150 Será el tamaño para todas las tablas
+        }
     
     func cargarImagenDesdeURL(url: URL, imageView: UIImageView) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in

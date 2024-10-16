@@ -28,6 +28,7 @@ class PostsCommunitiesViewController: UIViewController,UITableViewDataSource, UI
         postsCommunitiesTable.layer.shadowOpacity = 0.5
         postsCommunitiesTable.layer.shadowOffset = CGSize(width: 4, height: 4)
         postsCommunitiesTable.layer.shadowRadius = 6
+        
         communitiesArr=ourApp!.communities
     }
     
