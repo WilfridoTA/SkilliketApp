@@ -16,6 +16,7 @@
 		1F65A76D2CACC47700BFB642 /* UserPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65A76C2CACC47700BFB642 /* UserPostsTableViewCell.swift */; };
 		1F65A7732CACD17500BFB642 /* CreateContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65A7722CACD17500BFB642 /* CreateContentViewController.swift */; };
 		1F65A7752CADF4CD00BFB642 /* UserPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F65A7742CADF4CD00BFB642 /* UserPostsViewController.swift */; };
+		1F7004F42CC00429009E51B3 /* ForumChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7004F32CC00429009E51B3 /* ForumChatViewController.swift */; };
 		1F81CF2B2CBC4291000520EB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF202CBC4291000520EB /* Message.swift */; };
 		1F81CF2C2CBC4291000520EB /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF292CBC4291000520EB /* Water.swift */; };
 		1F81CF2D2CBC4291000520EB /* Noise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF222CBC4291000520EB /* Noise.swift */; };
@@ -44,9 +45,7 @@
 		1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */; };
 		1FB241B32CBF75460044009E /* ShowTermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */; };
 		1FB241B52CBF76BD0044009E /* ShowEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */; };
-
 		1FB241C42CBF8A540044009E /* NetworkStatusJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */; };
-
 		1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */; };
 		1FD464CF2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */; };
 		1FD464E62CBF4E1400CBDB49 /* ForumChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464E52CBF4E1400CBDB49 /* ForumChatTableViewCell.swift */; };
@@ -113,6 +112,7 @@
 		1F65A76C2CACC47700BFB642 /* UserPostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsTableViewCell.swift; sourceTree = "<group>"; };
 		1F65A7722CACD17500BFB642 /* CreateContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentViewController.swift; sourceTree = "<group>"; };
 		1F65A7742CADF4CD00BFB642 /* UserPostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostsViewController.swift; sourceTree = "<group>"; };
+		1F7004F32CC00429009E51B3 /* ForumChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumChatViewController.swift; sourceTree = "<group>"; };
 		1F81CF172CBC4291000520EB /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		1F81CF182CBC4291000520EB /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		1F81CF192CBC4291000520EB /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
@@ -349,6 +349,7 @@
 				1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */,
 				1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */,
 				1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */,
+				1F7004F32CC00429009E51B3 /* ForumChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -482,6 +483,7 @@
 				1F81CF7D2CBCAEBC000520EB /* TerminosCondicionesJSON.swift in Sources */,
 				BB78526B2CB3A58D00DA6452 /* FormCompositionalLayout.swift in Sources */,
 				3B5658002CA92DD30067F626 /* CommunitiesTableViewCell.swift in Sources */,
+				1F7004F42CC00429009E51B3 /* ForumChatViewController.swift in Sources */,
 				3BC389D42CBE336A0035EE3D /* JoinProjectViewController.swift in Sources */,
 				3B5FE86E2CAA190E00706136 /* SelectedPostViewController.swift in Sources */,
 				1F65A76D2CACC47700BFB642 /* UserPostsTableViewCell.swift in Sources */,
