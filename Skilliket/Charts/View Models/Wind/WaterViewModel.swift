@@ -71,11 +71,7 @@ class WaterViewModel: ObservableObject{
         self.waterData = waterData
         self.lastTotalLevel = lastTotalLevel
     }
-    /*
-    convenience init() {
-        self.init(waterData: WaterData.higherWeekendThreeMonthsExamples, lastTotalLevel: 2000.0)
-    }
-    */
+
     // MARK: - Helper Functions
     
     // Group wind data by day
@@ -213,7 +209,7 @@ class WaterViewModel: ObservableObject{
     
     static var preview: WaterViewModel {
         let vm = WaterViewModel()
-        //vm.waterData = WaterData.higherWeekendThreeMonthsExamples
+
         vm.lastTotalLevel = 2000.0 // Example value
         return vm
     }

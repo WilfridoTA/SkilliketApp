@@ -10,7 +10,7 @@ import Foundation
 class NoiseViewModel: ObservableObject {
     
     // Published properties to update the UI
-    @Published var noiseData: [NoiseData]
+    @Published var noiseData: [NoiseData] = []
     @Published var lastTotalLevel: Float = 0
     
     // Computed Properties
@@ -33,7 +33,6 @@ class NoiseViewModel: ObservableObject {
         return totalLevelPerWeek(noiseByWeek: grouped)
     }
 
-    
     var noiseByMonth: [(month: Date, level: Float)] {
         let grouped = noiseGroupedByMonth(noise: noiseData)
         return totalLevelPerMonth(noiseByMonth: grouped)
@@ -52,7 +51,6 @@ class NoiseViewModel: ObservableObject {
         return averageLevel.map { (number: $0.number, noise: $0.level) }
     }
 
-    
     var noiseByWeekdayHistogramData: [(number: Int, histogram: [(bucket: Int, count: Int)])] {
         var result: [(number: Int, histogram: [(bucket: Int, count: Int)])] = []
         let noiseByWeekdayData = self.noiseByWeekday
@@ -66,16 +64,17 @@ class NoiseViewModel: ObservableObject {
         averageLevelByWeekday.max(by: { $0.noise < $1.noise })
     }
     
-    
     // Initializers
     init(noiseData: [NoiseData] = [], lastTotalLevel: Float = 0.0) {
         self.noiseData = noiseData
         self.lastTotalLevel = lastTotalLevel
     }
     
+    /*
     convenience init() {
-        self.init(noiseData: NoiseData.higherWeekendThreeMonthsExamples, lastTotalLevel: 2000.0)
+        self.init(waterData: WaterData.higherWeekendThreeMonthsExamples, lastTotalLevel: 2000.0)
     }
+    */
     
     // MARK: - Helper Functions
     
@@ -123,7 +122,6 @@ class NoiseViewModel: ObservableObject {
         return noiseByWeekday
     }
     
-    
     // Calculate total level per date
     func totalLevelPerDate(noiseByDate: [Date: [NoiseData]]) -> [(day: Date, level: Float)] {
         var totalLevel: [(day: Date, level: Float)] = []
@@ -151,7 +149,6 @@ class NoiseViewModel: ObservableObject {
         }
         return totalLevel.sorted { $0.month < $1.month }
     }
-
     
     // Calculate average level per weekday number
     func averageLevelPerNumber(noiseByNumber: [Int: [NoiseData]]) -> [(number: Int, level: Double)] {
@@ -176,7 +173,7 @@ class NoiseViewModel: ObservableObject {
         return histogram.map { (bucket: $0.key, count: $0.value) }.sorted { $0.bucket < $1.bucket }
     }
 
-    // Calculate median velocity
+    // Calculate median noise level
     func calculateMedian(noiseData: [(number: Int, noise: Double)]) -> Double? {
         let levels = noiseData.map { $0.noise }.sorted()
         let count = levels.count
@@ -197,7 +194,7 @@ class NoiseViewModel: ObservableObject {
     
     static var preview: NoiseViewModel {
         let vm = NoiseViewModel()
-        vm.noiseData = NoiseData.higherWeekendThreeMonthsExamples
+    //vm.noiseData = NoiseData.higherWeekendThreeMonthsExamples
         vm.lastTotalLevel = 2000.0 // Example value
         return vm
     }

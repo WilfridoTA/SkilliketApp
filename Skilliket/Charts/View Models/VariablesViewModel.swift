@@ -13,6 +13,7 @@ class VariablesViewModel: ObservableObject {
     @Published var waterData: [WaterData] = []
     @Published var noiseData: [NoiseData] = []
     
+    
     init(temperatureData: [TemperatureData], windData: [WindData], waterData: [WaterData], noiseData: [NoiseData], skilliketDevice: SkilliketDevice? = nil) {
         self.temperatureData = temperatureData
         self.windData = windData

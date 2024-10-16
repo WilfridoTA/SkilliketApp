@@ -10,7 +10,7 @@ import Foundation
 class WindViewModel: ObservableObject {
     
     // Published properties to update the UI
-    @Published var windData: [WindData]
+    @Published var windData: [WindData] = []
     @Published var lastTotalVelocity: Float = 0
     
     // Computed Properties
@@ -33,7 +33,6 @@ class WindViewModel: ObservableObject {
         return totalVelocityPerWeek(windByWeek: grouped)
     }
 
-    
     var windByMonth: [(month: Date, velocity: Float)] {
         let grouped = windGroupedByMonth(wind: windData)
         return totalVelocityPerMonth(windByMonth: grouped)
@@ -49,10 +48,9 @@ class WindViewModel: ObservableObject {
     var averageVelocityByWeekday: [(number: Int, wind: Double)] {
         let windsByWeekday = windGroupedByWeekday(wind: windData)
         let averageVelocity = averageVelocityPerNumber(windByNumber: windsByWeekday)
-        return averageVelocity.map { (number: $0.number, wind: $0.velocity) } // Change to 'wind'
+        return averageVelocity.map { (number: $0.number, wind: $0.velocity) }
     }
 
-    
     var windByWeekdayHistogramData: [(number: Int, histogram: [(bucket: Int, count: Int)])] {
         var result: [(number: Int, histogram: [(bucket: Int, count: Int)])] = []
         let windByWeekdayData = self.windByWeekday
@@ -63,18 +61,13 @@ class WindViewModel: ObservableObject {
     }
     
     var highestVelocityWeekday: (number: Int, wind: Double)? {
-        averageVelocityByWeekday.max(by: { $0.wind < $1.wind }) // Change 'velocity' to 'wind'
+        averageVelocityByWeekday.max(by: { $0.wind < $1.wind })
     }
-    
     
     // Initializers
     init(windData: [WindData] = [], lastTotalVelocity: Float = 0.0) {
         self.windData = windData
         self.lastTotalVelocity = lastTotalVelocity
-    }
-    
-    convenience init() {
-        self.init(windData: WindData.higherWeekendThreeMonthsExamples, lastTotalVelocity: 2000.0)
     }
     
     // MARK: - Helper Functions
@@ -83,6 +76,7 @@ class WindViewModel: ObservableObject {
     func windGroupedByDay(wind: [WindData]) -> [Date: [WindData]] {
         var windByDay: [Date: [WindData]] = [:]
         let calendar = Calendar.current
+        
         for entry in wind {
             let date = calendar.startOfDay(for: entry.date)
             windByDay[date, default: []].append(entry)
@@ -94,6 +88,7 @@ class WindViewModel: ObservableObject {
     func windGroupedByWeek(wind: [WindData]) -> [Date: [WindData]] {
         var windByWeek: [Date: [WindData]] = [:]
         let calendar = Calendar.current
+        
         for entry in wind {
             guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: entry.date)) else { continue }
             windByWeek[startOfWeek, default: []].append(entry)
@@ -105,6 +100,7 @@ class WindViewModel: ObservableObject {
     func windGroupedByMonth(wind: [WindData]) -> [Date: [WindData]] {
         var windByMonth: [Date: [WindData]] = [:]
         let calendar = Calendar.current
+        
         for entry in wind {
             guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: entry.date)) else { continue }
             windByMonth[startOfMonth, default: []].append(entry)
@@ -116,6 +112,7 @@ class WindViewModel: ObservableObject {
     func windGroupedByWeekday(wind: [WindData]) -> [Int: [WindData]] {
         var windByWeekday: [Int: [WindData]] = [:]
         let calendar = Calendar.current
+        
         for entry in wind {
             let weekday = calendar.component(.weekday, from: entry.date)
             windByWeekday[weekday, default: []].append(entry)
@@ -123,10 +120,10 @@ class WindViewModel: ObservableObject {
         return windByWeekday
     }
     
-    
     // Calculate total velocity per date
     func totalVelocityPerDate(windByDate: [Date: [WindData]]) -> [(day: Date, velocity: Float)] {
         var totalVelocity: [(day: Date, velocity: Float)] = []
+        
         for (date, windEntries) in windByDate {
             let totalVelocityForDate = windEntries.reduce(0) { $0 + $1.velocity }
             totalVelocity.append((day: date, velocity: totalVelocityForDate))
@@ -136,6 +133,7 @@ class WindViewModel: ObservableObject {
     
     func totalVelocityPerWeek(windByWeek: [Date: [WindData]]) -> [(week: Date, velocity: Float)] {
         var totalVelocity: [(week: Date, velocity: Float)] = []
+        
         for (week, windEntries) in windByWeek {
             let totalVelocityForWeek = windEntries.reduce(0) { $0 + $1.velocity }
             totalVelocity.append((week: week, velocity: totalVelocityForWeek))
@@ -145,17 +143,18 @@ class WindViewModel: ObservableObject {
 
     func totalVelocityPerMonth(windByMonth: [Date: [WindData]]) -> [(month: Date, velocity: Float)] {
         var totalVelocity: [(month: Date, velocity: Float)] = []
+        
         for (month, windEntries) in windByMonth {
             let totalVelocityForMonth = windEntries.reduce(0) { $0 + $1.velocity }
             totalVelocity.append((month: month, velocity: totalVelocityForMonth))
         }
         return totalVelocity.sorted { $0.month < $1.month }
     }
-
     
     // Calculate average velocity per weekday number
     func averageVelocityPerNumber(windByNumber: [Int: [WindData]]) -> [(number: Int, velocity: Double)] {
         var averageVelocity: [(number: Int, velocity: Double)] = []
+        
         for (number, windEntries) in windByNumber {
             let count = windEntries.count
             guard count > 0 else { continue }
@@ -169,6 +168,7 @@ class WindViewModel: ObservableObject {
     // Generate histogram for wind velocities
     func histogram(for velocities: [WindData], bucketSize: Int) -> [(bucket: Int, count: Int)] {
         var histogram: [Int: Int] = [:]
+        
         for entry in velocities {
             let bucket = Int(entry.velocity) / bucketSize
             histogram[bucket, default: 0] += 1
@@ -197,9 +197,10 @@ class WindViewModel: ObservableObject {
     
     static var preview: WindViewModel {
         let vm = WindViewModel()
-        vm.windData = WindData.higherWeekendThreeMonthsExamples
+        //vm.windData = WindData.higherWeekendThreeMonthsExamples
         vm.lastTotalVelocity = 2000.0 // Example value
         return vm
     }
 }
+
 

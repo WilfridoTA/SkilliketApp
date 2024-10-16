@@ -46,3 +46,6 @@ class WaterData: Data, Identifiable, Equatable {
     }
 }
 
+struct WaterJSON: Codable {
+    let waterArray: [WaterData]
+}
