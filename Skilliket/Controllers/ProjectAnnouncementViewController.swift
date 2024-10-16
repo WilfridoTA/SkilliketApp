@@ -26,6 +26,12 @@ class ProjectAnnouncementViewController: UIViewController, UITableViewDataSource
         announcementTable.dataSource=self
         announcementTable.delegate=self
         
+        //Personalizamos las celdas generadas
+        announcementTable.layer.shadowColor = UIColor.black.cgColor
+        announcementTable.layer.shadowOpacity = 0.5
+        announcementTable.layer.shadowOffset = CGSize(width: 4, height: 4)
+        announcementTable.layer.shadowRadius = 6
+        
         announcmentsArr=actualProject!.announcements
     }
     
@@ -51,6 +57,8 @@ class ProjectAnnouncementViewController: UIViewController, UITableViewDataSource
                 if let im=getMember(name: arreglo.creator)?.profileImage{
                     cargarImagenDesdeURL(url: im, imageView: cell.projectAnnouncementImage)
                 }
+        
+        cell.projectAnnouncementImage.layer.cornerRadius = 16
         
         return cell
     }
@@ -86,7 +94,7 @@ class ProjectAnnouncementViewController: UIViewController, UITableViewDataSource
     
     //Mantener constante el tamaño de cada celda
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 180 //150 Será el tamaño para todas las tablas
+        return 150 //150 Será el tamaño para todas las tablas
     }
 
 }
