@@ -24,26 +24,33 @@ class VariablesViewModel: ObservableObject {
     
     var skilliketDevice:SkilliketDevice?
 
-    func loadData() {
+    func loadDataGDL() {
+        skilliketDevice!.fetchTemperatureGDL()
+        skilliketDevice!.fetchWindGDL()
+        skilliketDevice!.fetchWaterGDL()
+        skilliketDevice!.fetchNoiseGDL()
+    }
+    
+    func loadDataMTY() {
         skilliketDevice!.fetchTemperatureMTY()
-        fetchWindMTY()
-        fetchWaterMTY()
-        fetchNoiseMTY()
-        
-        fetchTemperatureGDL()
-        fetchWindGDL()
-        fetchWaterGDL()
-        fetchNoiseGDL()
-        
-        fetchTemperatureCDMX()
-        fetchWindCDMX()
-        fetchWaterCDMX()
-        fetchNoiseCDMX()
-        
-        fetchTemperatureTRT()
-        fetchWindTRT()
-        fetchWaterTRT()
-        fetchNoiseTRT()
+        skilliketDevice!.fetchWindMTY()
+        skilliketDevice!.fetchWaterMTY()
+        skilliketDevice!.fetchNoiseMTY()
+    }
+    
+    func loadDataCDMX() {
+        skilliketDevice!.fetchTemperatureCDMX()
+        skilliketDevice!.fetchWindCDMX()
+        skilliketDevice!.fetchWaterCDMX()
+        skilliketDevice!.fetchNoiseCDMX()
+    }
+    
+    func loadDataTRT() {
+        skilliketDevice!.fetchTemperatureTRT()
+        skilliketDevice!.fetchWindTRT()
+        skilliketDevice!.fetchWaterTRT()
+       // waterData = SkilliketDevice.water
+        skilliketDevice!.fetchNoiseTRT()
     }
 
     

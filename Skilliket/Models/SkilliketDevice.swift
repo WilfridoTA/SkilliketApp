@@ -234,6 +234,7 @@ extension SkilliketDevice{
                 let waters = try JSONDecoder().decode(WaterJSON.self, from: data)
                 DispatchQueue.main.async {
                     self.water = waters.waterArray
+                    print(self.water)
                 }
             } catch {
                 print("Error decoding water data: \(error)")
