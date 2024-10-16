@@ -19,6 +19,11 @@ class ProjectToBeApprovedViewController: UIViewController,UITableViewDataSource,
         
         projectToApprovedTable.dataSource=self
         projectToApprovedTable.delegate=self
+        
+        projectToApprovedTable.layer.shadowColor = UIColor.black.cgColor
+        projectToApprovedTable.layer.shadowOpacity = 0.5
+        projectToApprovedTable.layer.shadowOffset = CGSize(width: 4, height: 4)
+        projectToApprovedTable.layer.shadowRadius = 6
 
         // Do any additional setup after loading the view.
         projectsArr=actualCommunity!.waitingProjects
@@ -51,6 +56,10 @@ class ProjectToBeApprovedViewController: UIViewController,UITableViewDataSource,
         cell.projectApprovedImage.layer.cornerRadius = 18
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            return 300
+        }
     
     func cargarImagenDesdeURL(url: URL, imageView: UIImageView) {
         URLSession.shared.dataTask(with: url) { (data, response, error) in
