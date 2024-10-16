@@ -64,6 +64,29 @@ final class SkilliketTests: XCTestCase {
                 XCTAssertNotNil(loginVC.passwordTextField)
                 XCTAssertNotNil(loginVC.usernameTextField)
                             
+                let validUserName = "ReginaM"
+                let invalidPassword = "contraseña"
+                            
+                loginVC.passwordTextField?.text = validUserName
+                loginVC.usernameTextField?.text = invalidPassword
+                            
+                loginVC.loginButton.sendActions(for: .touchUpInside)
+                            
+                XCTAssertNil(loginVC.actualMember)
+            }
+        }
+        
+    }
+    
+    func testHU04_CP01_login_Fail2(){
+        loginVC=LoginVC()
+        DispatchQueue.main.async {
+            loginVC.loadViewIfNeeded()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                XCTAssertNotNil(loginVC.passwordTextField)
+                XCTAssertNotNil(loginVC.usernameTextField)
+                            
                 let invalidUserName = "usuario"
                 let invalidPassword = "contraseña"
                             
@@ -286,6 +309,7 @@ final class SkilliketTests: XCTestCase {
             }
         }
     }
+    
     
     
 
