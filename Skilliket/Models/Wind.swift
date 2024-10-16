@@ -8,27 +8,28 @@
 import Foundation
 
 class WindData: Data{
-    let windLevel:Float
+    let velocity:Float
     
-    init(date: Date, windLevel:Float) {
-        self.windLevel = windLevel
-        super.init(date: date)
+    init(date: DateComponents, time: DateComponents,velocity:Float) {
+        self.velocity=velocity
+        super.init(date: date, time: time)
     }
     
     required convenience init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        let windLevel = try container.decode(Float.self, forKey: .windLevel)
-        let date = try container.decode(Date.self, forKey: .date)
+        let velocity = try container.decode(Float.self, forKey: .velocity)
+        let date = try container.decode(DateComponents.self, forKey: .date)
+        let time = try container.decode(DateComponents.self, forKey: .time)
         
-        self.init(date:date, windLevel: windLevel)
+        self.init(date:date,time:time,velocity: velocity)
     }
     
     enum CodingKeys: String, CodingKey {
-        case windLevel
+        case velocity
         case date
+        case time
     }
-    
 }
 
 struct WindJSON: Codable {

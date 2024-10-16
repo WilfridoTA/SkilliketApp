@@ -11,9 +11,9 @@ import Charts
 @available(macOS 14.0, *)
 struct DailyWaterChartView: View {
     
-    let waterData: [WaterData]
+    let waterData: [WaterData2]
       
-    init(waterData: [WaterData]) {
+    init(waterData: [WaterData2]) {
         self.waterData = waterData
           
         guard let lastDate = waterData.last?.date else { return }

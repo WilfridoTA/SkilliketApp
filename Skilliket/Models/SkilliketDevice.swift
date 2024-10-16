@@ -44,6 +44,7 @@ extension SkilliketDevice{
 
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
             guard let self = self, let data = data, error == nil else { return }
+            print(response)
 
             do {
                 let decodedData = try JSONDecoder().decode(TemperatureJSON.self, from: data) // Decode the data

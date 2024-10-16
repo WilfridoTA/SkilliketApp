@@ -9,7 +9,9 @@ import Foundation
 
 class WaterViewModel: ObservableObject{
     
-    @Published var waterData: [WaterData]
+    @Published var waterData: [WaterData] = []
+
+    
     @Published var lastTotalLevel: Float = 0
     
     var totalLevel: Float {
@@ -69,56 +71,69 @@ class WaterViewModel: ObservableObject{
         self.waterData = waterData
         self.lastTotalLevel = lastTotalLevel
     }
-    
-    convenience init() {
-        self.init(waterData: WaterData.higherWeekendThreeMonthsExamples, lastTotalLevel: 2000.0)
-    }
-    
+
     // MARK: - Helper Functions
     
     // Group wind data by day
     func waterGroupedByDay(water: [WaterData]) -> [Date: [WaterData]] {
         var waterByDay: [Date: [WaterData]] = [:]
         let calendar = Calendar.current
+        
         for entry in water {
-            let date = calendar.startOfDay(for: entry.date)
-            waterByDay[date, default: []].append(entry)
+            // Convert DateComponents to Date
+            if let date = calendar.date(from: entry.date) {
+                // Get the start of the day for the date
+                let startOfDay = calendar.startOfDay(for: date)
+                waterByDay[startOfDay, default: []].append(entry)
+            }
         }
+        
         return waterByDay
     }
+
     
     // Group wind data by week
     func waterGroupedByWeek(water: [WaterData]) -> [Date: [WaterData]] {
         var waterByWeek: [Date: [WaterData]] = [:]
         let calendar = Calendar.current
         for entry in water {
-            guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: entry.date)) else { continue }
-            waterByWeek[startOfWeek, default: []].append(entry)
+            // Convert DateComponents to Date
+            if let date = calendar.date(from: entry.date) {
+                guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)) else { continue }
+                waterByWeek[startOfWeek, default: []].append(entry)
+            }
         }
         return waterByWeek
     }
-    
-    // Group wind data by month
+
+    // Group water data by month
     func waterGroupedByMonth(water: [WaterData]) -> [Date: [WaterData]] {
         var waterByMonth: [Date: [WaterData]] = [:]
         let calendar = Calendar.current
         for entry in water {
-            guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: entry.date)) else { continue }
-            waterByMonth[startOfMonth, default: []].append(entry)
+            // Convert DateComponents to Date
+            if let date = calendar.date(from: entry.date) {
+                guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: date)) else { continue }
+                waterByMonth[startOfMonth, default: []].append(entry)
+            }
         }
         return waterByMonth
     }
-    
-    // Group wind data by weekday
+
+    // Group water data by weekday
     func waterGroupedByWeekday(water: [WaterData]) -> [Int: [WaterData]] {
         var waterByWeekday: [Int: [WaterData]] = [:]
         let calendar = Calendar.current
         for entry in water {
-            let weekday = calendar.component(.weekday, from: entry.date)
-            waterByWeekday[weekday, default: []].append(entry)
+            // Convert DateComponents to Date
+            if let date = calendar.date(from: entry.date) {
+                let weekday = calendar.component(.weekday, from: date)
+                waterByWeekday[weekday, default: []].append(entry)
+            }
         }
         return waterByWeekday
     }
+
     
     
     // Calculate total velocity per date
@@ -194,7 +209,7 @@ class WaterViewModel: ObservableObject{
     
     static var preview: WaterViewModel {
         let vm = WaterViewModel()
-        vm.waterData = WaterData.higherWeekendThreeMonthsExamples
+
         vm.lastTotalLevel = 2000.0 // Example value
         return vm
     }
