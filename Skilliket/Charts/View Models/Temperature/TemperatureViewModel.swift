@@ -10,7 +10,7 @@ import Foundation
 class TemperatureViewModel: ObservableObject {
     
     // Published properties to update the UI
-    @Published var temperatureData: [TemperatureData]
+    @Published var temperatureData: [TemperatureData2]
     @Published var lastTotalTemp: Float = 0
     
     // Computed Properties
@@ -32,13 +32,14 @@ class TemperatureViewModel: ObservableObject {
         let grouped = temperatureGroupedByWeek(temperature: temperatureData)
         return totalTempPerWeek(temperatureByWeek: grouped)
     }
+
     
     var tempByMonth: [(month: Date, temp: Float)] {
         let grouped = temperatureGroupedByMonth(temperature: temperatureData)
         return totalTempPerMonth(temperatureByMonth: grouped)
     }
     
-    var tempByWeekday: [(number: Int, temp: [TemperatureData])] {
+    var tempByWeekday: [(number: Int, temp: [TemperatureData2])] {
         let grouped = temperatureGroupedByWeekday(temperature: temperatureData).map {
             (number: $0.key, temp: $0.value)
         }
@@ -50,6 +51,7 @@ class TemperatureViewModel: ObservableObject {
         let averageTemp = averageTempPerNumber(temperatureByNumber: temperaturesByWeekday)
         return averageTemp.map { (number: $0.number, temp: $0.temp) } // Change to 'temp'
     }
+
     
     var tempByWeekdayHistogramData: [(number: Int, histogram: [(bucket: Int, count: Int)])] {
         var result: [(number: Int, histogram: [(bucket: Int, count: Int)])] = []
@@ -64,90 +66,66 @@ class TemperatureViewModel: ObservableObject {
         averageTempByWeekday.max(by: { $0.temp < $1.temp }) // Change 'temp' to 'temp'
     }
     
+    
     // Initializers
-    init(temperatureData: [TemperatureData] = [], lastTotalTemp: Float = 0.0) {
+    init(temperatureData: [TemperatureData2] = [], lastTotalTemp: Float = 0.0) {
         self.temperatureData = temperatureData
         self.lastTotalTemp = lastTotalTemp
     }
     
+    convenience init() {
+        self.init(temperatureData: TemperatureData2.higherWeekendThreeMonthsExamples, lastTotalTemp: 20.0)
+    }
     
     // MARK: - Helper Functions
     
-    // Group temperature data by da
     // Group temperature data by day
-    func temperatureGroupedByDay(temperature: [TemperatureData]) -> [Date: [TemperatureData]] {
-        var temperatureByDay: [Date: [TemperatureData]] = [:]
+    func temperatureGroupedByDay(temperature: [TemperatureData2]) -> [Date: [TemperatureData2]] {
+        var temperatureByDay: [Date: [TemperatureData2]] = [:]
         let calendar = Calendar.current
-        
         for entry in temperature {
-            if let date = calendar.date(from: entry.date){
-                // Use entry.date directly since it's already of type Date
-                let startOfDay = calendar.startOfDay(for: date)
-                temperatureByDay[startOfDay, default: []].append(entry)
-                
-            }
-
+            let date = calendar.startOfDay(for: entry.date)
+            temperatureByDay[date, default: []].append(entry)
         }
-        
         return temperatureByDay
     }
-
+    
     // Group temperature data by week
-    func temperatureGroupedByWeek(temperature: [TemperatureData]) -> [Date: [TemperatureData]] {
-        var temperatureByWeek: [Date: [TemperatureData]] = [:]
+    func temperatureGroupedByWeek(temperature: [TemperatureData2]) -> [Date: [TemperatureData2]] {
+        var temperatureByWeek: [Date: [TemperatureData2]] = [:]
         let calendar = Calendar.current
-        
         for entry in temperature {
-            if let date = calendar.date(from: entry.date){
-                guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)) else { continue }
-                temperatureByWeek[startOfWeek, default: []].append(entry)
-                
-                
-            }
-            // Use entry.date directly since it's already of type Date
-            
-            // Get the start of the week
-
+            guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: entry.date)) else { continue }
+            temperatureByWeek[startOfWeek, default: []].append(entry)
         }
-        
         return temperatureByWeek
     }
-
-    // Group temperature data by month
-    func waterGroupedByMonth(water: [WaterData]) -> [Date: [WaterData]] {
-        var waterByMonth: [Date: [WaterData]] = [:]
-        let calendar = Calendar.current
-        for entry in water {
-            // Convert DateComponents to Date
-            if let date = calendar.date(from: entry.date) {
-                guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: date)) else { continue }
-                waterByMonth[startOfMonth, default: []].append(entry)
-            }
-        }
-        return waterByMonth
-    }
-
     
-
-    // Group temperature data by weekday
-    func temperatureGroupedByWeekday(temperature: [TemperatureData]) -> [Int: [TemperatureData]] {
-        var temperatureByWeekday: [Int: [TemperatureData]] = [:]
+    // Group temperature data by month
+    func temperatureGroupedByMonth(temperature: [TemperatureData2]) -> [Date: [TemperatureData2]] {
+        var temperatureByMonth: [Date: [TemperatureData2]] = [:]
         let calendar = Calendar.current
-        
         for entry in temperature {
-            // Use entry.date directly since it's already of type Date
-            if let date = calendar.date(from: entry.date) {
-                let weekday = calendar.component(.weekday, from: date)
-                temperatureByWeekday[weekday, default: []].append(entry)
-            }
+            guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: entry.date)) else { continue }
+            temperatureByMonth[startOfMonth, default: []].append(entry)
         }
-        
+        return temperatureByMonth
+    }
+    
+    // Group temperature data by weekday
+    func temperatureGroupedByWeekday(temperature: [TemperatureData2]) -> [Int: [TemperatureData2]] {
+        var temperatureByWeekday: [Int: [TemperatureData2]] = [:]
+        let calendar = Calendar.current
+        for entry in temperature {
+            let weekday = calendar.component(.weekday, from: entry.date)
+            temperatureByWeekday[weekday, default: []].append(entry)
+        }
         return temperatureByWeekday
     }
-
+    
     
     // Calculate total temperature per date
-    func totalTempPerDate(temperatureByDate: [Date: [TemperatureData]]) -> [(day: Date, temp: Float)] {
+    func totalTempPerDate(temperatureByDate: [Date: [TemperatureData2]]) -> [(day: Date, temp: Float)] {
         var totalTemp: [(day: Date, temp: Float)] = []
         for (date, temperatureEntries) in temperatureByDate {
             let totalTempForDate = temperatureEntries.reduce(0) { $0 + $1.celsius }
@@ -156,7 +134,7 @@ class TemperatureViewModel: ObservableObject {
         return totalTemp.sorted { $0.day < $1.day }
     }
     
-    func totalTempPerWeek(temperatureByWeek: [Date: [TemperatureData]]) -> [(week: Date, temp: Float)] {
+    func totalTempPerWeek(temperatureByWeek: [Date: [TemperatureData2]]) -> [(week: Date, temp: Float)] {
         var totalTemp: [(week: Date, temp: Float)] = []
         for (week, temperatureEntries) in temperatureByWeek {
             let totalTempForWeek = temperatureEntries.reduce(0) { $0 + $1.celsius }
@@ -165,7 +143,7 @@ class TemperatureViewModel: ObservableObject {
         return totalTemp.sorted { $0.week < $1.week }
     }
 
-    func totalTempPerMonth(temperatureByMonth: [Date: [TemperatureData]]) -> [(month: Date, temp: Float)] {
+    func totalTempPerMonth(temperatureByMonth: [Date: [TemperatureData2]]) -> [(month: Date, temp: Float)] {
         var totalTemp: [(month: Date, temp: Float)] = []
         for (month, temperatureEntries) in temperatureByMonth {
             let totalTempForMonth = temperatureEntries.reduce(0) { $0 + $1.celsius }
@@ -173,9 +151,10 @@ class TemperatureViewModel: ObservableObject {
         }
         return totalTemp.sorted { $0.month < $1.month }
     }
+
     
     // Calculate average temperature per weekday number
-    func averageTempPerNumber(temperatureByNumber: [Int: [TemperatureData]]) -> [(number: Int, temp: Double)] {
+    func averageTempPerNumber(temperatureByNumber: [Int: [TemperatureData2]]) -> [(number: Int, temp: Double)] {
         var averageTemp: [(number: Int, temp: Double)] = []
         for (number, temperatureEntries) in temperatureByNumber {
             let count = temperatureEntries.count
@@ -188,7 +167,7 @@ class TemperatureViewModel: ObservableObject {
     }
     
     // Generate histogram for temperature readings
-    func histogram(for temperatures: [TemperatureData], bucketSize: Int) -> [(bucket: Int, count: Int)] {
+    func histogram(for temperatures: [TemperatureData2], bucketSize: Int) -> [(bucket: Int, count: Int)] {
         var histogram: [Int: Int] = [:]
         for entry in temperatures {
             let bucket = Int(entry.celsius) / bucketSize
@@ -223,4 +202,3 @@ class TemperatureViewModel: ObservableObject {
         return vm
     }
 }
-

@@ -8,29 +8,30 @@
 import Foundation
 
 class TemperatureData: Data{
-    let celsius:Float
+    let temperatureLevel:Float
     
-    init(date: DateComponents, time: DateComponents,celsius:Float) {
-        self.celsius=celsius
-        super.init(date: date, time: time)
+    init(date: Date, temperatureLevel:Float) {
+        self.temperatureLevel = temperatureLevel
+        super.init(date: date)
     }
     
     required convenience init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        let celsius = try container.decode(Float.self, forKey: .celsius)
-        let date = try container.decode(DateComponents.self, forKey: .date)
-        let time = try container.decode(DateComponents.self, forKey: .time)
+        let temperatureLevel = try container.decode(Float.self, forKey: .temperatureLevel)
+        let date = try container.decode(Date.self, forKey: .date)
         
-        self.init(date:date,time:time,celsius: celsius)
+        self.init(date:date, temperatureLevel: temperatureLevel)
     }
     
     enum CodingKeys: String, CodingKey {
-        case celsius
+        case temperatureLevel
         case date
-        case time
     }
+    
 }
+
+
 
 struct TemperatureJSON: Codable {
     let temperatureArray: [TemperatureData]

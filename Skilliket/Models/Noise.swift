@@ -10,25 +10,23 @@ import Foundation
 class NoiseData: Data{
     let noiseLevel:Float
     
-    init(date: DateComponents, time: DateComponents,noiseLevel:Float) {
+    init(date: Date, noiseLevel:Float) {
         self.noiseLevel=noiseLevel
-        super.init(date: date, time: time)
+        super.init(date: date)
     }
     
     required convenience init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         let noiseLevel = try container.decode(Float.self, forKey: .noiseLevel)
-        let date = try container.decode(DateComponents.self, forKey: .date)
-        let time = try container.decode(DateComponents.self, forKey: .time)
+        let date = try container.decode(Date.self, forKey: .date)
         
-        self.init(date:date,time:time,noiseLevel:noiseLevel)
+        self.init(date:date, noiseLevel:noiseLevel)
     }
     
     enum CodingKeys: String, CodingKey {
         case noiseLevel
         case date
-        case time
     }
     
 }

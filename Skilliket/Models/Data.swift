@@ -8,10 +8,9 @@
 import Foundation
 
 class Data: Codable {
-    let date, time: DateComponents
+    let date: Date
     
-    init(date: DateComponents, time: DateComponents) {
+    init(date: Date) {
         self.date = date
-        self.time = time
     }
 }
