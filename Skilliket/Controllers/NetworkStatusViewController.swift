@@ -7,7 +7,9 @@
 
 import UIKit
 
-class NetworkStatusViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NetworkStatusViewController: UIViewController {
+
+    
     
     @IBOutlet var table: UITableView!
     var ourApp:App?
@@ -25,11 +27,13 @@ class NetworkStatusViewController: UIViewController, UITableViewDataSource, UITa
         networkBackground.layer.shadowOpacity = 1
         networkBackground.layer.shadowOffset = CGSize(width: 0, height: 0)
         networkBackground.layer.shadowRadius = 10
+        
+        
     }
     
 
     //MARK: - Funciones de la tabla
-    
+    /*
     //El tamaño del arreglo nos dira el numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -40,7 +44,7 @@ class NetworkStatusViewController: UIViewController, UITableViewDataSource, UITa
         return 1
     }
     
-    /*
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return
     }

@@ -13,6 +13,9 @@ class AdminTabBarController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let navigationController = self.navigationController {
+            navigationController.setNavigationBarHidden(true, animated: false)
+        }
     }
     
 

@@ -50,24 +50,21 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = postApproveTable.dequeueReusableCell(withIdentifier: "projectsApproveCell", for: indexPath) as! PostApproveTableViewCell
         
         //Obtenemos el tamaño del arreglo de proyectos
-        let postArr = postsArr![indexPath.row]
+        let postArr = postsArr![indexPath.section]
         
         //Contenido de cada celda
-        if let posts = postArr as? [Skilliket.Post] {
-            for p in posts {
-                cell.postApproveTitle.text = "Post by \(p.creator)"
-                cell.postApproveContent.text = p.text
-                if let im = p.image {
-                    cargarImagenDesdeURL(url: im, imageView: cell.postApproveImage)
-                } else {
-                    cell.postApproveImage.image = UIImage(systemName: ".square.and.pencil.circle")
-                }
+        if let posts = postArr as? Post {
+            cell.postApproveTitle.text = "Post by \(posts.creator)"
+            cell.postApproveContent.text = posts.text
+            if let im = posts.image {
+                cargarImagenDesdeURL(url: im, imageView: cell.postApproveImage)
+            } else {
+                cell.postApproveImage.image = UIImage(systemName: ".square.and.pencil.circle")
             }
-        } else if let news = postArr as? [Skilliket.New] {
-            for p in news {
-                cell.postApproveTitle.text = "Post by \(p.creator)"
-                cell.postApproveContent.text = "\(p.text) \nLink: \(p.link)"
-            }
+
+        } else if let news = postArr as? New {
+            cell.postApproveTitle.text = "Post by \(news.creator)"
+            cell.postApproveContent.text = "\(news.text) \nLink: \(news.link)"
         } else {
             print("Tipo desconocido en postArr")
         }
@@ -83,8 +80,18 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
     func getWaitingContentsOfCommunity(community:Community)->[Any]{
         //te da todos los contenidos (posts, news y reports) de una comunidad
         var contents:[Any]=[]
-        contents.append(community.waitingPost)
-        contents.append(community.waitingNews)
+        if let wn=community.waitingNews{
+            for i in 0...wn.count-1{
+                contents.append(community.approvedNews![i])
+            }
+        }
+        
+        if let wp=community.waitingPost{
+            for i in 0...wp.count-1{
+                contents.append(community.approvedPost![i])
+            }
+        }
+        
         
         return contents
     }

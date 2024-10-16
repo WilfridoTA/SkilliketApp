@@ -53,11 +53,18 @@ class PostsCommunitiesViewController: UIViewController,UITableViewDataSource, UI
         let cell = postsCommunitiesTable.dequeueReusableCell(withIdentifier: "postsCommunitiesCell", for: indexPath) as! PostsTableViewCell
         
         //Obtenemos el tamaño de nuestro arreglo
-        let commAr = communitiesArr![indexPath.row]
+        let commAr = communitiesArr![indexPath.section]
         
         //Modificamos el contenido de nuestra celda
         cell.CommunityName.text = commAr!.name
-        cell.PostsNumber.text = String(commAr!.waitingProjects!.count)
+        var num=0
+        if let wn=commAr!.waitingNews{
+            num+=wn.count
+        }
+        if let wp=commAr!.waitingPost{
+            num+=wp.count
+        }
+        cell.PostsNumber.text = String(num)
         cargarImagenDesdeURL(url: commAr!.image, imageView: cell.CommunityImage)
 
         //Personalizamos imagen
