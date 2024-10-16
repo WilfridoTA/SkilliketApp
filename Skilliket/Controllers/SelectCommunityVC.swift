@@ -40,13 +40,33 @@ class SelectCommunityVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func updatePopUpButtonTitle(button: UIButton, title: String) {
+        button.setTitle(title, for: .normal)
+        
+        // Actualizar manualmente el título del botón emergente
+        if let titleLabel = button.titleLabel {
+            titleLabel.text = title
+        }
+        
+        button.layoutIfNeeded()
+        button.setNeedsLayout()
+    }
+    
     func setUpCityButton(){
+        var configuration = UIButton.Configuration.plain()
+            configuration.title = "Select City"
+            configuration.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16)
+        
         let actionClosure = { (action: UIAction) in self.popUpButtonCity
-            self.city = action.title
-            self.updateZoneButton()
+            if action.title != "Select city"{
+                self.city = action.title
+                self.updateZoneButton()
+            }
+            self.popUpButtonCity.configuration?.attributedTitle = AttributedString(action.title)
+            self.popUpButtonCity.setNeedsLayout()
         }
             
-        var menuChildren: [UIMenuElement] = []
+        var menuChildren: [UIMenuElement] = [UIAction(title: "Select city", handler: actionClosure)]
             
         for i in 0...ourApp!.communities.count-1 {
             menuChildren.append(UIAction(title: ourApp!.communities[i].city, handler: actionClosure))
@@ -55,34 +75,10 @@ class SelectCommunityVC: UIViewController {
 
 
         // Configurar el menú
+        popUpButtonCity.configuration = configuration
         popUpButtonCity.menu = UIMenu(options: .displayInline, children: menuChildren)
         popUpButtonCity.showsMenuAsPrimaryAction = true
         popUpButtonCity.changesSelectionAsPrimaryAction = true
-
-        // Configurar el icono
-        let image = UIImage(systemName: "chevron.down") ?? UIImage()
-        popUpButtonCity.setImage(image, for: .normal)
-
-        // Ajustar los márgenes del título e imagen
-        if let imageView = popUpButtonCity.imageView {
-            imageView.contentMode = .scaleAspectFit
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imageView.trailingAnchor.constraint(equalTo: popUpButtonCity.trailingAnchor, constant: -10),
-                imageView.topAnchor.constraint(equalTo: popUpButtonCity.topAnchor, constant: 0),
-                imageView.widthAnchor.constraint(equalToConstant: 20),
-                imageView.heightAnchor.constraint(equalToConstant: 20)
-            ])
-        }
-
-        if let titleLabel = popUpButtonCity.titleLabel {
-            titleLabel.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                titleLabel.leadingAnchor.constraint(equalTo: popUpButtonCity.leadingAnchor, constant: 10),
-                titleLabel.centerYAnchor.constraint(equalTo: popUpButtonCity.centerYAnchor)
-            ])
-        }
-
 
         popUpButtonCity.layer.cornerRadius = 10
 
@@ -91,8 +87,14 @@ class SelectCommunityVC: UIViewController {
     }
 
     func firstSetUpZoneButton() {
+        var configuration = UIButton.Configuration.plain()
+            configuration.title = "Select city first"
+            configuration.contentInsets = NSDirectionalEdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16)
+        
         let actionClosure = { (action: UIAction) in self.popUpButtonZone
-                self.zone = action.title
+            self.zone = action.title
+            self.popUpButtonZone.configuration?.attributedTitle = AttributedString(action.title)
+            self.popUpButtonZone.setNeedsLayout()
         }
             
         var menuChildren: [UIMenuElement] = []
@@ -101,34 +103,10 @@ class SelectCommunityVC: UIViewController {
 
 
         // Configurar el menú
+        popUpButtonZone.configuration = configuration
         popUpButtonZone.menu = UIMenu(options: .displayInline, children: menuChildren)
         popUpButtonZone.showsMenuAsPrimaryAction = true
         popUpButtonZone.changesSelectionAsPrimaryAction = true
-
-        // Configurar el icono
-        let image = UIImage(systemName: "chevron.down") ?? UIImage()
-        popUpButtonZone.setImage(image, for: .normal)
-
-        // Ajustar los márgenes del título e imagen
-        if let imageView = popUpButtonZone.imageView {
-            imageView.contentMode = .scaleAspectFit
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                imageView.trailingAnchor.constraint(equalTo: popUpButtonZone.trailingAnchor, constant: -10),
-                imageView.topAnchor.constraint(equalTo: popUpButtonZone.topAnchor, constant: 0),
-                imageView.widthAnchor.constraint(equalToConstant: 20),
-                imageView.heightAnchor.constraint(equalToConstant: 20)
-            ])
-        }
-
-        if let titleLabel = popUpButtonZone.titleLabel {
-            titleLabel.translatesAutoresizingMaskIntoConstraints = false
-            NSLayoutConstraint.activate([
-                titleLabel.leadingAnchor.constraint(equalTo: popUpButtonZone.leadingAnchor, constant: 10),
-                titleLabel.centerYAnchor.constraint(equalTo: popUpButtonZone.centerYAnchor)
-            ])
-        }
-
 
         popUpButtonZone.layer.cornerRadius = 10
 
@@ -139,10 +117,11 @@ class SelectCommunityVC: UIViewController {
     func updateZoneButton(){
         let actionClosure = { (action: UIAction) in self.popUpButtonZone
             self.zone = action.title
+            self.updatePopUpButtonTitle(button: self.popUpButtonZone, title: action.title)
             self.updateCommunityView()
         }
         
-        var menuChildren: [UIMenuElement] = []
+        var menuChildren: [UIMenuElement] = [UIAction(title: "Select zone", handler: actionClosure)]
             
         for i in 0...ourApp!.communities.count-1{
             if ourApp!.communities[i].city==city{
@@ -268,6 +247,7 @@ class SelectCommunityVC: UIViewController {
         if let userPostsVC = navigationController.topViewController as? UserPostsViewController {
             userPostsVC.actualMember = actualMember
             userPostsVC.ourApp = ourApp
+            userPostsVC.actualCommunity=getCommunity()
         }
     }
 
@@ -276,6 +256,7 @@ class SelectCommunityVC: UIViewController {
             // Configurar YourForumsViewController
             yourForumsVC.actualMember = actualMember
             yourForumsVC.ourApp = ourApp
+            yourForumsVC.actualCommunity=getCommunity()
         }
     }
 
@@ -283,7 +264,8 @@ class SelectCommunityVC: UIViewController {
         if let yourProjectsVC = navigationController.topViewController as? YourProjectsViewController {
             // Configurar YourProjectsViewController
             yourProjectsVC.actualMember = actualMember
-            yourProjectsVC.ourApp = ourApp        }
+            yourProjectsVC.ourApp = ourApp
+        }
     }
 
     func configureDataGraphViewController(_ navigationController: UINavigationController) {
