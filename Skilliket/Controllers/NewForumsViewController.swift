@@ -10,6 +10,7 @@ import UIKit
 class NewForumsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var featuredForumsTable: UITableView!
+    
     var ourApp:App?
     var actualMember:Member?
     var actualCommunity:Community?
@@ -24,6 +25,12 @@ class NewForumsViewController: UIViewController, UITableViewDataSource, UITableV
         
         featuredForumsTable.dataSource=self
         featuredForumsTable.delegate=self
+        
+        //Para cada celda
+        featuredForumsTable.layer.shadowColor = UIColor.black.cgColor
+        featuredForumsTable.layer.shadowOpacity = 0.5
+        featuredForumsTable.layer.shadowOffset = CGSize(width: 4, height: 4)
+        featuredForumsTable.layer.shadowRadius = 6
         
         forumsArr=getForumsNotWithMember(member: actualMember!)
         
@@ -51,25 +58,29 @@ class NewForumsViewController: UIViewController, UITableViewDataSource, UITableV
     }
     */
     
+    //MARK: - Celdas de la tabla
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1 //Cantidad de secciones a crear
+        return forumsArr!.count //Cantidad de secciones a crear
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return forumsArr!.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = featuredForumsTable.dequeueReusableCell(withIdentifier: "featuredForumsCell", for: indexPath) as! FeaturedForumsTableViewCell
         
         //Obtenemos el tamaño del arreglo de proyectos
-        let forArr = forumsArr![indexPath.row]
+        let forArr = forumsArr![indexPath.section]
         cell.featuredFormsDescription.text=forArr.description
         cell.featuredForumsLocation.text=forArr.location
         cell.featuredForumsName.text=forArr.name
         cell.featuredForumsNumMembers.text="\(forumsArr!.count)"
         cargarImagenDesdeURL(url: forArr.image, imageView: cell.featuredForumsImage)
+        
+        //Bordear imagen
+        cell.featuredForumsImage.layer.cornerRadius = 18
         
         return cell
     }

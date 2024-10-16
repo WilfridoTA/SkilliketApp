@@ -103,6 +103,9 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             }
             cell.link.isHidden=true
             
+            cell.imagePost.layer.cornerRadius = 18
+            cell.userImage.layer.cornerRadius = 9
+            
         } else if let p=postArr as? New{
             cell.title.text = "New"
             cell.nameMember.text=p.creator
@@ -127,6 +130,9 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             }
             cell.link.text="\(p.link)"
             
+            cell.imagePost.layer.cornerRadius = 18
+            cell.userImage.layer.cornerRadius = 9
+            
         } else if let p=postArr as? Report{
             cell.title.text = "Report"
             cell.nameMember.text=p.creator
@@ -136,6 +142,8 @@ class UserPostsViewController: UIViewController, UITableViewDataSource, UITableV
             } else{
                 cell.imagePost.image = UIImage(systemName: "newspaper")
             }
+            cell.imagePost.layer.cornerRadius = 18
+            cell.userImage.layer.cornerRadius = 9
             
             // Convertir DateComponents a Date
             let calendar = Calendar.current
