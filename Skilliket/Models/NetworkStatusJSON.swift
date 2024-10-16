@@ -64,6 +64,30 @@ class NetworkDevice: Codable {
     }
 }
 
+// MARK: - TicketResponse
+class TicketResponse: Codable {
+    let response: ResponsePTT
+    let version: String
+
+    init(response: ResponsePTT, version: String) {
+        self.response = response
+        self.version = version
+    }
+}
+
+// MARK: - Response
+class ResponsePTT: Codable {
+    let idleTimeout: Int
+    let serviceTicket: String
+    let sessionTimeout: Int
+
+    init(idleTimeout: Int, serviceTicket: String, sessionTimeout: Int) {
+        self.idleTimeout = idleTimeout
+        self.serviceTicket = serviceTicket
+        self.sessionTimeout = sessionTimeout
+    }
+}
+
 enum DeviceType: String, Codable {
     case routers = "Routers"
     case switches = "Switches"
@@ -73,10 +97,52 @@ typealias OneStatus=Response
 typealias Statuses=[OneStatus]
 
 extension NetworkStatusJSONS{
-    static func fetchNetworkStatus() async throws -> Statuses {
-        var urlComponents = URLComponents(string: "http://localhost:58000/api/v1/assurance/health")!
+    
+    static func getToken() async throws->String?{
+            let url="http://localhost:58000/api/v1/ticket"
+            var retorno="TokenError"
+            let baseURL = URL(string: url)
+            var request = URLRequest(url: baseURL!)
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-            let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
+        
+            let parametros: [String: String] = [
+                "username": "cisco",
+                "password": "cisco123!"
+            ]
+
+            do {
+                let jsonData = try JSONSerialization.data(withJSONObject: parametros, options: [])
+
+                //Configurar el cuerpo del request con el JSON
+                request.httpBody = jsonData
+
+                // Hacer la solicitud usando URLSession
+                let (data, response) = try await URLSession.shared.data(for: request)
+                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201 else {
+                    throw ErrorJSON.errorConnect
+                }
+                let ticketResponse = try? JSONDecoder().decode(TicketResponse.self, from: data)
+                retorno = ticketResponse?.response.serviceTicket ?? "TokenError"
+                
+                return retorno
+
+            } catch {
+               print("Error al obtener token: \(error)")
+            }
+            return retorno
+        }
+
+
+    static func fetchNetworkStatus(token:String) async throws -> Statuses {
+        let url="http://localhost:58000/api/v1/assurance/health"
+        let baseURL = URL(string: url)
+        var request = URLRequest(url: baseURL!)
+        //request.httpMethod = "GET"
+        request.addValue(token, forHTTPHeaderField: "X-Auth-Token")
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
 
             guard let httpResponse = response as? HTTPURLResponse,
                   httpResponse.statusCode == 200 else {
