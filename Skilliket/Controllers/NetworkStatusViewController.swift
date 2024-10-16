@@ -24,10 +24,17 @@ class NetworkStatusViewController: UIViewController {
         super.viewDidLoad()
         Task {
             do {
-                let networkStatuses = try await NetworkStatusJSONS.fetchNetworkStatus(token: NetworkStatusJSONS.getToken()!)
+                if let token = try await NetworkStatusJSONS.getToken() {
+                    let networkStatuses = try await NetworkStatusJSONS.fetchNetworkStatus(token: token)
+                    // Aquí puedes manejar `networkStatuses` según lo necesites
+                } else {
+                    print("Error: No se pudo obtener el token")
+                }
             } catch {
+                print("Error al obtener el estado de la red: \(error)")
             }
         }
+
         
     }
     

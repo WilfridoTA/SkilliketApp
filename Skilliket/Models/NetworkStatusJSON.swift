@@ -98,41 +98,39 @@ typealias Statuses=[OneStatus]
 
 extension NetworkStatusJSONS{
     
-    static func getToken() async throws->String?{
-            let url="http://localhost:58000/api/v1/ticket"
-            var retorno="TokenError"
-            let baseURL = URL(string: url)
-            var request = URLRequest(url: baseURL!)
-            request.httpMethod = "POST"
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
-        
-            let parametros: [String: String] = [
-                "username": "cisco",
-                "password": "cisco123!"
-            ]
-
-            do {
-                let jsonData = try JSONSerialization.data(withJSONObject: parametros, options: [])
-
-                //Configurar el cuerpo del request con el JSON
-                request.httpBody = jsonData
-
-                // Hacer la solicitud usando URLSession
-                let (data, response) = try await URLSession.shared.data(for: request)
-                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201 else {
-                    throw ErrorJSON.errorConnect
-                }
-                let ticketResponse = try? JSONDecoder().decode(TicketResponse.self, from: data)
-                retorno = ticketResponse?.response.serviceTicket ?? "TokenError"
-                
-                return retorno
-
-            } catch {
-               print("Error al obtener token: \(error)")
-            }
-            return retorno
+    static func getToken() async throws -> String? {
+        let url = "http://localhost:58000/api/v1/ticket"
+        var retorno = "TokenError"
+        guard let baseURL = URL(string: url) else {
+            print("URL inválida")
+            return nil
         }
+        var request = URLRequest(url: baseURL)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+
+        let parametros: [String: String] = [
+            "username": "cisco",
+            "password": "cisco123!"
+        ]
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: parametros, options: [])
+            // Configurar el cuerpo del request con el JSON
+            request.httpBody = jsonData
+            // Hacer la solicitud usando URLSession
+            let (data, response) = try await URLSession.shared.data(for: request)
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 201 else {
+                throw ErrorJSON.errorConnect
+            }
+            let ticketResponse = try? JSONDecoder().decode(TicketResponse.self, from: data)
+            retorno = ticketResponse?.response.serviceTicket ?? "TokenError"
+            return retorno
+        } catch {
+            print("Error al obtener token: \(error)")
+        }
+        return retorno
+    }
 
 
     static func fetchNetworkStatus(token:String) async throws -> Statuses {
