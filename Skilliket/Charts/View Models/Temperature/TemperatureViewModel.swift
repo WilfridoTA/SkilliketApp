@@ -32,7 +32,6 @@ class TemperatureViewModel: ObservableObject {
         let grouped = temperatureGroupedByWeek(temperature: temperatureData)
         return totalTempPerWeek(temperatureByWeek: grouped)
     }
-
     
     var tempByMonth: [(month: Date, temp: Float)] {
         let grouped = temperatureGroupedByMonth(temperature: temperatureData)
@@ -51,7 +50,6 @@ class TemperatureViewModel: ObservableObject {
         let averageTemp = averageTempPerNumber(temperatureByNumber: temperaturesByWeekday)
         return averageTemp.map { (number: $0.number, temp: $0.temp) } // Change to 'temp'
     }
-
     
     var tempByWeekdayHistogramData: [(number: Int, histogram: [(bucket: Int, count: Int)])] {
         var result: [(number: Int, histogram: [(bucket: Int, count: Int)])] = []
@@ -66,63 +64,87 @@ class TemperatureViewModel: ObservableObject {
         averageTempByWeekday.max(by: { $0.temp < $1.temp }) // Change 'temp' to 'temp'
     }
     
-    
     // Initializers
     init(temperatureData: [TemperatureData] = [], lastTotalTemp: Float = 0.0) {
         self.temperatureData = temperatureData
         self.lastTotalTemp = lastTotalTemp
     }
     
-    convenience init() {
-        self.init(temperatureData: TemperatureData.higherWeekendThreeMonthsExamples, lastTotalTemp: 20.0)
-    }
     
     // MARK: - Helper Functions
     
+    // Group temperature data by da
     // Group temperature data by day
     func temperatureGroupedByDay(temperature: [TemperatureData]) -> [Date: [TemperatureData]] {
         var temperatureByDay: [Date: [TemperatureData]] = [:]
         let calendar = Calendar.current
+        
         for entry in temperature {
-            let date = calendar.startOfDay(for: entry.date)
-            temperatureByDay[date, default: []].append(entry)
+            if let date = calendar.date(from: entry.date){
+                // Use entry.date directly since it's already of type Date
+                let startOfDay = calendar.startOfDay(for: date)
+                temperatureByDay[startOfDay, default: []].append(entry)
+                
+            }
+
         }
+        
         return temperatureByDay
     }
-    
+
     // Group temperature data by week
     func temperatureGroupedByWeek(temperature: [TemperatureData]) -> [Date: [TemperatureData]] {
         var temperatureByWeek: [Date: [TemperatureData]] = [:]
         let calendar = Calendar.current
+        
         for entry in temperature {
-            guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: entry.date)) else { continue }
-            temperatureByWeek[startOfWeek, default: []].append(entry)
+            if let date = calendar.date(from: entry.date){
+                guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date)) else { continue }
+                temperatureByWeek[startOfWeek, default: []].append(entry)
+                
+                
+            }
+            // Use entry.date directly since it's already of type Date
+            
+            // Get the start of the week
+
         }
+        
         return temperatureByWeek
     }
-    
+
     // Group temperature data by month
-    func temperatureGroupedByMonth(temperature: [TemperatureData]) -> [Date: [TemperatureData]] {
-        var temperatureByMonth: [Date: [TemperatureData]] = [:]
+    func waterGroupedByMonth(water: [WaterData]) -> [Date: [WaterData]] {
+        var waterByMonth: [Date: [WaterData]] = [:]
         let calendar = Calendar.current
-        for entry in temperature {
-            guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: entry.date)) else { continue }
-            temperatureByMonth[startOfMonth, default: []].append(entry)
+        for entry in water {
+            // Convert DateComponents to Date
+            if let date = calendar.date(from: entry.date) {
+                guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: date)) else { continue }
+                waterByMonth[startOfMonth, default: []].append(entry)
+            }
         }
-        return temperatureByMonth
+        return waterByMonth
     }
+
     
+
     // Group temperature data by weekday
     func temperatureGroupedByWeekday(temperature: [TemperatureData]) -> [Int: [TemperatureData]] {
         var temperatureByWeekday: [Int: [TemperatureData]] = [:]
         let calendar = Calendar.current
+        
         for entry in temperature {
-            let weekday = calendar.component(.weekday, from: entry.date)
-            temperatureByWeekday[weekday, default: []].append(entry)
+            // Use entry.date directly since it's already of type Date
+            if let date = calendar.date(from: entry.date) {
+                let weekday = calendar.component(.weekday, from: date)
+                temperatureByWeekday[weekday, default: []].append(entry)
+            }
         }
+        
         return temperatureByWeekday
     }
-    
+
     
     // Calculate total temperature per date
     func totalTempPerDate(temperatureByDate: [Date: [TemperatureData]]) -> [(day: Date, temp: Float)] {
@@ -151,7 +173,6 @@ class TemperatureViewModel: ObservableObject {
         }
         return totalTemp.sorted { $0.month < $1.month }
     }
-
     
     // Calculate average temperature per weekday number
     func averageTempPerNumber(temperatureByNumber: [Int: [TemperatureData]]) -> [(number: Int, temp: Double)] {
@@ -202,3 +223,4 @@ class TemperatureViewModel: ObservableObject {
         return vm
     }
 }
+

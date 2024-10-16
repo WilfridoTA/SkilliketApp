@@ -1,10 +1,3 @@
-//
-//  DailyWaterChartView.swift
-//  Skilliket
-//
-//  Created by Nicole  on 15/10/24.
-//
-
 import SwiftUI
 import Charts
 
@@ -34,13 +27,15 @@ struct DailyWaterChartView: View {
         scrollPositionEnd.formatted(.dateTime.month().day().year())
     }
 
-    init(viewModel: VariablesViewModel) {
+    // Modify init
+    init(viewModel: VariablesViewModel, skilliket: SkilliketDevice = SkilliketDevice(id: 1, name: "s", location: "s", status: .up)) {
         self.viewModel = viewModel
+        viewModel.skilliketDevice = skilliket
         
         // Calculate the initial scroll position based on loaded data
-        if let lastDateComponents = viewModel.waterData.last?.date {
-            let calendar = Calendar.current
-            if let lastDate = calendar.date(from: lastDateComponents) {
+        if let lastDataPoint = viewModel.waterData.last { // safely unwrapping lastDataPoint
+            // Unwrap the date from the last data point
+            if let lastDate = lastDataPoint.date { // Assuming date is an optional Date
                 // Calculate the beginning of the interval (30 days before the last date)
                 let beginningOfInterval = lastDate.addingTimeInterval(-1 * 3600 * 24 * 30)
                 self._scrollPosition = State(initialValue: beginningOfInterval.timeIntervalSinceReferenceDate)
@@ -50,7 +45,6 @@ struct DailyWaterChartView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            
             // Title for the chart
             Text("Daily Water Levels (cm)")
                 .font(.title2)
@@ -64,17 +58,14 @@ struct DailyWaterChartView: View {
             
             // The chart displaying daily water level data
             Chart(viewModel.waterData, id: \.date) { dataPoint in
-                // Convert DateComponents to Date for each data point
-                if let date = Calendar.current.date(from: dataPoint.date) {
-                    BarMark(
-                        x: .value("Day", date, unit: .day),
-                        y: .value("Water Level", dataPoint.waterLevel)
-                    )
-                }
+                BarMark(
+                    x: .value("Day", dataPoint.date, unit: .day), // Assuming dataPoint.date is already of type Date
+                    y: .value("Water Level", dataPoint.waterLevel)
+                )
             }
             .chartScrollableAxes(.horizontal)
             .chartXVisibleDomain(length: 3600 * 24 * numberOfDisplayedDays) // shows 30 days
-            // snap to beginning of the month when scrolling ends
+            // Snap to beginning of the month when scrolling ends
             .chartScrollTargetBehavior(
                 .valueAligned(
                     matching: .init(hour: 0),
@@ -87,9 +78,9 @@ struct DailyWaterChartView: View {
         }
         .onChange(of: viewModel.waterData) { newValue in
             // Update the scroll position based on new data
-            if let lastDateComponents = newValue.last?.date {
-                let calendar = Calendar.current
-                if let lastDate = calendar.date(from: lastDateComponents) {
+            if let lastDataPoint = newValue.last { // safely unwrapping lastDataPoint
+                // Safely unwrap the date
+                if let lastDate = lastDataPoint.date { // Assuming date is an optional Date
                     let beginningOfInterval = lastDate.addingTimeInterval(-1 * 3600 * 24 * 30)
                     scrollPosition = beginningOfInterval.timeIntervalSinceReferenceDate
                 }
@@ -110,6 +101,7 @@ struct DailyWaterChartView: View {
         .aspectRatio(1, contentMode: .fit)
         .padding()
 }
+
 
 
 
