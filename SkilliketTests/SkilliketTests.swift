@@ -78,7 +78,7 @@ final class SkilliketTests: XCTestCase {
         
     }
     
-    func testHU04_CP02_register_Success(){
+    func testHU01_CP02_register_Success(){
         var registerVC=CreateAccountVC()
         var loginVC=LoginVC()
         DispatchQueue.main.async {
@@ -118,7 +118,7 @@ final class SkilliketTests: XCTestCase {
         }
     }
     
-    func testHU04_CP02_register_Fail(){
+    func testHU01_CP02_register_Fail(){
         var registerVC=CreateAccountVC()
         var loginVC=LoginVC()
         DispatchQueue.main.async {
@@ -158,7 +158,7 @@ final class SkilliketTests: XCTestCase {
         }
     }
     
-    func testHU05_CP03_seeTermsAndConditions_Success() {
+    func testHU02_CP03_seeTermsAndConditions_Success() {
         let loginVC = LoginVC()
         
         DispatchQueue.main.async {
@@ -179,6 +179,35 @@ final class SkilliketTests: XCTestCase {
             }
         }
     }
+    
+    
+    func testHU06_CP04_chooseCommunity_Success(){
+        var registerVC=CreateAccountVC()
+        var loginVC=LoginVC()
+        DispatchQueue.main.async {
+            registerVC.loadViewIfNeeded()
+            loginVC.loadViewIfNeeded()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                XCTAssertNotNil(loginVC.passwordTextField)
+                XCTAssertNotNil(loginVC.usernameTextField)
+                XCTAssertNotNil(registerVC.passwordTextField)
+                XCTAssertNotNil(registerVC.usernameTextField)
+                XCTAssertNotNil(registerVC.nameTextField)
+                XCTAssertNotNil(registerVC.lastNameTextField)
+                XCTAssertNotNil(registerVC.emailTextField)
+                XCTAssertNotNil(registerVC.agreeTermsButton)
+                XCTAssertNotNil(registerVC.eulaButton)
+                
+                registerVC.agreeTermsButton.sendActions(for: .touchUpInside)
+                
+                XCTAssertTrue(registerVC.agreeTerms)
+
+            }
+        }
+    }
+    
+    
 
 
 }
