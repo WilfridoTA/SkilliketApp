@@ -23,6 +23,11 @@ class YourProjectsViewController: UIViewController, UITableViewDataSource, UITab
         yourProjectsTable.dataSource = self//La misma clase será encargada de obtener la información de la celda
         yourProjectsTable.delegate = self//Tamaño de celda - UITableViewDelegate
         
+        yourProjectsTable.layer.shadowColor = UIColor.black.cgColor
+        yourProjectsTable.layer.shadowOpacity = 0.5
+        yourProjectsTable.layer.shadowOffset = CGSize(width: 4, height: 4)
+        yourProjectsTable.layer.shadowRadius = 6
+        
         projectsArr=getProyectsOfMember(member: actualMember!)
     }
     
@@ -55,23 +60,25 @@ class YourProjectsViewController: UIViewController, UITableViewDataSource, UITab
     //MARK: - Funciones de la tabla
     //El tamaño del arreglo nos dira el numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return projectsArr!.count
     }
     
     //Cada sección tendra una fila
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return projectsArr!.count
+        return 1
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = yourProjectsTable.dequeueReusableCell(withIdentifier: "UserProjectCell", for: indexPath) as! YourProjectsTableViewCell
         
-        let arreglo = projectsArr![indexPath.row]
+        let arreglo = projectsArr![indexPath.section]
         
         cell.yourProjectsName.text = arreglo.name
         cell.yourProjectsDescription.text=arreglo.description
         cargarImagenDesdeURL(url: arreglo.imagen, imageView: cell.YourProjectsImage)
+        
+        cell.YourProjectsImage.layer.cornerRadius = 18
         
         return cell
     }
