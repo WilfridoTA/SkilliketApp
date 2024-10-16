@@ -34,6 +34,15 @@ class YourForumsViewController: UIViewController, UITableViewDataSource, UITable
             actualCommunity=getCommunityOfMember(member: member)
         }
         forumsArr=getForumsOfMember(member: actualMember!)
+        if forumsArr!.count==0{
+            showAlert(title: "Hey!", message: "Seems like you haven't joined a forum yet, check them out!")
+        }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
     }
     
     func getCommunityOfMember(member:Member)->Community?

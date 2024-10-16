@@ -19,6 +19,16 @@ class JoinProjectViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        // Do any additional setup after loading the view.
+        
+        /*
+         adaptar cuando se tenga la lista
+         if forumsArr!.count==0{
+            showAlert(title: "Hey!", message: "Seems like you have joined to all the available forums of your community")
+        }
+         */
+
         joinProjectTable.dataSource = self
         joinProjectTable.delegate = self
         
@@ -57,8 +67,14 @@ class JoinProjectViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         return memberCommunity
+
     }
     
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
+    }
 
     /*
     // MARK: - Navigation
