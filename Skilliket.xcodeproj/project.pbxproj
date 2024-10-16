@@ -42,6 +42,8 @@
 		1F81CF7C2CBCAEBC000520EB /* EulaJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF772CBCAEBC000520EB /* EulaJSON.swift */; };
 		1F81CF7D2CBCAEBC000520EB /* TerminosCondicionesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */; };
 		1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */; };
+		1FB241B32CBF75460044009E /* ShowTermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */; };
+		1FB241B52CBF76BD0044009E /* ShowEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */; };
 		1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */; };
 		1FD464CF2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */; };
 		3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */; };
@@ -123,6 +125,8 @@
 		1F81CF782CBCAEBC000520EB /* Terminos&Condiciones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Terminos&Condiciones.swift"; sourceTree = "<group>"; };
 		1F81CF792CBCAEBC000520EB /* TerminosCondicionesJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TerminosCondicionesJSON.swift; sourceTree = "<group>"; };
 		1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
+		1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTermsConditionsViewController.swift; sourceTree = "<group>"; };
+		1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEulaViewController.swift; sourceTree = "<group>"; };
 		1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectUserViewController.swift; sourceTree = "<group>"; };
 		1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusTableViewCell.swift; sourceTree = "<group>"; };
 		3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewController.swift; sourceTree = "<group>"; };
@@ -311,6 +315,8 @@
 				1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */,
 				3BC389D32CBE336A0035EE3D /* JoinProjectViewController.swift */,
 				1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */,
+				1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */,
+				1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 				1F81CF7A2CBCAEBC000520EB /* Eula.swift in Sources */,
 				1F81CF7B2CBCAEBC000520EB /* Terminos&Condiciones.swift in Sources */,
 				1F81CF7C2CBCAEBC000520EB /* EulaJSON.swift in Sources */,
+				1FB241B52CBF76BD0044009E /* ShowEulaViewController.swift in Sources */,
 				1F81CF7D2CBCAEBC000520EB /* TerminosCondicionesJSON.swift in Sources */,
 				BB78526B2CB3A58D00DA6452 /* FormCompositionalLayout.swift in Sources */,
 				3B5658002CA92DD30067F626 /* CommunitiesTableViewCell.swift in Sources */,
@@ -433,6 +440,7 @@
 				3B3C8AF52CBB933400C78D03 /* ProjectCommunitiesViewController.swift in Sources */,
 				BB7852702CB6139000DA6452 /* CreateReportViewController.swift in Sources */,
 				3B26ADE12CBB2E600025CDB3 /* YourProjectsViewController.swift in Sources */,
+				1FB241B32CBF75460044009E /* ShowTermsConditionsViewController.swift in Sources */,
 				1F81CF422CBC52A7000520EB /* AdminTabBarController.swift in Sources */,
 				3B2ABABD2CA5D1EC003EF886 /* AppDelegate.swift in Sources */,
 				3B3C8AFB2CBB971300C78D03 /* ProjectToBeApprovedTableViewCell.swift in Sources */,
