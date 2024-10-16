@@ -31,3 +31,7 @@ class WaterData: Data{
         case time
     }
 }
+
+struct WaterJSON: Codable {
+    let waterArray: [WaterData]
+}

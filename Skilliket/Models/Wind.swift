@@ -31,3 +31,7 @@ class WindData: Data{
         case time
     }
 }
+
+struct WindJSON: Codable {
+    let windArray: [WindData]
+}

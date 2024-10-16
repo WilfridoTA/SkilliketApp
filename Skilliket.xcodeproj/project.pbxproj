@@ -44,9 +44,7 @@
 		1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */; };
 		1FB241B32CBF75460044009E /* ShowTermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */; };
 		1FB241B52CBF76BD0044009E /* ShowEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */; };
-
 		1FB241C42CBF8A540044009E /* NetworkStatusJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */; };
-
 		1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */; };
 		1FD464CF2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */; };
 		1FD464E62CBF4E1400CBDB49 /* ForumChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464E52CBF4E1400CBDB49 /* ForumChatTableViewCell.swift */; };
@@ -84,6 +82,34 @@
 		3BC3E76C2CA7388E00F106A6 /* CommunitiesColorGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC3E76B2CA7388E00F106A6 /* CommunitiesColorGradient.swift */; };
 		3BE325BB2CBA0ABC00791263 /* NewForumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE325BA2CBA0ABC00791263 /* NewForumsViewController.swift */; };
 		3BF11BD82CA729A700F4C113 /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF11BD72CA729A700F4C113 /* CommunitiesViewController.swift */; };
+		BB50C3B22CC01D740063980B /* TemperatureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3B12CC01D740063980B /* TemperatureViewModel.swift */; };
+		BB50C3B82CC01D930063980B /* SimpleTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3B72CC01D930063980B /* SimpleTemperatureView.swift */; };
+		BB50C3B92CC01D930063980B /* DetailTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3B42CC01D930063980B /* DetailTemperatureView.swift */; };
+		BB50C3BA2CC01D930063980B /* DailyTemperatureChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3B32CC01D930063980B /* DailyTemperatureChartView.swift */; };
+		BB50C3BB2CC01D930063980B /* WeeklyTemperatureChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3B62CC01D930063980B /* WeeklyTemperatureChartView.swift */; };
+		BB50C3BC2CC01D930063980B /* MonthlyTemperatureChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3B52CC01D930063980B /* MonthlyTemperatureChartView.swift */; };
+		BB50C3C32CC01DA70063980B /* DailyNoiseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3BE2CC01DA70063980B /* DailyNoiseChartView.swift */; };
+		BB50C3C42CC01DA70063980B /* NoiseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3BD2CC01DA70063980B /* NoiseViewModel.swift */; };
+		BB50C3C52CC01DA70063980B /* WeeklyNoiseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3C12CC01DA70063980B /* WeeklyNoiseChartView.swift */; };
+		BB50C3C62CC01DA70063980B /* DetailNoiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3BF2CC01DA70063980B /* DetailNoiseView.swift */; };
+		BB50C3C72CC01DA70063980B /* SimpleNoiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3C22CC01DA70063980B /* SimpleNoiseView.swift */; };
+		BB50C3C82CC01DA70063980B /* MonthlyNoiseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3C02CC01DA70063980B /* MonthlyNoiseChartView.swift */; };
+		BB50C3CF2CC01DB00063980B /* SimpleWaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3CE2CC01DB00063980B /* SimpleWaterView.swift */; };
+		BB50C3D02CC01DB00063980B /* DetailWaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3CB2CC01DB00063980B /* DetailWaterView.swift */; };
+		BB50C3D12CC01DB00063980B /* WaterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3C92CC01DB00063980B /* WaterViewModel.swift */; };
+		BB50C3D22CC01DB00063980B /* DailyWaterChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3CA2CC01DB00063980B /* DailyWaterChartView.swift */; };
+		BB50C3D32CC01DB00063980B /* WeeklyWaterChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3CD2CC01DB00063980B /* WeeklyWaterChartView.swift */; };
+		BB50C3D42CC01DB00063980B /* MonthlyWaterChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3CC2CC01DB00063980B /* MonthlyWaterChartView.swift */; };
+		BB50C3DB2CC01DB60063980B /* WindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3D52CC01DB60063980B /* WindViewModel.swift */; };
+		BB50C3DC2CC01DB60063980B /* MonthlyWindChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3D82CC01DB60063980B /* MonthlyWindChartView.swift */; };
+		BB50C3DD2CC01DB60063980B /* DailyWindChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3D62CC01DB60063980B /* DailyWindChartView.swift */; };
+		BB50C3DE2CC01DB60063980B /* WeeklyWindChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3D92CC01DB60063980B /* WeeklyWindChartView.swift */; };
+		BB50C3DF2CC01DB60063980B /* DetailWindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3D72CC01DB60063980B /* DetailWindView.swift */; };
+		BB50C3E02CC01DB60063980B /* SimpleWindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3DA2CC01DB60063980B /* SimpleWindView.swift */; };
+		BB50C3E42CC01DCD0063980B /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3E32CC01DCD0063980B /* MacContentView.swift */; };
+		BB50C3E52CC01DCD0063980B /* MainChartsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3E12CC01DCD0063980B /* MainChartsFile.swift */; };
+		BB50C3E62CC01DCD0063980B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3E22CC01DCD0063980B /* ContentView.swift */; };
+		BB50C3EA2CC0285B0063980B /* VariablesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50C3E92CC0285B0063980B /* VariablesViewModel.swift */; };
 		BB7852652CB3563100DA6452 /* FormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7852642CB3563100DA6452 /* FormModel.swift */; };
 		BB7852672CB35FB900DA6452 /* CreateNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7852662CB35FB900DA6452 /* CreateNewsViewController.swift */; };
 		BB7852692CB3650000DA6452 /* FormCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7852682CB3650000DA6452 /* FormCollectionViewCell.swift */; };
@@ -182,6 +208,34 @@
 		3BC3E76B2CA7388E00F106A6 /* CommunitiesColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesColorGradient.swift; sourceTree = "<group>"; };
 		3BE325BA2CBA0ABC00791263 /* NewForumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForumsViewController.swift; sourceTree = "<group>"; };
 		3BF11BD72CA729A700F4C113 /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
+		BB50C3B12CC01D740063980B /* TemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
+		BB50C3B32CC01D930063980B /* DailyTemperatureChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTemperatureChartView.swift; sourceTree = "<group>"; };
+		BB50C3B42CC01D930063980B /* DetailTemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTemperatureView.swift; sourceTree = "<group>"; };
+		BB50C3B52CC01D930063980B /* MonthlyTemperatureChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTemperatureChartView.swift; sourceTree = "<group>"; };
+		BB50C3B62CC01D930063980B /* WeeklyTemperatureChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTemperatureChartView.swift; sourceTree = "<group>"; };
+		BB50C3B72CC01D930063980B /* SimpleTemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTemperatureView.swift; sourceTree = "<group>"; };
+		BB50C3BD2CC01DA70063980B /* NoiseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseViewModel.swift; sourceTree = "<group>"; };
+		BB50C3BE2CC01DA70063980B /* DailyNoiseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoiseChartView.swift; sourceTree = "<group>"; };
+		BB50C3BF2CC01DA70063980B /* DetailNoiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoiseView.swift; sourceTree = "<group>"; };
+		BB50C3C02CC01DA70063980B /* MonthlyNoiseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyNoiseChartView.swift; sourceTree = "<group>"; };
+		BB50C3C12CC01DA70063980B /* WeeklyNoiseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyNoiseChartView.swift; sourceTree = "<group>"; };
+		BB50C3C22CC01DA70063980B /* SimpleNoiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNoiseView.swift; sourceTree = "<group>"; };
+		BB50C3C92CC01DB00063980B /* WaterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterViewModel.swift; sourceTree = "<group>"; };
+		BB50C3CA2CC01DB00063980B /* DailyWaterChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterChartView.swift; sourceTree = "<group>"; };
+		BB50C3CB2CC01DB00063980B /* DetailWaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWaterView.swift; sourceTree = "<group>"; };
+		BB50C3CC2CC01DB00063980B /* MonthlyWaterChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWaterChartView.swift; sourceTree = "<group>"; };
+		BB50C3CD2CC01DB00063980B /* WeeklyWaterChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWaterChartView.swift; sourceTree = "<group>"; };
+		BB50C3CE2CC01DB00063980B /* SimpleWaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWaterView.swift; sourceTree = "<group>"; };
+		BB50C3D52CC01DB60063980B /* WindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindViewModel.swift; sourceTree = "<group>"; };
+		BB50C3D62CC01DB60063980B /* DailyWindChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWindChartView.swift; sourceTree = "<group>"; };
+		BB50C3D72CC01DB60063980B /* DetailWindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWindView.swift; sourceTree = "<group>"; };
+		BB50C3D82CC01DB60063980B /* MonthlyWindChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWindChartView.swift; sourceTree = "<group>"; };
+		BB50C3D92CC01DB60063980B /* WeeklyWindChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWindChartView.swift; sourceTree = "<group>"; };
+		BB50C3DA2CC01DB60063980B /* SimpleWindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWindView.swift; sourceTree = "<group>"; };
+		BB50C3E12CC01DCD0063980B /* MainChartsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChartsFile.swift; sourceTree = "<group>"; };
+		BB50C3E22CC01DCD0063980B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB50C3E32CC01DCD0063980B /* MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
+		BB50C3E92CC0285B0063980B /* VariablesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariablesViewModel.swift; sourceTree = "<group>"; };
 		BB7852642CB3563100DA6452 /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		BB7852662CB35FB900DA6452 /* CreateNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewsViewController.swift; sourceTree = "<group>"; };
 		BB7852682CB3650000DA6452 /* FormCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +288,7 @@
 		3B2ABABB2CA5D1EC003EF886 /* Skilliket */ = {
 			isa = PBXGroup;
 			children = (
+				BB50C3762CC01C8E0063980B /* Charts */,
 				3BF11BD62CA728CE00F4C113 /* Controllers */,
 				3BF11BD42CA7289F00F4C113 /* Views */,
 				3BF11BD52CA728AF00F4C113 /* Models */,
@@ -351,6 +406,81 @@
 				1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BB50C3762CC01C8E0063980B /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3AC2CC01CAC0063980B /* View Models */,
+				BB50C3E12CC01DCD0063980B /* MainChartsFile.swift */,
+				BB50C3E22CC01DCD0063980B /* ContentView.swift */,
+				BB50C3E32CC01DCD0063980B /* MacContentView.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		BB50C3AC2CC01CAC0063980B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3B02CC01CD80063980B /* Wind */,
+				BB50C3AF2CC01CD40063980B /* Water */,
+				BB50C3AE2CC01CCE0063980B /* Noise */,
+				BB50C3AD2CC01CC90063980B /* Temperature */,
+				BB50C3E92CC0285B0063980B /* VariablesViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		BB50C3AD2CC01CC90063980B /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3B32CC01D930063980B /* DailyTemperatureChartView.swift */,
+				BB50C3B42CC01D930063980B /* DetailTemperatureView.swift */,
+				BB50C3B52CC01D930063980B /* MonthlyTemperatureChartView.swift */,
+				BB50C3B62CC01D930063980B /* WeeklyTemperatureChartView.swift */,
+				BB50C3B72CC01D930063980B /* SimpleTemperatureView.swift */,
+				BB50C3B12CC01D740063980B /* TemperatureViewModel.swift */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
+		BB50C3AE2CC01CCE0063980B /* Noise */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3BD2CC01DA70063980B /* NoiseViewModel.swift */,
+				BB50C3BE2CC01DA70063980B /* DailyNoiseChartView.swift */,
+				BB50C3BF2CC01DA70063980B /* DetailNoiseView.swift */,
+				BB50C3C02CC01DA70063980B /* MonthlyNoiseChartView.swift */,
+				BB50C3C12CC01DA70063980B /* WeeklyNoiseChartView.swift */,
+				BB50C3C22CC01DA70063980B /* SimpleNoiseView.swift */,
+			);
+			path = Noise;
+			sourceTree = "<group>";
+		};
+		BB50C3AF2CC01CD40063980B /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3D52CC01DB60063980B /* WindViewModel.swift */,
+				BB50C3D62CC01DB60063980B /* DailyWindChartView.swift */,
+				BB50C3D72CC01DB60063980B /* DetailWindView.swift */,
+				BB50C3D82CC01DB60063980B /* MonthlyWindChartView.swift */,
+				BB50C3D92CC01DB60063980B /* WeeklyWindChartView.swift */,
+				BB50C3DA2CC01DB60063980B /* SimpleWindView.swift */,
+			);
+			path = Water;
+			sourceTree = "<group>";
+		};
+		BB50C3B02CC01CD80063980B /* Wind */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3C92CC01DB00063980B /* WaterViewModel.swift */,
+				BB50C3CA2CC01DB00063980B /* DailyWaterChartView.swift */,
+				BB50C3CB2CC01DB00063980B /* DetailWaterView.swift */,
+				BB50C3CC2CC01DB00063980B /* MonthlyWaterChartView.swift */,
+				BB50C3CD2CC01DB00063980B /* WeeklyWaterChartView.swift */,
+				BB50C3CE2CC01DB00063980B /* SimpleWaterView.swift */,
+			);
+			path = Wind;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,8 +610,13 @@
 				1F81CF7C2CBCAEBC000520EB /* EulaJSON.swift in Sources */,
 				1FB241B52CBF76BD0044009E /* ShowEulaViewController.swift in Sources */,
 				1F81CF7D2CBCAEBC000520EB /* TerminosCondicionesJSON.swift in Sources */,
+				BB50C3EA2CC0285B0063980B /* VariablesViewModel.swift in Sources */,
 				BB78526B2CB3A58D00DA6452 /* FormCompositionalLayout.swift in Sources */,
+				BB50C3B22CC01D740063980B /* TemperatureViewModel.swift in Sources */,
 				3B5658002CA92DD30067F626 /* CommunitiesTableViewCell.swift in Sources */,
+				BB50C3E42CC01DCD0063980B /* MacContentView.swift in Sources */,
+				BB50C3E52CC01DCD0063980B /* MainChartsFile.swift in Sources */,
+				BB50C3E62CC01DCD0063980B /* ContentView.swift in Sources */,
 				3BC389D42CBE336A0035EE3D /* JoinProjectViewController.swift in Sources */,
 				3B5FE86E2CAA190E00706136 /* SelectedPostViewController.swift in Sources */,
 				1F65A76D2CACC47700BFB642 /* UserPostsTableViewCell.swift in Sources */,
@@ -524,6 +659,12 @@
 				3B3C8AF32CBB8A7300C78D03 /* ProjectNewsTableViewCell.swift in Sources */,
 				3B26ADD72CBB1CA80025CDB3 /* YourForumsViewController.swift in Sources */,
 				1F65A7752CADF4CD00BFB642 /* UserPostsViewController.swift in Sources */,
+				BB50C3C32CC01DA70063980B /* DailyNoiseChartView.swift in Sources */,
+				BB50C3C42CC01DA70063980B /* NoiseViewModel.swift in Sources */,
+				BB50C3C52CC01DA70063980B /* WeeklyNoiseChartView.swift in Sources */,
+				BB50C3C62CC01DA70063980B /* DetailNoiseView.swift in Sources */,
+				BB50C3C72CC01DA70063980B /* SimpleNoiseView.swift in Sources */,
+				BB50C3C82CC01DA70063980B /* MonthlyNoiseChartView.swift in Sources */,
 				3B3C8AEF2CBB817300C78D03 /* ProjectAnnouncementTableViewCell.swift in Sources */,
 				3B56580C2CA9EF3B0067F626 /* PostsCommunitiesViewController.swift in Sources */,
 				1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */,
@@ -538,7 +679,24 @@
 				3BC389D82CBE4C960035EE3D /* projectsColorGradient.swift in Sources */,
 				3B56580A2CA94D4A0067F626 /* PostsTableViewCell.swift in Sources */,
 				3B3C8AF12CBB8A1C00C78D03 /* ProjectNewsViewController.swift in Sources */,
+				BB50C3B82CC01D930063980B /* SimpleTemperatureView.swift in Sources */,
+				BB50C3B92CC01D930063980B /* DetailTemperatureView.swift in Sources */,
+				BB50C3DB2CC01DB60063980B /* WindViewModel.swift in Sources */,
+				BB50C3DC2CC01DB60063980B /* MonthlyWindChartView.swift in Sources */,
+				BB50C3DD2CC01DB60063980B /* DailyWindChartView.swift in Sources */,
+				BB50C3DE2CC01DB60063980B /* WeeklyWindChartView.swift in Sources */,
+				BB50C3DF2CC01DB60063980B /* DetailWindView.swift in Sources */,
+				BB50C3E02CC01DB60063980B /* SimpleWindView.swift in Sources */,
+				BB50C3BA2CC01D930063980B /* DailyTemperatureChartView.swift in Sources */,
+				BB50C3BB2CC01D930063980B /* WeeklyTemperatureChartView.swift in Sources */,
+				BB50C3BC2CC01D930063980B /* MonthlyTemperatureChartView.swift in Sources */,
 				3B2ABABF2CA5D1EC003EF886 /* SceneDelegate.swift in Sources */,
+				BB50C3CF2CC01DB00063980B /* SimpleWaterView.swift in Sources */,
+				BB50C3D02CC01DB00063980B /* DetailWaterView.swift in Sources */,
+				BB50C3D12CC01DB00063980B /* WaterViewModel.swift in Sources */,
+				BB50C3D22CC01DB00063980B /* DailyWaterChartView.swift in Sources */,
+				BB50C3D32CC01DB00063980B /* WeeklyWaterChartView.swift in Sources */,
+				BB50C3D42CC01DB00063980B /* MonthlyWaterChartView.swift in Sources */,
 				1F81CF402CBC501B000520EB /* DataGraphViewController.swift in Sources */,
 				1F4710F22CAC9D7E00442287 /* SelectCommunityVC.swift in Sources */,
 				3BC3E76C2CA7388E00F106A6 /* CommunitiesColorGradient.swift in Sources */,

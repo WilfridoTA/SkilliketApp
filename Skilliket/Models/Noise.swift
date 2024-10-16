@@ -32,3 +32,7 @@ class NoiseData: Data{
     }
     
 }
+
+struct NoiseJSON: Codable {
+    let noiseArray: [NoiseData]
+}

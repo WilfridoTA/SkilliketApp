@@ -31,3 +31,7 @@ class TemperatureData: Data{
         case time
     }
 }
+
+struct TemperatureJSON: Codable {
+    let temperatureArray: [TemperatureData]
+}
