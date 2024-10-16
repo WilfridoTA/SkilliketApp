@@ -109,7 +109,7 @@ class PostsCommunitiesViewController: UIViewController,UITableViewDataSource, UI
         if let nextView=segue.destination as? PostApproveViewController{
             nextView.ourApp=ourApp
             nextView.actualAdmin=actualAdmin
-            let index=postsCommunitiesTable.indexPathForSelectedRow?.row
+            let index=postsCommunitiesTable.indexPathForSelectedRow?.section
             nextView.actualCommunity=communitiesArr![index!]
         }
     }

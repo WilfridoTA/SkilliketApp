@@ -86,7 +86,7 @@ class ProjectCommunitiesViewController: UIViewController,UITableViewDataSource, 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nextView=segue.destination as? ProjectToBeApprovedViewController{
             nextView.ourApp=ourApp
-            let index=ProjectCommunitiesTable.indexPathForSelectedRow?.row
+            let index=ProjectCommunitiesTable.indexPathForSelectedRow?.section
             nextView.actualCommunity=communitiesArr![index!]
         }
     }

@@ -82,7 +82,7 @@ class ProjectToBeApprovedViewController: UIViewController,UITableViewDataSource,
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nextView=segue.destination as? ProjectApprovedDetailsViewController{
             nextView.ourApp=ourApp
-            let index=projectToApprovedTable.indexPathForSelectedRow?.row
+            let index=projectToApprovedTable.indexPathForSelectedRow?.section
             nextView.actualProject=projectsArr![index!]
         }
     }

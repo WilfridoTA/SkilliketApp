@@ -132,6 +132,13 @@ class YourForumsViewController: UIViewController, UITableViewDataSource, UITable
             destinatiomVC.ourApp=ourApp
             destinatiomVC.actualCommunity=actualCommunity
             destinatiomVC.actualMember=actualMember
+        } else if let destinatiomVC=segue.destination as? ForumChatViewController{
+            destinatiomVC.ourApp=ourApp
+            destinatiomVC.actualCommunity=actualCommunity
+            destinatiomVC.actualMember=actualMember
+            let index=yourForumsTable.indexPathForSelectedRow?.section
+            destinatiomVC.actualForum=forumsArr![index!]
+            
         }
     }
 }

@@ -52,12 +52,12 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total connected:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAd-Ju-fo9">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="351.66666666666669" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="130.33333333333334" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHI-Tb-zEh">
-                                                                        <rect key="frame" x="351.66666666666669" y="0.0" width="41.333333333333314" height="50"/>
+                                                                        <rect key="frame" x="130.33333333333334" y="0.0" width="262.66666666666663" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -89,12 +89,12 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Total percentage:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNP-sc-1om">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="136.33333333333334" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="351.66666666666669" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-zt-tei">
-                                                                        <rect key="frame" x="136.33333333333334" y="0.0" width="256.66666666666663" height="50"/>
+                                                                        <rect key="frame" x="351.66666666666669" y="0.0" width="41.333333333333314" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -2202,6 +2202,7 @@
                     <navigationItem key="navigationItem" id="0ux-sz-48u"/>
                     <connections>
                         <outlet property="insertText" destination="y0u-Q9-hbS" id="LFu-1w-Vxc"/>
+                        <outlet property="scrollView" destination="oYs-iI-Taa" id="SgL-XS-nYf"/>
                         <outlet property="table" destination="b3w-89-1tE" id="TCa-dC-5iM"/>
                     </connections>
                 </viewController>
