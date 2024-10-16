@@ -28,4 +28,5 @@ class JoinProjectViewController: UIViewController {
     }
     */
 
+    //si se une al projecto debe actualizarse en miApp y enviarla en el segue de regreso
 }

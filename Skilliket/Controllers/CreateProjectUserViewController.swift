@@ -23,5 +23,6 @@ class CreateProjectUserViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder() //Aplicar para todos los TextField
     }
     
+    //si se crea el projecto debe actualizarse en miApp y enviarla en el segue de regreso
 
 }
