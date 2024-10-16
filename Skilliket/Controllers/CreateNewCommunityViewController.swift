@@ -113,8 +113,8 @@ class CreateNewCommunityViewController: UIViewController, UITextFieldDelegate {
             default:
                 break
             }
-            
-            //let newCommunity=Community(name: nameTextField.text!, country: country, device: <#T##SkilliketDevice#>, state: state, city: selectedCity!, zone: selectedArea!, image: <#T##URL#>)
+
+            performSegue(withIdentifier: "unwindCommunities", sender: self)
         }
         
         //Imprimir datos

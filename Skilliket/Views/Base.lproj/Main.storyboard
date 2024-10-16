@@ -488,7 +488,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Create new community"/>
                                         <connections>
                                             <action selector="CreateCommunityBTN:" destination="Umc-cQ-Y51" eventType="touchUpInside" id="QMf-HS-kMI"/>
-                                            <segue destination="Ltl-Y9-XX3" kind="unwind" unwindAction="unwindToCommunitiesListWithUndiwndSegue:" id="TO6-09-UoW"/>
+                                            <segue destination="Ltl-Y9-XX3" kind="unwind" identifier="unwindCommunities" unwindAction="unwindToCommunitiesListWithUndiwndSegue:" id="TO6-09-UoW"/>
                                         </connections>
                                     </button>
                                 </subviews>
