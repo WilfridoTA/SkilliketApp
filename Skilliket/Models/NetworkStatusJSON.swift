@@ -74,7 +74,7 @@ typealias Statuses=[OneStatus]
 
 extension NetworkStatusJSONS{
     static func fetchNetworkStatus() async throws -> Statuses {
-        var urlComponents = URLComponents(string: "")!
+        var urlComponents = URLComponents(string: "http://localhost:58000/api/v1/assurance/health")!
 
             let (data, response) = try await URLSession.shared.data(from: urlComponents.url!)
 
