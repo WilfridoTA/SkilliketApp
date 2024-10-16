@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -44,6 +44,7 @@
 		1F81CF7F2CBCB32A000520EB /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */; };
 		1FB241B32CBF75460044009E /* ShowTermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */; };
 		1FB241B52CBF76BD0044009E /* ShowEulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */; };
+		1FB241C42CBF8A540044009E /* NetworkStatusJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */; };
 		1FD464CD2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */; };
 		1FD464CF2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */; };
 		3B1CE98D2CAA3BA900A96445 /* NetworkStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */; };
@@ -138,6 +139,7 @@
 		1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTermsConditionsViewController.swift; sourceTree = "<group>"; };
 		1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEulaViewController.swift; sourceTree = "<group>"; };
 		1FB241BA2CBF7DE60044009E /* SkilliketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkilliketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusJSON.swift; sourceTree = "<group>"; };
 		1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectUserViewController.swift; sourceTree = "<group>"; };
 		1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusTableViewCell.swift; sourceTree = "<group>"; };
 		3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				1F4710EB2CAB4F6E00442287 /* UserColorGradient.swift */,
 				BB7852642CB3563100DA6452 /* FormModel.swift */,
 				BB78526A2CB3A58D00DA6452 /* FormCompositionalLayout.swift */,
+				1FB241C32CBF8A540044009E /* NetworkStatusJSON.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				1F4710EC2CAB4F6E00442287 /* UserColorGradient.swift in Sources */,
 				3BE325BB2CBA0ABC00791263 /* NewForumsViewController.swift in Sources */,
 				1F4710EE2CABA0B600442287 /* CreateAccountVC.swift in Sources */,
+				1FB241C42CBF8A540044009E /* NetworkStatusJSON.swift in Sources */,
 				1F65A7732CACD17500BFB642 /* CreateContentViewController.swift in Sources */,
 				3B26ADDF2CBB22B40025CDB3 /* FeaturedForumsTableViewCell.swift in Sources */,
 				3BAAF7802CA750C6000C7C75 /* PostColorGradient.swift in Sources */,
