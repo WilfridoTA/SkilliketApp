@@ -89,6 +89,16 @@
 		BB7852722CB74D8200DA6452 /* CreateForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7852712CB74D8200DA6452 /* CreateForumViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1FB241BE2CBF7DE60044009E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B2ABAB12CA5D1EC003EF886 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B2ABAB82CA5D1EC003EF886;
+			remoteInfo = Skilliket;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1F4710E92CAB365E00442287 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1F4710EB2CAB4F6E00442287 /* UserColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserColorGradient.swift; sourceTree = "<group>"; };
@@ -127,6 +137,7 @@
 		1F81CF7E2CBCB32A000520EB /* EulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
 		1FB241B22CBF75460044009E /* ShowTermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTermsConditionsViewController.swift; sourceTree = "<group>"; };
 		1FB241B42CBF76BD0044009E /* ShowEulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEulaViewController.swift; sourceTree = "<group>"; };
+		1FB241BA2CBF7DE60044009E /* SkilliketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkilliketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD464CC2CBF3B2D00CBDB49 /* CreateProjectUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectUserViewController.swift; sourceTree = "<group>"; };
 		1FD464CE2CBF404A00CBDB49 /* NetworkStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusTableViewCell.swift; sourceTree = "<group>"; };
 		3B1CE98C2CAA3BA900A96445 /* NetworkStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +185,18 @@
 		BB7852712CB74D8200DA6452 /* CreateForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateForumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		1FB241BB2CBF7DE60044009E /* SkilliketTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SkilliketTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		1FB241B72CBF7DE60044009E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B2ABAB62CA5D1EC003EF886 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2ABABB2CA5D1EC003EF886 /* Skilliket */,
+				1FB241BB2CBF7DE60044009E /* SkilliketTests */,
 				3B2ABABA2CA5D1EC003EF886 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -197,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				3B2ABAB92CA5D1EC003EF886 /* Skilliket.app */,
+				1FB241BA2CBF7DE60044009E /* SkilliketTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -324,6 +348,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1FB241B92CBF7DE60044009E /* SkilliketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FB241C02CBF7DE60044009E /* Build configuration list for PBXNativeTarget "SkilliketTests" */;
+			buildPhases = (
+				1FB241B62CBF7DE60044009E /* Sources */,
+				1FB241B72CBF7DE60044009E /* Frameworks */,
+				1FB241B82CBF7DE60044009E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FB241BF2CBF7DE60044009E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1FB241BB2CBF7DE60044009E /* SkilliketTests */,
+			);
+			name = SkilliketTests;
+			packageProductDependencies = (
+			);
+			productName = SkilliketTests;
+			productReference = 1FB241BA2CBF7DE60044009E /* SkilliketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3B2ABAB82CA5D1EC003EF886 /* Skilliket */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B2ABACD2CA5D1EE003EF886 /* Build configuration list for PBXNativeTarget "Skilliket" */;
@@ -348,9 +395,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					1FB241B92CBF7DE60044009E = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 3B2ABAB82CA5D1EC003EF886;
+					};
 					3B2ABAB82CA5D1EC003EF886 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -370,11 +421,19 @@
 			projectRoot = "";
 			targets = (
 				3B2ABAB82CA5D1EC003EF886 /* Skilliket */,
+				1FB241B92CBF7DE60044009E /* SkilliketTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1FB241B82CBF7DE60044009E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B2ABAB72CA5D1EC003EF886 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +447,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1FB241B62CBF7DE60044009E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B2ABAB52CA5D1EC003EF886 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +540,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1FB241BF2CBF7DE60044009E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B2ABAB82CA5D1EC003EF886 /* Skilliket */;
+			targetProxy = 1FB241BE2CBF7DE60044009E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3B2ABAC22CA5D1EC003EF886 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -494,6 +568,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1FB241C12CBF7DE60044009E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SkilliketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skilliket.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Skilliket";
+			};
+			name = Debug;
+		};
+		1FB241C22CBF7DE60044009E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.SkilliketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skilliket.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Skilliket";
+			};
+			name = Release;
+		};
 		3B2ABACB2CA5D1EE003EF886 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -670,6 +780,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1FB241C02CBF7DE60044009E /* Build configuration list for PBXNativeTarget "SkilliketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FB241C12CBF7DE60044009E /* Debug */,
+				1FB241C22CBF7DE60044009E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3B2ABAB42CA5D1EC003EF886 /* Build configuration list for PBXProject "Skilliket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
