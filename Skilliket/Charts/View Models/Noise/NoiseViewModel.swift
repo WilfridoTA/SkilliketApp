@@ -10,7 +10,7 @@ import Foundation
 class NoiseViewModel: ObservableObject {
     
     // Published properties to update the UI
-    @Published var noiseData: [NoiseData]
+    @Published var noiseData: [NoiseData2]
     @Published var lastTotalLevel: Float = 0
     
     // Computed Properties
@@ -39,7 +39,7 @@ class NoiseViewModel: ObservableObject {
         return totalLevelPerMonth(noiseByMonth: grouped)
     }
     
-    var noiseByWeekday: [(number: Int, level: [NoiseData])] {
+    var noiseByWeekday: [(number: Int, level: [NoiseData2])] {
         let grouped = noiseGroupedByWeekday(noise: noiseData).map {
             (number: $0.key, level: $0.value)
         }
@@ -80,8 +80,8 @@ class NoiseViewModel: ObservableObject {
     // MARK: - Helper Functions
     
     // Group noise data by day
-    func noiseGroupedByDay(noise: [NoiseData]) -> [Date: [NoiseData]] {
-        var noiseByDay: [Date: [NoiseData]] = [:]
+    func noiseGroupedByDay(noise: [NoiseData2]) -> [Date: [NoiseData2]] {
+        var noiseByDay: [Date: [NoiseData2]] = [:]
         let calendar = Calendar.current
         for entry in noise {
             let date = calendar.startOfDay(for: entry.date)
@@ -91,8 +91,8 @@ class NoiseViewModel: ObservableObject {
     }
     
     // Group noise data by week
-    func noiseGroupedByWeek(noise: [NoiseData]) -> [Date: [NoiseData]] {
-        var noiseByWeek: [Date: [NoiseData]] = [:]
+    func noiseGroupedByWeek(noise: [NoiseData2]) -> [Date: [NoiseData2]] {
+        var noiseByWeek: [Date: [NoiseData2]] = [:]
         let calendar = Calendar.current
         for entry in noise {
             guard let startOfWeek = calendar.date(from: calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: entry.date)) else { continue }
@@ -102,8 +102,8 @@ class NoiseViewModel: ObservableObject {
     }
     
     // Group noise data by month
-    func noiseGroupedByMonth(noise: [NoiseData]) -> [Date: [NoiseData]] {
-        var noiseByMonth: [Date: [NoiseData]] = [:]
+    func noiseGroupedByMonth(noise: [NoiseData2]) -> [Date: [NoiseData2]] {
+        var noiseByMonth: [Date: [NoiseData2]] = [:]
         let calendar = Calendar.current
         for entry in noise {
             guard let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: entry.date)) else { continue }
@@ -113,8 +113,8 @@ class NoiseViewModel: ObservableObject {
     }
     
     // Group noise data by weekday
-    func noiseGroupedByWeekday(noise: [NoiseData]) -> [Int: [NoiseData]] {
-        var noiseByWeekday: [Int: [NoiseData]] = [:]
+    func noiseGroupedByWeekday(noise: [NoiseData2]) -> [Int: [NoiseData2]] {
+        var noiseByWeekday: [Int: [NoiseData2]] = [:]
         let calendar = Calendar.current
         for entry in noise {
             let weekday = calendar.component(.weekday, from: entry.date)
