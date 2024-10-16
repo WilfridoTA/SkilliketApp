@@ -48,9 +48,9 @@ class JoinProjectViewController: UIViewController, UITableViewDataSource, UITabl
             for i in 0...(community!.approvedProjects!.count-1){
                 let project=community!.approvedProjects![i]
                 if project.members!.contains(member.name){
-                    projectOfMember.append(project)
-                } else{
                     
+                } else{
+                    projectOfMember.append(project)
                 }
             }
             return projectOfMember
@@ -105,12 +105,14 @@ class JoinProjectViewController: UIViewController, UITableViewDataSource, UITabl
         cell.joinProjectDescription.text = arreglo.description
         cargarImagenDesdeURL(url: arreglo.imagen, imageView: cell.joinProjectImage)
         
+        cell.joinProjectImage.layer.cornerRadius = 18
+        
         return cell
     }
     
     //Mantener constante el tamaño de cada celda
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250 //150 Será el tamaño para todas las tablas
+        return 200 //150 Será el tamaño para todas las tablas
     }
     
     func cargarImagenDesdeURL(url: URL, imageView: UIImageView) {
