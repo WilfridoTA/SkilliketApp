@@ -15,8 +15,20 @@ class JoinProjectViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        /*
+         adaptar cuando se tenga la lista
+         if forumsArr!.count==0{
+            showAlert(title: "Hey!", message: "Seems like you have joined to all the available forums of your community")
+        }
+         */
     }
     
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
+    }
 
     /*
     // MARK: - Navigation

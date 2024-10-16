@@ -29,6 +29,15 @@ class YourProjectsViewController: UIViewController, UITableViewDataSource, UITab
         yourProjectsTable.layer.shadowRadius = 6
         
         projectsArr=getProyectsOfMember(member: actualMember!)
+        if projectsArr!.count==0{
+            showAlert(title: "Hey!", message: "Seems like you haven't joined to any project yet, check them out!")
+        }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
     }
     
     func getProyectsOfMember(member:Member)->[Project]{
