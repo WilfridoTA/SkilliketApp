@@ -1084,6 +1084,7 @@
                         <outlet property="passwordTextField" destination="pJy-Ol-pQZ" id="rSn-YB-fPR"/>
                         <outlet property="privacyNoticeButton" destination="csv-Qz-JXS" id="3Sh-IU-38V"/>
                         <outlet property="registerButton" destination="kAf-LT-9vq" id="l0z-yL-KnG"/>
+                        <outlet property="scrollView" destination="lqu-IE-hB6" id="q1F-mk-mov"/>
                         <outlet property="usernameTextField" destination="Xhd-wr-p7x" id="V2i-do-6Nb"/>
                         <segue destination="eci-tB-VDo" kind="show" identifier="adminLogin" id="OxA-1e-URC"/>
                         <segue destination="oy8-8K-P48" kind="show" identifier="userLogin" id="zqE-6L-qqG"/>
@@ -1472,6 +1473,7 @@
                         <outlet property="lastNameTextField" destination="X6o-OD-NDE" id="WAB-pj-PI6"/>
                         <outlet property="nameTextField" destination="ecF-Hm-LrL" id="z4m-Ra-R2t"/>
                         <outlet property="passwordTextField" destination="flg-Nt-jh8" id="RSy-v1-fFW"/>
+                        <outlet property="scrollView" destination="hQ4-lF-dFV" id="MMf-ma-hlu"/>
                         <outlet property="usernameTextField" destination="Yl9-rm-0Fw" id="GIa-oz-0A4"/>
                         <segue destination="XPy-Qe-lRF" kind="unwind" identifier="unwindToLoginVC" unwindAction="unwindToLoginVC:" id="ynR-IL-LnY"/>
                     </connections>
@@ -2925,7 +2927,7 @@
         <!--Create Project-->
         <scene sceneID="6T4-aA-HU0">
             <objects>
-                <viewController id="sv0-3E-mXa" sceneMemberID="viewController">
+                <viewController id="sv0-3E-mXa" customClass="CreateProjectUserViewController" customModule="Skilliket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ITk-74-QDG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3426,7 +3428,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qnz-gg-Arx"/>
+        <segue reference="cGF-Dm-9Ox"/>
         <segue reference="zqE-6L-qqG"/>
     </inferredMetricsTieBreakers>
     <resources>
