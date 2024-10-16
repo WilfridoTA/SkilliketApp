@@ -182,6 +182,37 @@
 		3BC3E76B2CA7388E00F106A6 /* CommunitiesColorGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesColorGradient.swift; sourceTree = "<group>"; };
 		3BE325BA2CBA0ABC00791263 /* NewForumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewForumsViewController.swift; sourceTree = "<group>"; };
 		3BF11BD72CA729A700F4C113 /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
+		BB50C3EB2CC06A9C0063980B /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		BB50C3EC2CC06A9C0063980B /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
+		BB50C3ED2CC06A9C0063980B /* Noise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noise.swift; sourceTree = "<group>"; };
+		BB50C3EE2CC06A9C0063980B /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		BB50C3F02CC06A9C0063980B /* TemperatureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewModel.swift; sourceTree = "<group>"; };
+		BB50C3F12CC06A9C0063980B /* DailyTemperatureChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTemperatureChartView.swift; sourceTree = "<group>"; };
+		BB50C3F22CC06A9C0063980B /* DetailTemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTemperatureView.swift; sourceTree = "<group>"; };
+		BB50C3F32CC06A9C0063980B /* MonthlyTemperatureChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTemperatureChartView.swift; sourceTree = "<group>"; };
+		BB50C3F42CC06A9C0063980B /* WeeklyTemperatureChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTemperatureChartView.swift; sourceTree = "<group>"; };
+		BB50C3F52CC06A9C0063980B /* SimpleTemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTemperatureView.swift; sourceTree = "<group>"; };
+		BB50C3F72CC06A9C0063980B /* NoiseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoiseViewModel.swift; sourceTree = "<group>"; };
+		BB50C3F82CC06A9C0063980B /* DailyNoiseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNoiseChartView.swift; sourceTree = "<group>"; };
+		BB50C3F92CC06A9C0063980B /* DetailNoiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNoiseView.swift; sourceTree = "<group>"; };
+		BB50C3FA2CC06A9C0063980B /* MonthlyNoiseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyNoiseChartView.swift; sourceTree = "<group>"; };
+		BB50C3FB2CC06A9C0063980B /* WeeklyNoiseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyNoiseChartView.swift; sourceTree = "<group>"; };
+		BB50C3FC2CC06A9C0063980B /* SimpleNoiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNoiseView.swift; sourceTree = "<group>"; };
+		BB50C3FE2CC06A9C0063980B /* WaterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterViewModel.swift; sourceTree = "<group>"; };
+		BB50C3FF2CC06A9C0063980B /* DailyWaterChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWaterChartView.swift; sourceTree = "<group>"; };
+		BB50C4002CC06A9C0063980B /* DetailWaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWaterView.swift; sourceTree = "<group>"; };
+		BB50C4012CC06A9C0063980B /* MonthlyWaterChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWaterChartView.swift; sourceTree = "<group>"; };
+		BB50C4022CC06A9C0063980B /* WeeklyWaterChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWaterChartView.swift; sourceTree = "<group>"; };
+		BB50C4032CC06A9C0063980B /* SimpleWaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWaterView.swift; sourceTree = "<group>"; };
+		BB50C4052CC06A9C0063980B /* WindViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindViewModel.swift; sourceTree = "<group>"; };
+		BB50C4062CC06A9C0063980B /* DailyWindChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWindChartView.swift; sourceTree = "<group>"; };
+		BB50C4072CC06A9C0063980B /* DetailWindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWindView.swift; sourceTree = "<group>"; };
+		BB50C4082CC06A9C0063980B /* MonthlyWindChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyWindChartView.swift; sourceTree = "<group>"; };
+		BB50C4092CC06A9C0063980B /* WeeklyWindChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWindChartView.swift; sourceTree = "<group>"; };
+		BB50C40A2CC06A9C0063980B /* SimpleWindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleWindView.swift; sourceTree = "<group>"; };
+		BB50C40D2CC06A9C0063980B /* MainChartsFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChartsFile.swift; sourceTree = "<group>"; };
+		BB50C40E2CC06A9C0063980B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB50C40F2CC06A9C0063980B /* MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
 		BB7852642CB3563100DA6452 /* FormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormModel.swift; sourceTree = "<group>"; };
 		BB7852662CB35FB900DA6452 /* CreateNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewsViewController.swift; sourceTree = "<group>"; };
 		BB7852682CB3650000DA6452 /* FormCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -240,6 +271,7 @@
 				3B2ABAC52CA5D1EE003EF886 /* Assets.xcassets */,
 				3B2ABAC72CA5D1EE003EF886 /* LaunchScreen.storyboard */,
 				3B2ABACA2CA5D1EE003EF886 /* Info.plist */,
+				BB50C4102CC06A9C0063980B /* Charts */,
 			);
 			path = Skilliket;
 			sourceTree = "<group>";
@@ -352,6 +384,92 @@
 				1F7004F32CC00429009E51B3 /* ForumChatViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BB50C3EF2CC06A9C0063980B /* Chart Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3EB2CC06A9C0063980B /* Wind.swift */,
+				BB50C3EC2CC06A9C0063980B /* Water.swift */,
+				BB50C3ED2CC06A9C0063980B /* Noise.swift */,
+				BB50C3EE2CC06A9C0063980B /* Temperature.swift */,
+			);
+			path = "Chart Models";
+			sourceTree = "<group>";
+		};
+		BB50C3F62CC06A9C0063980B /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3F02CC06A9C0063980B /* TemperatureViewModel.swift */,
+				BB50C3F12CC06A9C0063980B /* DailyTemperatureChartView.swift */,
+				BB50C3F22CC06A9C0063980B /* DetailTemperatureView.swift */,
+				BB50C3F32CC06A9C0063980B /* MonthlyTemperatureChartView.swift */,
+				BB50C3F42CC06A9C0063980B /* WeeklyTemperatureChartView.swift */,
+				BB50C3F52CC06A9C0063980B /* SimpleTemperatureView.swift */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
+		BB50C3FD2CC06A9C0063980B /* Noise */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3F72CC06A9C0063980B /* NoiseViewModel.swift */,
+				BB50C3F82CC06A9C0063980B /* DailyNoiseChartView.swift */,
+				BB50C3F92CC06A9C0063980B /* DetailNoiseView.swift */,
+				BB50C3FA2CC06A9C0063980B /* MonthlyNoiseChartView.swift */,
+				BB50C3FB2CC06A9C0063980B /* WeeklyNoiseChartView.swift */,
+				BB50C3FC2CC06A9C0063980B /* SimpleNoiseView.swift */,
+			);
+			path = Noise;
+			sourceTree = "<group>";
+		};
+		BB50C4042CC06A9C0063980B /* Water */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3FE2CC06A9C0063980B /* WaterViewModel.swift */,
+				BB50C3FF2CC06A9C0063980B /* DailyWaterChartView.swift */,
+				BB50C4002CC06A9C0063980B /* DetailWaterView.swift */,
+				BB50C4012CC06A9C0063980B /* MonthlyWaterChartView.swift */,
+				BB50C4022CC06A9C0063980B /* WeeklyWaterChartView.swift */,
+				BB50C4032CC06A9C0063980B /* SimpleWaterView.swift */,
+			);
+			path = Water;
+			sourceTree = "<group>";
+		};
+		BB50C40B2CC06A9C0063980B /* Wind */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C4052CC06A9C0063980B /* WindViewModel.swift */,
+				BB50C4062CC06A9C0063980B /* DailyWindChartView.swift */,
+				BB50C4072CC06A9C0063980B /* DetailWindView.swift */,
+				BB50C4082CC06A9C0063980B /* MonthlyWindChartView.swift */,
+				BB50C4092CC06A9C0063980B /* WeeklyWindChartView.swift */,
+				BB50C40A2CC06A9C0063980B /* SimpleWindView.swift */,
+			);
+			path = Wind;
+			sourceTree = "<group>";
+		};
+		BB50C40C2CC06A9C0063980B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3F62CC06A9C0063980B /* Temperature */,
+				BB50C3FD2CC06A9C0063980B /* Noise */,
+				BB50C4042CC06A9C0063980B /* Water */,
+				BB50C40B2CC06A9C0063980B /* Wind */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		BB50C4102CC06A9C0063980B /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				BB50C3EF2CC06A9C0063980B /* Chart Models */,
+				BB50C40C2CC06A9C0063980B /* View Models */,
+				BB50C40D2CC06A9C0063980B /* MainChartsFile.swift */,
+				BB50C40E2CC06A9C0063980B /* ContentView.swift */,
+				BB50C40F2CC06A9C0063980B /* MacContentView.swift */,
+			);
+			path = Charts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
