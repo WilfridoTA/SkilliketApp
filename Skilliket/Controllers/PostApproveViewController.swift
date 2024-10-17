@@ -134,7 +134,7 @@ class PostApproveViewController: UIViewController, UITableViewDataSource, UITabl
             nextView.ourApp=ourApp
             nextView.actualAdmin=actualAdmin
             nextView.actualCommunity=actualCommunity
-            let index=postApproveTable.indexPathForSelectedRow?.section
+            let index=postApproveTable.indexPathForSelectedRow?.row
             nextView.actualPost=postsArr![index!]
         }
     }

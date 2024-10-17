@@ -697,7 +697,7 @@
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" title="Show more…"/>
                                                                     <connections>
-                                                                        <segue destination="Sfz-sd-QiS" kind="show" id="5N0-W8-i2j"/>
+                                                                        <segue destination="Sfz-sd-QiS" kind="show" id="zf1-J8-Eyx"/>
                                                                     </connections>
                                                                 </button>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkJ-HS-YCa">
@@ -2551,10 +2551,10 @@
                                     <buttonConfiguration key="configuration" style="plain">
                                         <imageReference key="image" image="bubble.right.circle.fill" catalog="system" symbolScale="large"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <segue destination="2u4-Wp-1UY" kind="show" id="2tC-yI-nzM"/>
+                                    </connections>
                                 </button>
-                                <connections>
-                                    <segue destination="2u4-Wp-1UY" kind="show" id="MSj-rb-B7h"/>
-                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
